@@ -4,7 +4,7 @@
   "description": "Create a modern notebook to document or explain almost anything with spacebook.app",
   "footer": "Made with ❤ in Minneapolis",
   "url": "https://spacebook.app",
-  "githubUrl": "https://github.com/<username>/<repository>",
+  "githubUrl": "https://github.com/broeker/spacebook-demo",
   "githubBranch": "main",
   "navigationStyle": "vertical",
   "emoji": "💥",
