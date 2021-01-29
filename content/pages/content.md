@@ -11,8 +11,7 @@ eleventyNavigation:
 All of your pages and images are stored in a top-level directory called **content**, with a sub-folder for your pages (**content/pages**) and one for your images (**content/images**). When you first install your spacebook, it will contain a default welcome page that you can change or delete. 
 
 ::: callout
-**Did you know?** The trick to managing a spacebook is a basic understanding of Markdown and how it is used to create and
- organize your content. Use your editor or the Github UI to examine any one of the files in your pages folder to get the lay of the land. 
+**Did you know?** The trick to managing a spacebook is a basic understanding of Markdown and how it is used to create and organize your content. Use your editor or the Github UI to examine any one of the files in your pages folder to get the lay of the land. 
 :::
 
 ## Understanding Frontmatter
