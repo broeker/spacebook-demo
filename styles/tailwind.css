@@ -2,13 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* svg.github {
+  fill: #ff9900;
+} 
+
+svg.github:hover {
+  fill: #669900;
+} */
+
+
+.logo-block {
+  height: auto;
+  width: auto;
+  margin-left: 2em;
+  background-image: url("_includes/assets/images/logo.png");
+  background-size: contain;
+}
+
+.logo-block-sm {
+  height: 30px;
+  width: 30px;
+  margin-left: 2em;
+  background-image: url("_includes/assets/images/logo.png");
+  background-size: contain;
+}
+
+body.dark .logo-block {
+  background-image: url("_includes/assets/images/logo-dark.png");
+}
+
+body.dark .logo-block:hover {
+  background-image: url("_includes/assets/images/logo.png");
+}
+
 @layer base {
-  
   /* Set up some default image behavior for nicer images */
-  img {
+  .prose img {
     @apply w-auto  shadow-md border-2 border-transparent !important
   }
-  img:hover {
+  .prose img:hover {
     @apply border-2 border-gray-100
   }
   /* Overrides for Tailwind Typography prose class */
@@ -23,9 +56,6 @@
   }
   .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
     scroll-margin-top: 3.5em;
-  }
-  .prose pre code {
-    @apply overflow-x-auto !important 
   }
   .prose .footer-nav a {
     @apply no-underline !important
@@ -89,10 +119,19 @@
   nav ul li a:hover {
     @apply text-gray-900 dark:text-gray-400;
   }
+
+  .search-results {
+    @apply z-50 p-4 border-l-8 border-t border-r border-b border-gray-300 mr-2 
+  }
+
   nav ul li a.active {
     @apply font-semibold;
   }
-  nav.toc ol li {
+
+  nav ul#search-results {
+    @apply -mt-1
+  }
+  /* nav.toc ol li {
     @apply pt-2 !important
   }
   nav.toc ol li li {
@@ -103,9 +142,13 @@
   }
   nav.toc ol li a:hover {
     @apply text-gray-900
-  }
-  .prose .footer-nav a:hover {
+  } */
+  /* .prose .footer-nav a:hover {
     @apply dark:text-gray-400 !important
+  } */
+
+  .footer.prose-sm {
+    @apply leading-5
   }
 
 /* Utilities and misc */

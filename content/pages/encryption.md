@@ -30,7 +30,7 @@ If you ever change this password, all of your users will be prevented from acces
 
 ## Enable encryption
 
-In your **_data/site.json** file, set encryption to true:
+In your **_data/config.toml** file, set encryption to true:
 
 ```
 {

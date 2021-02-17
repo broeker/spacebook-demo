@@ -8,7 +8,7 @@ eleventyNavigation:
   parent: Advanced settings 
 ---
 
-Depending on the amount of pages you have and the type of content you create, it may make sense to have a horizontal navigation bar across the top of your site instead of the default vertical sidebar navigation. You can easily switch between the two options by changing your **_data/site.json** configuration file:
+Depending on the amount of pages you have and the type of content you create, it may make sense to have a horizontal navigation bar across the top of your site instead of the default vertical sidebar navigation. You can easily switch between the two options by changing your **_data/config.toml** configuration file:
 
 
 ## Vertical navigation (default)

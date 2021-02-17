@@ -8,7 +8,16 @@ const embedEverything = require("eleventy-plugin-embed-everything");
 const pluginTOC = require('eleventy-plugin-nesting-toc');
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const Image = require("@11ty/eleventy-img");
+const toml = require("toml");
+
+module.exports = eleventyConfig => {
+ 
+};
 module.exports = function(eleventyConfig) {
+
+  // Toml support
+  eleventyConfig.addDataExtension("toml", contents => toml.parse(contents));
+
   // eleventyConfig.addPlugin(pluginTOC);
   eleventyConfig.addPlugin(svgContents); 
   eleventyConfig.addPlugin(embedEverything);

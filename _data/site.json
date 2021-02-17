@@ -1,7 +1,7 @@
 {
-  "name": "Spacebook",
+  "name": "California Design Handbook",
   "subtitle": "Create a modern notebook to document or explain almost anything.",
-  "description": "Create a modern notebook to document or explain almost anything with spacebook.app",
+  "description": "Modern notebooks to document or explain almost anything with spacebook.app",
   "footer": "Made with ❤ in Minneapolis",
   "url": "https://spacebook.app",
   "githubUrl": "https://github.com/broeker/spacebook-demo",
@@ -13,9 +13,10 @@
   "enableEditButton": true,
   "enableDatestamp": true,
   "enableGithubLink": true,
-  "enableContact": false,
-  "enableNetlifyCMS": false,
+  "enableContact": true,
+  "enableNetlifyCMS": true,
   "enableComments": false,
-  "enableEncryption": false,
+  "enableEncryption": true,
   "enablePageNavigation": true
+
 }

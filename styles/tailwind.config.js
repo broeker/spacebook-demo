@@ -19,6 +19,10 @@ module.exports = {
       center: true,
     },
     extend: {
+      // backgroundImage: theme => ({
+      //   'logo': "url('_includes/assets/images/logo.png') !important",
+      //   'pogo': "url('_includes/assets/images/logo-dark.png') !important",
+      //  }),
       typography: {
         DEFAULT: {
           css: {
@@ -28,6 +32,11 @@ module.exports = {
               '&:hover': {
               color: '#1E3A8A',
               },
+            },
+            'div.logo': {
+              width: "250px",
+              height: "250px",
+              'background-color': "#ff9900"
             },
             '.prose a.edit, .tag a': {
               color: '#333',
@@ -54,7 +63,9 @@ module.exports = {
       }
     },
   }, 
-  variants: {},
+  variants: {
+    fill: ['hover', 'focus'], // this line does the trick
+  },
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),

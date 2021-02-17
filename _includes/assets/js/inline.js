@@ -11,8 +11,8 @@ if (window.netlifyIdentity) {
 document.addEventListener("DOMContentLoaded", function() {
   
   const el = document.getElementById("main");
-  el.addEventListener("click", closeNavigation, false)
-
+   el.addEventListener("click", closeNavigation, false)
+   el.addEventListener("click", closeSearch, false)
   if (localStorage.getItem('darkmode') === 'true') {
     document.body.classList.add("dark");
   } else {
@@ -24,6 +24,35 @@ function logout() {
   localStorage.removeItem("passphrase")
   window.location.href = "/";
 }
+
+function showSearch() {
+  const logo = document.getElementById("logo");
+  const site = document.getElementById("site");
+  const icons = document.getElementById("header-icons");
+  const searchbox = document.getElementById("searchbox");
+  const hamburger = document.getElementById('hamburger')
+  logo.classList.add("hidden"); 
+  site.classList.add("hidden"); 
+  icons.classList.add("hidden"); 
+  hamburger.classList.add("hidden"); 
+  searchbox.classList.add("w-full"); 
+  searchbox.classList.remove("hidden")
+  document.getElementById("searchField").focus();
+}
+
+function closeSearch() {
+  const logo = document.getElementById('logo')
+  const site = document.getElementById("site");
+  const searchbox = document.getElementById("searchbox");
+  const hamburger = document.getElementById('hamburger')
+  site.classList.remove("hidden"); 
+  logo.classList.remove("hidden"); 
+  hamburger.classList.remove("hidden"); 
+  searchbox.classList.remove("w-full"); 
+  searchbox.classList.remove("sm:block")
+  searchbox.classList.add("hidden")
+}
+
 
 function showNavigation() {
   const navigation = document.getElementById("navigation");

@@ -57,7 +57,7 @@ eleventyNavigation:
 
 ```
  * **metaDescription:** -- this can be used to create a custom description metatag on a page-by-page basis. If not present, the global metatag description from **sites.json** is used
- * **comments** -- (opt out) if you have set *enableComments* to true in *site.json* comments will appear on all pages unless you opt out using *comments: false*
+ * **comments** -- (opt out) if you have set *enableComments* to true in *config.toml* comments will appear on all pages unless you opt out using *comments: false*
 * **parent** -- this is used to set up a hierarchy of parent and child pages for your menu system. If you set the *parent* of a given page to match the *key* of another page, it will show up as a child page within the menu system
 * **title** -- you add a custom title to change the menu label (useful if you want a short key but a longer menu label)
 

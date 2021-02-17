@@ -8,17 +8,17 @@
       const searchBox = document.getElementById("searchField");
       const resEl = document.getElementById("searchResults");
       const noResultsEl = document.getElementById("noResultsFound");
-      const navigation = document.getElementById("navigation");
+      //const resWrapper = document.getElementById("searchWrapper");
+      //const navigation = document.getElementById("navigation");
 
       searchBox.addEventListener('focus', (event) => {
         event.target.classList.remove("hidden"); 
-        resEl.classList.remove("hidden"); 
+        // resEl.classList.remove("hidden"); 
       });
 
     document.addEventListener('click', function(event) {
         var isClickInside = searchBox.contains(event.target);
         if (!isClickInside) {
-            console.log('hidden')
             resEl.classList.add("hidden"),noResultsEl.classList.add("hidden")
             noResultsEl.classList.add("hidden")
         }
@@ -28,7 +28,8 @@
       if (e.target.value != "") {
         if (results != "") {
           noResultsEl.classList.add("hidden")
-          resEl.classList.add("p-4")
+          resEl.classList.add("search-results")
+          resEl.classList.remove("hidden"); 
           results.map((r) => {
             const { id, title, description } = r.doc;
             const el = document.createElement("li", { tabindex: '-1' });
@@ -48,6 +49,7 @@
           });
         } else {
           noResultsEl.classList.remove("hidden")
+          noResultsEl.classList.add("search-results")
         }
       } else {
         noResultsEl.classList.add("hidden")
