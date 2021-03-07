@@ -26,7 +26,7 @@ section: page
                     <div class="inline-block w-auto text-xs text-dateline dark:text-dateline-dark pt-1 pb-1 pl-3 mr-2 rounded ">Updated <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time></div>
                 {% endif %}
                 {% if config.enableEditButton == true %}
-                    <div class="inline-block w-auto text-xs  pt-1 pr-4 pb-1 pl-3 rounded"><a class="text-dateline dark:text-dateline-dark hover:dark:text-dateline-hover dark:hover:text-dateline-dark-hover no-underline font-normal !important" target="_blank" href="{{ config.githubUrl }}/edit/{{ config.githubBranch }}/{{ page.inputPath }}">Edit</a></div>
+                    <div class="inline-block w-auto text-xs  pt-1 pr-4 pb-1 pl-3 rounded"><a class="text-dateline dark:text-dateline-dark hover:dark:text-dateline-hover dark:hover:text-dateline-dark-hover no-underline font-normal !important" target="_blank"  rel="noopener" rel="noreferrer" href="{{ config.githubUrl }}/edit/{{ config.githubBranch }}/{{ page.inputPath }}">Edit</a></div>
                 {% endif %}
             </div>
         </div>
