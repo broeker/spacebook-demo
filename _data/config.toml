@@ -1,0 +1,97 @@
+#------------------------------------------------#
+# SPACEBOOK CONFIGURATION
+# Official Launch Handbook
+#------------------------------------------------#
+#
+#        |
+#       / \
+#      / _ \        See spacebook.app for
+#     |.o '.|       more documentation!
+#     |'._.'|
+#     |     |
+#   ,'|  |  |`.
+#  /  |  |  |  \
+#  |,-'--|--'-.| 
+#
+#------------------------------------------------#
+# name 
+#   - the main title or name of your spacebook
+# subtitle
+#   - the short subtitle that appears below your site name
+#   - optional
+# description 
+#   - used to populate your site metadata
+#   - shows up in search results and in social sharing
+#------------------------------------------------#
+name = "Spacebook v1.0"
+shortName = "Spacebook Inc"
+subtitle = "Create a modern notebook to document or explain almost anything."
+shortSubtitle = "Create a modern notebook today."
+description = "Create a modern notebook to document or explain almost anything."
+url =  "https://spacebook.app"
+#------------------------------------------------#
+
+# Enter the URL to your github repository. If you
+# set enableGithubLink to true, it will enable an
+# "edit this page" link on the top of every page. 
+githubUrl = "https://github.com/broeker/spacebook-demo"
+githubBranch = "main"
+
+
+enableFaviconEmoji = false 
+faviconEmoji = "💥"
+
+#------------------------------------------------#
+# SITE FEATURES
+# Horizontal navigation utilized Alpine.js to 
+# build a responsive hierarical menu. 
+#------------------------------------------------#
+enableGithubLink = true 
+enableDarkmode = true 
+enableSearch = true
+enableEncryption = true 
+enableContact = true
+enableComments = true
+enableEditButton = true
+enableDatestamp = true
+enablePageNavigation = true
+
+searchPlaceholder = "Search "
+searchNoResultsMessage = "Sorry cadet, no results available!"
+
+#------------------------------------------------#
+# NAVIGATION STYLE (vertical or horizontal)
+# Horizontal navigation utilized Alpine.js to 
+# build a responsive hierarical menu. 
+#------------------------------------------------#
+
+navigationStyle = "horizontal"
+
+#------------------------------------------------#
+# FOOTER
+#------------------------------------------------#
+# footerText (appears at the center of your bottom footer)
+# To use raw HTML in your use a multiline tomls string, e.g.:
+# 
+# footerText = """
+# <div><strong>Acme Inc and the California Office of Design</strong></div>
+# <div>Where all the news is fit to print</div>
+# <ul>
+#    <li>Foo: 612-555-5555</li>
+#    <li>Address: Yorba, CA 55410-0000</li>
+#    <li>Website: <a href="http://spacebook.app" target="_blank">spacebook.app</li>
+#</ul>
+#------------------------------------------------##
+
+footerText = "Made with ❤ in Minneapolis"
+
+
+
+#------------------------------------------------#
+# CMS INTEGRATION (Netlify or Forestry)
+# Horizontal navigation utilized Alpine.js to 
+# build a responsive hierarical menu. 
+#------------------------------------------------#
+enableCMS = true
+#  enableCMS (show the CMS admin icon in footer)
+#------------------------------------------------

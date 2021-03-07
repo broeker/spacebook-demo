@@ -2,57 +2,46 @@
 layout: layouts/base.njk
 section: page
 ---
-
-{% if config.navigationStyle == "vertical" %}
-    {% if config.enableEditButton == true or config.enableDatestamp == true %}
-    <div class="absolute right-0 flex justify-end">
-        {% if config.enableDatestamp == true %}
-        <div class="inline-block w-auto text-xs text-gray-500 py-1 mr-3">Updated <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time></div>
-        {% endif %}
-        {% if config.enableEditButton == true %}
-        <div class="inline-block w-auto text-xs text-gray-500 hover:bg-gray-200 py-1 mr-3"><a  target="_blank" rel="noopener" rel="noreferrer" href="{{ config.githubUrl }}/edit/{{ config.githubBranch }}/{{ page.inputPath }}">Edit</a></div>
-        {% endif %}
-    </div>
+{% if config.enableEditButton == true or config.enableDatestamp == true %}
+<div id="dateline-vertical" class="hidden absolute right-0 flex justify-end">
+    {% if config.enableDatestamp == true %}
+    <div class="inline-block w-auto text-xs text-dateline dark:text-dateline-dark
+     py-1 mr-3">Updated <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time></div>
     {% endif %}
+    {% if config.enableEditButton == true %}
+    <div class="inline-block w-auto text-xs  py-1 mr-3"><a class="text-dateline dark:text-dateline-dark hover:text-dateline-hover dark:hover:text-dateline-dark-hover" target="_blank" rel="noopener" rel="noreferrer" href="{{ config.githubUrl }}/edit/{{ config.githubBranch }}/{{ page.inputPath }}">Edit</a></div>
+    {% endif %}
+</div>
 {% endif %}
- 
-    {# <div class="flex w-full justify-center"> #}
-        <div class="pt-8 flex-none w-auto prose sm:prose lg:prose-lg xl:prose-md flow-root">
-            <article>
-                <h1 class="dark:text-gray-500">{{ title }}x</h1>
-                {% if config.navigationStyle == "horizontal" %}
-                    {% if config.enableEditButton == true or config.enableDatestamp == true %}
-                        <div class="flex mt-4 justify-end mr-1">
-                        {% if config.enableDatestamp == true %}
-                            <div class="inline-block w-auto text-xs text-gray-500 pt-1 pb-1 pl-3 mr-2 rounded ">Updated <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time></div>
-                        {% endif %}
-                        {% if config.enableEditButton == true %}
-                            <div class="inline-block w-auto text-xs  text-gray-500 hover:bg-gray-200 pt-1 pr-4 pb-1 pl-3 rounded "><a class="text-gray-500 no-underline font-normal !important" target="_blank" href="{{ config.githubUrl }}/edit/{{ config.githubBranch }}/{{ page.inputPath }}">Edit</a></div>
-                        {% endif %}
-                        </div>
-                    {% endif %}
+
+<div class="pt-12 flex-none w-auto prose  md:prose-lg flow-root  focus:outline-none
+        focus:ring-header-border
+        focus:ring-2">
+    <article>
+        <h1>{{ title }}</h1>
+        {% if config.enableEditButton == true or config.enableDatestamp == true %}
+        <div id="dateline" class="hidden">
+            <div class="dateline flex mt-4 justify-end mr-1">
+                {% if config.enableDatestamp == true %}
+                    <div class="inline-block w-auto text-xs text-dateline dark:text-dateline-dark pt-1 pb-1 pl-3 mr-2 rounded ">Updated <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time></div>
                 {% endif %}
-                <div class="content self-center adjust dark:text-gray-400">
-                    {{ layoutContent | safe }}
-                    {% if (config.enableComments) and (comments !== 0) %}
-                        <!-- Paste your comment code here! -->
-                    {% endif %}
-                    
-                    {% if config.enablePageNavigation == true %}
-                     <ul class="footer-nav pt-4 mb-8  ml-0 pl-0 flex flex-wrap flex-row-reverse  justify-between mt-8 list-none">
-                     {%- set nextPage = collections.menuItems | getNextCollectionItem(page) %}
-                     {%- if nextPage %}<li class="ml-0 pl-0"><a class="font-semibold text-gray-500 hover:text-gray-900" href="{{ nextPage.url | url }}">{% if nextPage.data.eleventyNavigation.title %}{{  nextPage.data.eleventyNavigation.title }}{% else %}{{  nextPage.data.eleventyNavigation.key }}{% endif %}</a> <svg height="24" fill="none" viewBox="0 0 24 24" stroke="#6B7280" class="inline ml-1 flex-shrink-0"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></li>{% endif %}
-                     {%- set previousPage = collections.menuItems | getPreviousCollectionItem(page) %}
-                     {%- if previousPage %}<li class="ml-0 pl-0"><svg height="24" fill="none" viewBox="0 0 24 24" stroke="#6B7280" class="transform rotate-180 inline mr-1 flex-shrink-0">
-                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                     <a class="font-semibold text-gray-500 hover:text-gray-900" href="{{ previousPage.url | url }}">
-                    {% if previousPage.data.eleventyNavigation.title %}{{  previousPage.data.eleventyNavigation.title }}{% else %}{{  previousPage.data.eleventyNavigation.key }}{% endif %} </a> </li>{% endif %}
-                    </ul>
-                    {% endif %}
-                </div>
-                </article>
-           
-    </div>
-{# </div> #}
-   
+                {% if config.enableEditButton == true %}
+                    <div class="inline-block w-auto text-xs  pt-1 pr-4 pb-1 pl-3 rounded"><a class="text-dateline dark:text-dateline-dark hover:dark:text-dateline-hover dark:hover:text-dateline-dark-hover no-underline font-normal !important" target="_blank" href="{{ config.githubUrl }}/edit/{{ config.githubBranch }}/{{ page.inputPath }}">Edit</a></div>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="text-content-text dark:text-content-text-dark self-center adjust">
+            {{ layoutContent | safe }}
+            {% if (config.enableComments) and (comments !== 0) %}
+            <!-- Paste your comment code here! -->
+            {% endif %}
+                        
+            {% if config.enablePageNavigation == true %}
+              {% include "../components/page.nav.njk" %}
+            {% endif %}
+        </div>
+    </article>
+</div>
 

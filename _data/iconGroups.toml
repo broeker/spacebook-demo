@@ -1,0 +1,127 @@
+[[header]]
+name="Github"
+url="https://github.com"
+icon="githubIcon"
+
+[[header]]
+name="Darkmode"
+icon="darkmodeIcon"
+onclick="activateDarkMode()"
+[[header]]
+name="Encryption"
+onclick="logout()"
+icon="logoutIcon"
+
+[[footerLeft]]
+name="Contact"
+url="https://github.com"
+icon="contactIcon"
+
+[[footerLeft]]
+name="Twitter"
+url="https://twitter.url"
+icon="twitterIcon"
+
+[[footerRight]]
+name="CMS"
+url="https://github.com"
+icon="cmsIcon"
+
+[[footerRight]]
+name="Twitter"
+url="https://twitter.com"
+icon="twitterIcon"
+
+[[sidebar]]
+name="Airplane"
+url="https://linkedIn.com"
+label = "Follow me on Twitter"
+icon="twitterIcon"
+
+[[sidebar]]
+name="Github"
+url="https://github.com"
+icon="githubIcon"
+label = "View on Github"
+
+
+
+
+# [[footerRight]]
+# name="Question"
+# url="https://twitter.com"
+# icon="questionIcon"
+
+# [[footerRight]]
+# name="Flower"
+# url="https://twitter.com"
+# icon="flowerIcon"
+
+# [[footerRight]]
+# name="Bolt"
+# url="https://twitter.com"
+# icon="boltIcon"
+
+# [[footerRight]]
+# name="More"
+# url="https://twitter.com"
+# icon="moreIcon"
+
+# [[footerRight]]
+# name="Forward"
+# url="https://twitter.com"
+# icon="forwardIcon"
+
+# [[footerRight]]
+# name="Back"
+# url="https://twitter.com"
+# icon="backIcon"
+
+# [[footerLeft]]
+# name="LinkedIn"
+# url="https://linkedIn.com"
+# icon="linkedInIcon"
+
+# [[footerLeft]]
+# name="Website"
+# url="https://linkedIn.com"
+# icon="websiteIcon"
+
+# [[footerLeft]]
+# name="App"
+# url="https://linkedIn.com"
+# icon="appIcon"
+
+# [[footerLeft]]
+# name="Heart"
+# url="https://linkedIn.com"
+# icon="heartIcon"
+
+# [[footerLeft]]
+# name="Location"
+# url="https://linkedIn.com"
+# icon="locationIcon"
+
+# [[footerLeft]]
+# name="Rocket"
+# url="https://linkedIn.com"
+# icon="rocketIcon"
+
+# [[footerLeft]]
+# name="Planet"
+# url="https://linkedIn.com"
+# icon="planetIcon"
+
+# [[footerLeft]]
+# name="Audio"
+# url="https://linkedIn.com"
+# icon="audioIcon"
+
+# [[footerLeft]]
+# name="Info"
+# url="https://linkedIn.com"
+# icon="infoIcon"
+
+
+
+

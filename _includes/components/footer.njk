@@ -1,19 +1,16 @@
-<div class="z-50 mt-12 h-auto dark:bg-gray-900 text-gray-500 
-dark:text-gray-400 justify-center p-2 border-t border-gray-100 
-dark:border-gray-800">
+<div id="footer" class="mt-12 h-auto justify-center p-2 bg-footer dark:bg-footer-dark dark:footer-dark text-footer-text dark:text-footer-text-dark
+border-t border-footer-border dark:border-footer-border-dark">
   <div class="flex space-x-2">
     <div class="px-2 py-2 flex-none w-min h-min flex  justify-center">
        {% include "../templates/iconsFooterLeft.njk" %}
     </div>
-    <div class="footer prose prose-sm px-2 py-2 flex-grow w-full h-min flex justify-center">
+    <div class="prose prose-sm px-2 py-2 flex-grow w-full h-min flex justify-center">
       <div class="flex-none">
-      {{ config.footerText | safe }}
+     {{ config.footerText | safe }}
       </div>
     </div>
     <div class="px-2 py-2 flex-none flex-grow-0 w-min h-min flex justify-center">
        {% include "../templates/iconsFooterRight.njk" %}
     </div>
-
   </div>
-
 </div>

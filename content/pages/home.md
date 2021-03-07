@@ -18,7 +18,6 @@ Create your own spacebook exactly like this one and customize it to your needs. 
 Spacebooks are modern notebooks you can use to create documentation, sketch out new ideas, plan a new project, or whatever suits your fancy. 
 
 ---
-
 ## Quick launch 👩🏽‍🚀
 
 If you're the adventurous type, you can launch your own spacebook right now with the click of a button. You'll need an existing [Github account](https://github.com/), and a [Netlify account](https://www.netlify.com/) (which you can create during this process if you wish): 
@@ -31,7 +30,7 @@ If you click that button and follow the steps, the Netlify robots will copy the 
 
 --- 
 
-::: callout-blue
+::: callout
 **Did you know?** You can host your project anywhere, but we currently assume [Netlify](https://www.netlify.com/), and various features may be Netlify dependent (e.g. contact forms, Netlify Identity).  They provide a generous free tier, and are pioneers in a new breed of web hosting that makes it simple to push some files to a speedy, global CDN that will serve your files faster than you can blink.
 :::
 

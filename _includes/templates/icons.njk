@@ -1,0 +1,17 @@
+{% for item in iconGroups.header %}
+    {% if not ( 
+        (config.enableGithubLink == 0 and item.name == "Github") 
+        or 
+        (config.enableDarkmode == 0 and item.name == "Darkmode")
+        or
+        (config.enableEncryption == 0 and item.name == "Encryption")
+        ) %}
+        <a 
+        {% if item.onclick %} onclick="{{ item.onclick }}" {% endif %}
+        {% if item.url %} href="{{ item.url }}" target="_blank" {% endif %}
+        title="{{ item.name}}"  aria-label="link" rel="noopener noreferrer" 
+        >
+        {{ icons[item.icon] | safe }}
+        </a>
+    {% endif %}
+{% endfor %}

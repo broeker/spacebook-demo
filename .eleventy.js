@@ -5,14 +5,12 @@ const htmlmin = require("html-minifier");
 const svgContents = require("eleventy-plugin-svg-contents");
 const mdIterator = require('markdown-it-for-inline')
 const embedEverything = require("eleventy-plugin-embed-everything");
-const pluginTOC = require('eleventy-plugin-nesting-toc');
+//const pluginTOC = require('eleventy-plugin-nesting-toc');
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const Image = require("@11ty/eleventy-img");
 const toml = require("toml");
 
-module.exports = eleventyConfig => {
- 
-};
+
 module.exports = function(eleventyConfig) {
 
   // Toml support
@@ -29,7 +27,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLiquidShortcode("image", async function(src, alt, sizes = "100vw") {
     if(alt === undefined) {
       // You bet we throw an error on missing alt (alt="" works okay)
-      throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
+      throw new Error(`Missing \`alt\` on responsive image from: ${src}`);
     }
     src = './content/images/'+src
     let metadata = await Image(src, {
@@ -74,6 +72,15 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./node_modules/alpinejs/dist/alpine.js": "./js/alpine.js",
   });
+  // Alpine.js pass through
+  eleventyConfig.addPassthroughCopy({
+    "./nav.json": "./nav.json",
+  });
+  // Alpine.js pass through
+  eleventyConfig.addPassthroughCopy({
+    "./_data/config.toml": "./config.toml",
+  });
+
 
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);

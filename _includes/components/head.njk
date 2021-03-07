@@ -12,11 +12,19 @@
   {% endif %}
 
   {% set js %}
+    {% include "assets/js/navigation.js" %}
     {% include "assets/js/inline.js" %}
     {% include "assets/js/search.js" %}
   {% endset %}
   
   <script defer>{{ js | jsmin | safe }}</script>
+
+{% set css %}
+  {% include "assets/css/theme.css" %}
+{% endset %}
+<style>
+  {{ css | cssmin | safe }}
+</style>
 
  {% if config.enableCMS == 1 %}
   <link rel="dns-prefetch" href="https://identity.netlify.com">
@@ -27,7 +35,6 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js" defer></script>
   {% endif %}
 
-  {% if config.navigationStyle == 'horizontal' %}
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
-  {% endif %}
+
 </head>

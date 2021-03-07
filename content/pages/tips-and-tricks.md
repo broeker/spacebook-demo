@@ -6,7 +6,7 @@ comments: 0
 eleventyNavigation:
   key: Tips & Tricks
   title: Tips & Tricks
-  order: 20 
+  order: 120 
 ---
 
 The following sections outline some basic tips and tricks along with best practices for doing various things within your spacebook.

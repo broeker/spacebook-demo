@@ -1,27 +1,24 @@
-<div class="fixed bg-white w-full top-0 left-0 z-10 flex-none h-20"> 
-  <div class="flex 
-      items-center 
-      bg-white 
-      dark:bg-gray-900 
-      z-20 fixed top-0 left-0 right-0 
-      border-b border-gray-100 
-      px-0 py-3 
-      dark:bg-dark dark:border-gray-800">
+<div id="header" class="fixed w-full top-0 left-0 z-10 flex-none h-16 md:h-20
+  bg-header dark:bg-header-dark border-b border-header-border dark:border-header-border-dark"> 
+  
+  <div class="flex items-center z-20 fixed top-0 left-0 right-0 px-0 py-3">
     
     <a id="logo" href="/" class="flex-none ml-2">
       <img class="block md:hidden" src="/_includes/assets/images/logo.png" height="36" width="36" />
       <img class="hidden md:block" src="/_includes/assets/images/logo.png" height="50" width="50" />
-      {# {{ logo.svgLogo | safe }} #}
     </a>
 
     <div id="site" class="resize-none space-y-4 w-full ml-2">
-      <a class="no-underline resize-none text-gray-600 hover:text-gray-800 font-bold dark:text-gray-500 items-center" href="/">
+      <div class="text-header-text hover:text-header-text-hover dark:text-header-text-dark dark:hover:text-header-text-dark-hover">
+         <a class="no-underline resize-none font-bold" href="/">
         <span class="block md:hidden text-sm sm:text-xl md:text-xl resize-none">{{ config.shortName }}</span>
         <span class="hidden md:block text-sm sm:text-xl md:text-xl resize-none">{{ config.name }}</span>
-        {% if config.subtitle %}
-        <span class="block
-          text-gray-500 hover:text-gray-600 
-          dark:text-gray-600 
+        </a>
+      </div>
+       
+      {% if config.subtitle %}
+      <span class="text-subheader-text hover:text-subheader-text-hover
+          dark:text-subheader-text-dark dark:hover:text-subheader-text-dark-hover
           font-normal 
           text-xs 
           md:text-sm 
@@ -30,18 +27,14 @@
           w-full">
           <span class="hidden md:block">{{ config.subtitle }}</span>
           <span class="block md:hidden">{{ config.shortSubtitle }}</span>
-        </span>
-        {% endif %}
-      </a>
+      </span>
+      {% endif %}
     </div>
 
     <button id="hamburger" aria-label="Show navigation" onclick="showNavigation()" class="block md:hidden pr-2 resize-none">
     {{ icons.menuIcon | safe  }}
     </button>
 
-
-  
-      
     {% if config.enableSearch == 1 %}
     {% include "../templates/search.njk" %} 
     {% endif %}
@@ -51,14 +44,13 @@
     </div>
 
   </div>
+  
+{#  {% if config.navigationStyle == 'horizontal' %}#}
 
-    {# <div class="flex-none w-full bg-pink-100 mt-20 h-20">
-    Sup iconsxxx
-    </div> #}
-
-     {% if config.navigationStyle == 'horizontal' %}
-        {% include "../components/horizontal.nav.njk" %}
-     {% endif %} 
+  <div id="h-nav" class="">
+    {% include "../components/horizontal.nav.njk" %}
+  </div>
+{#  {% endif %} #}
 </div>
 
  

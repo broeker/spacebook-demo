@@ -3,27 +3,18 @@
   {% include "components/head.njk" %}
   <body>
     <div id="app" class="h-screen bg-white dark:bg-gray-900">
-      
-      {% include "../components/header.njk" %}
-     
-      {% if config.navigationStyle == "vertical" %}
-       {% include "../components/vertical.nav.njk" %}
-      {% endif %}
-
-      <main id="main">
-        {% if config.navigationStyle == 'horizontal' %}
-        <div class="dark:bg-gray-900 pt-36">
-        {% else %}
-        <div class="pl-72 md:pl-72 dark:bg-gray-900 pt-20">
-        {% endif %}     
-      
-          <div class="px-8 max-w-5xl mx-auto">
-           {{ layoutContent | safe }}
-          </div>
-        
-          {% include "components/footer.njk" %} 
-
+        {% include "../components/header.njk" %}
+        <div id="v-nav" class="hidden">
+            {% include "../components/vertical.nav.njk" %}
         </div>
-      </main>
+        <main id="content" class="bg-content dark:bg-content-dark">
+          <div id="content-main" class="mt-16">
+              <div class="px-16 py-4 max-w-5xl mx-auto  focus:outline-none focus:ring-header-border focus:ring-2">
+              {{ layoutContent | safe }}
+              </div>
+            {% include "components/footer.njk" %}
+          </div>
+        </main>
+    </div>
   </body>
 </html>

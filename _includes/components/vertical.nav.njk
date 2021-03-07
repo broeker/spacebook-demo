@@ -1,0 +1,35 @@
+
+<nav id="navigation"
+        class="h-full overflow-y-auto fixed hidden
+        bg-sidebar dark:bg-sidebar-dark
+        px-6 w-64 lg:w-72 md:mt-20 md:block  
+        top-0 
+        border-r 
+        border-b border-sidebar-border 
+        dark:border-sidebar-border-dark">
+
+        <div class="hidden md:block absolute left-2 mt-2">
+            <button onclick="toggleNavigation()">{{ icons.chevronBoxUpIcon | safe }}</button>
+        </div>
+
+        {# Mobile icons #}
+        <div class="border-b border-sidebar-border pb-2 md:hidden flex space-x-2 justify-end items-center max-h-16 pt-3 -mr-5 mb-4">
+           {% include "../templates/icons.njk" %}
+          <div class="pr-2 pl-1">
+            <a id="close" name="Close navigation" title="Close menu" onclick="closeNavigation()" class="md:hidden" aria-label="close">
+           {{ icons.closeIcon | safe }} 
+            </a>
+          </div>
+        </div>
+        {# End mobile icon #}
+
+        <div class="mt-12">
+            {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({anchorClass: "item",activeAnchorClass: "active",activeListItemClass: "active",activeKey: eleventyNavigation.key, listClass: "nav", listItemClass: "item"}) | safe }}
+        </div>
+
+        <hr class="mt-8 mb-8" />
+        
+        <div class="prose"> 
+        {% include "../templates/sidebarIcons.njk" %}
+        </div>
+      </nav>

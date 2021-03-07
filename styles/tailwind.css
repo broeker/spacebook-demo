@@ -2,172 +2,124 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* svg.github {
-  fill: #ff9900;
-} 
-
-svg.github:hover {
-  fill: #669900;
-} */
-
-
-.logo-block {
-  height: auto;
-  width: auto;
-  margin-left: 2em;
-  background-image: url("_includes/assets/images/logo.png");
-  background-size: contain;
-}
-
-.logo-block-sm {
-  height: 30px;
-  width: 30px;
-  margin-left: 2em;
-  background-image: url("_includes/assets/images/logo.png");
-  background-size: contain;
-}
-
-body.dark .logo-block {
-  background-image: url("_includes/assets/images/logo-dark.png");
-}
-
-body.dark .logo-block:hover {
-  background-image: url("_includes/assets/images/logo.png");
-}
-
 @layer base {
+
   /* Set up some default image behavior for nicer images */
   .prose img {
-    @apply w-auto  shadow-md border-2 border-transparent !important
+    @apply w-auto  shadow-md border-2 border-transparent !important;
   }
   .prose img:hover {
-    @apply border-2 border-gray-100
+    @apply border-2 border-gray-100;
   }
   /* Overrides for Tailwind Typography prose class */
-  .prose a {
-    @apply dark:text-gray-400
+  #content a {
+    @apply text-content-link hover:text-content-link-hover dark:text-content-link-dark dark:hover:text-content-link-dark-hover;
   }
-  .prose a:hover {
-    @apply dark:text-gray-500
+  .prose hr {
+    @apply border-content-hr dark:border-content-hr-dark !important;
   }
-  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 .prose hr, .prose strong {
-    @apply dark:text-gray-400
+  #navigation hr {
+    @apply border-sidebar-hr dark:border-sidebar-hr-dark !important;
   }
-  .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6,
+  .prose strong {
+    @apply text-content-text dark:text-content-text-dark;
+  }
+
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
     scroll-margin-top: 3.5em;
   }
+
   .prose .footer-nav a {
-    @apply no-underline !important
+    @apply no-underline !important;
   }
-  .prose ul.contains-task-list,
-  .prose ul.spacelog  {
+
+  .prose ul.contains-task-list {
     @apply list-none -ml-6 !important;
   }
-  .prose ul.contains-task-list .task-list-item,
-  .prose ul.spacelog {
-    ::before {
+
+  .prose ul.contains-task-list .task-list-item {
       @apply hidden !important;
-    }
   }
 
   /* Define blockquotes and some standard callout blocks */
-  blockquote {
-    @apply rounded-lg p-4 bg-gray-100 dark:bg-gray-500 border-gray-200 border-l-8 dark:border-gray-700;
+  #content .prose blockquote {
+    @apply rounded-lg p-4 bg-blockquote dark:bg-blockquote-dark
+      text-blockquote-text dark:text-blockquote-text-dark
+      border-blockquote-border dark:border-blockquote-border-dark border-l-8 dark:border-blockquote !important;
   }
-  .callout {
-    @apply px-8 py-4 mb-4 rounded-lg bg-yellow-50;
+  #content .prose blockquote a {
+    @apply text-blockquote-link dark:text-blockquote-link-dark
   }
-  .callout, .callout strong, .callout em {
-    @apply dark:bg-gray-400 dark:text-gray-900;
-  }
-  .callout-blue {
-    @apply px-8 py-4 mb-4 rounded-lg bg-blue-50;
-  }
-  .callout-blue, .callout-blue strong, .callout-blue em {
-    @apply dark:text-gray-200 dark:bg-blue-900;
-  }
-  .callout-pink {
-    @apply px-8 py-4 mb-4 rounded-lg bg-pink-50;
-  }
-  .callout-pink, .callout-pink strong, .callout-pink em {
-    @apply dark:text-gray-200 dark:bg-pink-900;
-  }
-  .callout-green {
-    @apply px-8 py-4 mb-4 rounded-lg bg-green-50;
-  }
-  .callout-green, .callout-green strong, .callout-green em {
-    @apply dark:text-gray-200 dark:bg-green-900;
-  }
-  .warning {
-    @apply px-8 py-4 mb-4 rounded-lg bg-red-800 text-gray-50;
-  }
-  .warning, .warning strong, .warning em {
-    @apply text-gray-50 dark:bg-red-900  dark:text-gray-200;
+  #content .prose blockquote a:hover {
+    @apply text-blockquote-link-hover dark:text-blockquote-link-dark-hover
   }
 
-  /* Overrides for nav/Table of Contents block */
+  .callout {
+    @apply px-8 py-4 mb-4 rounded-lg;
+  }
+
+  /* Overrides for vertical nav */
   nav ul {
-    @apply ml-0 text-gray-500;
-   }
+    @apply ml-0;
+  }
   nav ul ul {
-   @apply ml-6 text-gray-500;
+    @apply ml-6;
   }
   nav ul li a {
-    @apply mb-1 pt-2 pr-4 pb-1 pl-2 w-full block text-gray-500 dark:text-gray-500;
+    @apply mb-1 pt-2 pr-4 pb-1 pl-2 w-full block text-nav dark:text-nav-dark-hover;
   }
   nav ul li a:hover {
-    @apply text-gray-900 dark:text-gray-400;
+    @apply text-nav-hover dark:text-nav-hover;
   }
-
-  .search-results {
-    @apply z-50 p-4 border-l-8 border-t border-r border-b border-gray-300 mr-2 
-  }
-
   nav ul li a.active {
     @apply font-semibold;
   }
 
-  nav ul#search-results {
-    @apply -mt-1
+  /* Search */
+  .search-results {
+    @apply z-50 p-4 bg-sidebar dark:bg-sidebar-dark text-sidebar dark:text-sidebar-dark;
   }
-  /* nav.toc ol li {
-    @apply pt-2 !important
-  }
-  nav.toc ol li li {
-    @apply pt-2 ml-4
-  }
-  nav.toc ol li a {
-    @apply text-gray-500
-  }
-  nav.toc ol li a:hover {
-    @apply text-gray-900
-  } */
-  /* .prose .footer-nav a:hover {
-    @apply dark:text-gray-400 !important
-  } */
 
+  .search-results a {
+    @apply z-50 text-sidebar-link dark:text-sidebar-link-dark;
+  }
+
+  .search-results a:hover {
+    @apply z-50 text-sidebar-link-hover dark:text-sidebar-link-dark-hover;
+  }
+
+  ul.search-results {
+    @apply pb-4 text-sidebar dark:text-sidebar-dark;
+  }
+
+  ul.search-results li {
+    @apply p-3 border-b bg-header dark:bg-header-dark border-header-border dark:border-header-border-dark;
+  }
+
+  /* Utilities and misc */
+  .adjust p img,
+  .adjust img,
+  .adjust p iframe,
+  .adjust iframe,
+  .twitter-tweet {
+    @apply shadow-md ml-auto mr-auto  p-2 !important;
+  }
+  .adjust p img:hover,
+  .adjust img:hover {
+    @apply shadow-xl;
+  }
   .footer.prose-sm {
-    @apply leading-5
-  }
-
-/* Utilities and misc */
-  .adjust  p img, .adjust img, .adjust p iframe, .adjust iframe, .twitter-tweet {
-    @apply shadow-md ml-auto mr-auto  p-2 !important
-  }
-  .adjust  p img:hover, .adjust img:hover {
-    @apply shadow-xl  
-  }
-  .adjust img.button {
-    @apply w-auto  shadow-none !important
-  }
-  .text-align-center {
-    @apply flex justify-center; 
-  }
-  .icon-spacer {
-    width: "24px";
-  }
-  input {
-   @apply dark:text-gray-400
+    @apply leading-5;
   }
 }
