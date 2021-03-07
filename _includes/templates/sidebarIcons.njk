@@ -1,6 +1,6 @@
 {% for item in iconGroups.sidebar %}
         <div class="flex align-center items-center">
-        <a href="#" class="no-underline" target="_blank" rel="noopener noreferrer">
+        <a href="{{ item.url }}" title="{{ item.name }}" class="no-underline" target="_blank" rel="noopener noreferrer">
         {% if item.emoji %}
         {{ item.emoji }}
         {% else %}
