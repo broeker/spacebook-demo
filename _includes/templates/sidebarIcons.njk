@@ -1,6 +1,6 @@
 {% for item in iconGroups.sidebar %}
         <div class="flex align-center items-center">
-        <a href="#" class="no-underline" target="_blank">
+        <a href="#" class="no-underline" target="_blank" rel="noopener noreferrer">
         {% if item.emoji %}
         {{ item.emoji }}
         {% else %}
@@ -9,9 +9,9 @@
         </a>
         <span class="p-2">
         {% if item.internal %}
-        <a class="no-underline" href="{{ item.url }}">{{ item.label }}</a>
+        <a class="no-underline" href="{{ item.url }}" rel="noopener noreferrer">{{ item.label }}</a>
         {% else %}
-        <a class="no-underline" href="{{ item.url }}" target="_blank">{{ item.label }}</a>
+        <a class="no-underline" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.label }}</a>
         {% endif %}
         </span>
         </div>

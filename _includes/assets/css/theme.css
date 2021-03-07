@@ -25,12 +25,12 @@
     --blockquote-link-dark: #D1D5DB; /* gray-300 */
     --blockquote-link-dark-hover: #9CA3AF; /* gray-400 */
 
-    --callout:  #E5E7EB; /* gray-200 */
+    --callout:  #E5E7EB; /* gray-100 */
     --callout-text: #6B7280; /* gray-500 */
     --callout-dark: #E5E7EB; /* gray-200 */
     --callout-text-dark: #6B7280; /* gray-500 */
     --callout-text-hover: #9CA3AF; /* gray-400 */
-    --callout-link: red;
+    --callout-link: #1E40AF; /* blue-800 */
     --callout-link-hover: #1E40AF; /* blue-800 */
     --callout-link-dark: purple;
     --callout-link-dark-hover: blue;
