@@ -5,7 +5,7 @@ backend:
 # Uncomment below to enable drafts
 # publish_mode: editorial_workflow
 
-media_folder: "static/img" # Media files will be stored in the repo under images/uploads
+media_folder: "content/images" # Media files will be stored in the repo under images/uploads
 
 # # Cloudinary
 # media_library:
@@ -18,7 +18,7 @@ collections:
   # Our pages e.g. About
   - name: "pages"
     label: "Page"
-    folder: "pages"
+    folder: "content/pages"
     create: true # Change to true to allow editors to create new pages
     slug: "{{slug}}"
     fields:
