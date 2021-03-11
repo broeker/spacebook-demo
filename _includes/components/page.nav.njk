@@ -4,7 +4,7 @@
                 <li class="self-center ml-0 pl-0"> 
                 <a class="text-pagenav hover:text-pagenav-hover 
                     dark:text-pagenav-dark 
-                    dark:hover:text-pagenav-dark-hover  font-semibold" href="{{ nextPage.url | url }}">{% if nextPage.data.eleventyNavigation.title %}{{  nextPage.data.eleventyNavigation.title }}{% else %}{{  nextPage.data.eleventyNavigation.key }}{% endif %}
+                    dark:hover:text-pagenav-dark-hover" href="{{ nextPage.url | url }}">{% if nextPage.data.eleventyNavigation.title %}{{  nextPage.data.eleventyNavigation.title }}{% else %}{{  nextPage.data.eleventyNavigation.key }}{% endif %}
                 {{ icons.chevronRightIcon | safe }} </a></li> 
                 
                {% endif %}
@@ -14,7 +14,7 @@
 
                 <a class="text-pagenav hover:text-pagenav-hover 
                     dark:text-pagenav-dark-hover 
-                    dark:hover:text-pagenav-dark-hover font-semibold" 
+                    dark:hover:text-pagenav-dark-hover"
                     href="{{ previousPage.url | url }}">
                 
                   {{ icons.chevronLeftIcon | safe }} {% if previousPage.data.eleventyNavigation.title %}{{  previousPage.data.eleventyNavigation.title }}{% else %}{{  previousPage.data.eleventyNavigation.key }}{% endif %} </a> </li>{% endif %}

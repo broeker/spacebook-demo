@@ -4,13 +4,16 @@
   {% if entry.url == page.url or entry.title == eleventyNavigation.parent or entry.title == eleventyComputed.key%}
     {# Active links #}
     {% set highlight =
-      'text-sidebar-link-hover
+      'bg-nav-button dark:bg-nav-button-dark
+       text-sidebar-link-hover dark:text-sidebar-link-dark-hover' %}
+    {% set buttonHighlight =
+      'bg-nav-button dark:nav-button-dark
        dark:text-sidebar-link-dark-hover' %}
     {% set current = 'aria-current="page"' %}
   {% else %}
     {# Normal links #}
     {% set highlight =
-      'text-sidebar-link hover:text-sidebar-link-hover
+      'hover:bg-nav-button dark:hover:bg-nav-button-dark text-sidebar-link hover:text-sidebar-link-hover
        dark:text-sidebar-link-dark dark:hover:text-sidebar-link-dark-hover' %}
     {% set current = '' %}
   {% endif %}
@@ -19,19 +22,22 @@
     {% if rel == "child" %}
       {# Top-level links (with no children) #}
       <a class="
-        px-4  py-2
+        px-4  py-2 mr-1.5
         block
+        rounded
         text-sm
         focus:outline-none
         focus:ring-header-border
         dark:focus:ring-header-border-dark
         focus:ring-2
+        hover:bg-nav-button
+        dark:hover:bg-nav-button-dark
         {{ highlight }}"
          href="{{ entry.url | url }}">{{ entry.title }}</a>
     {% else %}
       {# Child links #}
       <a class="
-        px-4 py-2
+        px-4 py-2 mr-1.5
         rounded
         block
         text-sm
@@ -50,7 +56,7 @@
         <button onclick="showMenu({{ entry.url | url }})" @click="open = !open"
                 x-ref="submenu"
                 class="whitespace-nowrap flex flex-row items-center
-            w-full px-4 py-2 text-sm text-left
+            mr-1.5 w-full px-4 py-2 text-sm text-left
             md:w-auto md:inline
             mt-0
             hover:font-semibold
@@ -59,6 +65,9 @@
             focus:ring-header-border
             dark:focus:ring-header-border-dark
             rounded
+            hover:bg-nav-button
+            dark:hover:bg-nav-button-dark
+            {{ buttonHighlight }}
             {{ highlight }}">
           <span>{{ entry.title }}</span>
           <svg fill="currentColor" height="24" width="24" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="space-x-4 inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -79,7 +88,7 @@
     {%- endif -%}
   {%- endif -%}
 {%- endmacro %}
-<div class="hidden py-1.5 flex justify-between content-center items-center bg-content dark:bg-content-dark mt-20">
+<div class="py-1.5 flex justify-between content-center items-center bg-content dark:bg-content-dark mt-20">
   <div class="flex-none content-center ml-2"><button onclick="toggleNavigation()">{{ icons.chevronBoxLeftIcon | safe }}</button></div>
     <div  x-data="{ open: false }">
       <nav x-ref="dropdown" class="hidden w-full md:block">

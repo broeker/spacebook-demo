@@ -49,7 +49,7 @@ faviconEmoji = "💥"
 enableGithubLink = true 
 enableDarkmode = true 
 enableSearch = true
-enableEncryption = true 
+enableEncryption = false
 enableContact = true
 enableComments = true
 enableEditButton = true
@@ -81,17 +81,14 @@ navigationStyle = "horizontal"
 #    <li>Address: Yorba, CA 55410-0000</li>
 #    <li>Website: <a href="http://spacebook.app" target="_blank">spacebook.app</li>
 #</ul>
-#------------------------------------------------##
+#------------------------------------------------#
 
 footerText = "Made with ❤ in Minneapolis"
 
-
-
 #------------------------------------------------#
 # CMS INTEGRATION (Netlify or Forestry)
-# Horizontal navigation utilized Alpine.js to 
-# build a responsive hierarical menu. 
+#------------------------------------------------#
+#  enableCMS (show the CMS admin icon in footer)
 #------------------------------------------------#
 enableCMS = true
-#  enableCMS (show the CMS admin icon in footer)
-#------------------------------------------------
+#------------------------------------------------#

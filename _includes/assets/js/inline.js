@@ -7,7 +7,7 @@ if (window.netlifyIdentity) {
     }
   });
 }
-
+//localStorage.clear()
 document.addEventListener("DOMContentLoaded", function() {
   const el = document.getElementById("content");
   el.addEventListener("click", closeSearch, false)
@@ -91,7 +91,7 @@ function closeNavigation() {
   navigation.classList.add("hidden");
   verticalNavigation.classList.add("hidden");
   document.body.classList.remove("overflow-hidden","foo")
-  navigation.classList.remove("overflow-y-scroll","w-full", "right-0", "z-50", "pt-0", "bg-white","border-l", "border-gray-200");
+  navigation.classList.remove("overflow-y-scroll","w-full", "right-0", "z-50", "pt-0", "bg-white","border-l", "border-gray-200", "md:absolute", "md:left-0");
 }
 
 

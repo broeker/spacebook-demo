@@ -125,6 +125,8 @@ module.exports = {
           'dark': 'var(--nav-dark)',
           'hover': 'var(--nav-hover)',
           'dark-hover': 'var(--nav-dark-hover)',
+          'button': 'var(--nav-button)',
+          'button-dark': 'var(--nav-button-dark)',
         },
         'icon': {
           DEFAULT: 'var(--icon)',

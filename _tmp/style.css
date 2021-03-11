@@ -833,14 +833,18 @@ nav ul ul {
 nav ul li a {
   display: block;
   margin-bottom: 0.25rem;
-  padding-bottom: 0.25rem;
   padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 1rem;
   color: var(--nav);
 }
 
 .dark nav ul li a {
+  color: var(--nav-dark);
+}
+
+.dark nav ul li a:hover {
   color: var(--nav-dark-hover);
 }
 
@@ -849,6 +853,15 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+  background-color: var(--nav-button);
+}
+
+.dark nav ul li a:hover {
+  background-color: var(--nav-button-dark);
+}
+
+nav ul li a:hover {
+  border-radius: 0.25rem;
   color: var(--nav-hover);
 }
 
@@ -857,6 +870,15 @@ nav ul li a:hover {
 }
 
 nav ul li a.active {
+  background-color: var(--nav-button);
+}
+
+.dark nav ul li a.active {
+  background-color: var(--nav-button-dark);
+}
+
+nav ul li a.active {
+  border-radius: 0.25rem;
   font-weight: 600;
 }
 
@@ -1626,6 +1648,10 @@ ul.search-results li {
   background-color: var(--sidebar) !important;
 }
 
+.bg-nav-button {
+  background-color: var(--nav-button) !important;
+}
+
 .bg-search {
   background-color: var(--search) !important;
 }
@@ -1633,6 +1659,10 @@ ul.search-results li {
 .hover\:bg-blue-600:hover {
   --tw-bg-opacity: 1 !important;
   background-color: rgba(37, 99, 235, var(--tw-bg-opacity)) !important;
+}
+
+.hover\:bg-nav-button:hover {
+  background-color: var(--nav-button) !important;
 }
 
 .dark .dark\:bg-gray-700 {
@@ -1661,8 +1691,16 @@ ul.search-results li {
   background-color: var(--sidebar-dark) !important;
 }
 
+.dark .dark\:bg-nav-button-dark {
+  background-color: var(--nav-button-dark) !important;
+}
+
 .dark .dark\:bg-search-dark {
   background-color: var(--search-dark) !important;
+}
+
+.dark .dark\:hover\:bg-nav-button-dark:hover {
+  background-color: var(--nav-button-dark) !important;
 }
 
 .border-gray-200 {
@@ -1818,10 +1856,6 @@ ul.search-results li {
   font-weight: 400 !important;
 }
 
-.font-semibold {
-  font-weight: 600 !important;
-}
-
 .font-bold {
   font-weight: 700 !important;
 }
@@ -1952,6 +1986,10 @@ ul.search-results li {
 
 .mt-20 {
   margin-top: 5rem !important;
+}
+
+.mr-1\.5 {
+  margin-right: 0.375rem !important;
 }
 
 .-mr-2 {
@@ -3248,6 +3286,14 @@ ul.search-results li {
 
   .md\:max-w-lg {
     max-width: 32rem !important;
+  }
+
+  .md\:absolute {
+    position: absolute !important;
+  }
+
+  .md\:left-0 {
+    left: 0px !important;
   }
 
   .md\:w-auto {

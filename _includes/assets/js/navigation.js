@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const navigationStyleDefault = "vertical"
+  const navigationStyleDefault = "horizontal"
   const horizontalNav = document.getElementById("h-nav");
   const verticalNav = document.getElementById("v-nav");
   const content = document.getElementById("content-main");

@@ -74,8 +74,10 @@
     /* NAVIGATION */
     --nav:  #6B7280; /* gray-500 */
     --nav-hover:  #4B5563; /* gray-600 */;
-    --nav-dark: white;
-    --nav-dark-hover: green;
+    --nav-dark: #9CA3AF; /* gray-400 */
+    --nav-dark-hover: #6B7280; /* gray-500 */
+    /*--nav-button: #F9FAFB; !* gray-50 *!*/
+    /*--nav-button-dark:  #1F2937; !* gray-700 *!*/
 
     /* BORDERS */
     --header-border: #E5E7EB; /* gray-200 */

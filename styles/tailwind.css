@@ -77,13 +77,13 @@
     @apply ml-6;
   }
   nav ul li a {
-    @apply mb-1 pt-2 pr-4 pb-1 pl-2 w-full block text-nav dark:text-nav-dark-hover;
+    @apply mb-1 py-2 pr-4  pl-2 w-full block text-nav dark:text-nav-dark dark:hover:text-nav-dark-hover;
   }
   nav ul li a:hover {
-    @apply text-nav-hover dark:text-nav-hover;
+    @apply text-nav-hover dark:text-nav-hover bg-nav-button dark:bg-nav-button-dark rounded;
   }
   nav ul li a.active {
-    @apply font-semibold;
+    @apply font-semibold  bg-nav-button dark:bg-nav-button-dark rounded;
   }
 
   /* Search */
