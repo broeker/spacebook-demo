@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to main)
+  branch: test # Branch to update (optional; defaults to main)
 
 # Uncomment below to enable drafts
 # publish_mode: editorial_workflow
