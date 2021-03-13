@@ -1,4 +1,4 @@
 const navigation = {
-  style: 'horizontal',
+  style: 'toggle',
   default: 'horizontal'
 }
