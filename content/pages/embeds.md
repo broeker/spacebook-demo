@@ -1,7 +1,7 @@
 ---
 title: Working with embeds 
-date: 2020-11-20
-permalink: /tips-and-tricks/embeds/index.html
+date: Last Modified
+permalink: /tips-and-tricks/embeds/
 toc: true
 eleventyNavigation:
   key: Working with embeds

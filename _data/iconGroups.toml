@@ -1,7 +1,7 @@
 [[header]]
 name="Github"
 url="https://github.com"
-icon="githubIcon"
+icon="gitIcon"
 
 [[header]]
 name="Darkmode"
@@ -41,7 +41,7 @@ icon="twitterIcon"
 [[sidebar]]
 name="Github"
 url="https://github.com"
-icon="githubIcon"
+icon="gitIcon"
 label = "View on Github"
 
 

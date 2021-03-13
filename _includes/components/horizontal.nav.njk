@@ -38,6 +38,7 @@
       {# Child links #}
       <a class="
         px-4 py-2 mr-1.5
+        ml-1
         rounded
         block
         text-sm
@@ -53,7 +54,7 @@
 
     {%- if entry.children.length -%}
       <div @click.away="open = false" class="relative" x-data="{ open: false }">
-        <button onclick="showMenu({{ entry.url | url }})" @click="open = !open"
+        <button onclick="showSubMenu({{ entry.url | url }})" @click="open = !open"
                 x-ref="submenu"
                 class="whitespace-nowrap flex flex-row items-center
             mr-1.5 w-full px-4 py-2 text-sm text-left
@@ -67,8 +68,7 @@
             rounded
             hover:bg-nav-button
             dark:hover:bg-nav-button-dark
-            {{ buttonHighlight }}
-            {{ highlight }}">
+            {{ buttonHighlight }} {{ highlight }}">
           <span>{{ entry.title }}</span>
           <svg fill="currentColor" height="24" width="24" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="space-x-4 inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </button>
@@ -89,7 +89,13 @@
   {%- endif -%}
 {%- endmacro %}
 <div class="py-1.5 flex justify-between content-center items-center bg-content dark:bg-content-dark mt-20">
-  <div class="flex-none content-center ml-2"><button onclick="toggleNavigation()">{{ icons.chevronBoxLeftIcon | safe }}</button></div>
+
+  <div class="flex-none content-center ml-2">
+  {%  if config.navigationStyle === "toggle" %}
+  <button onclick="toggleNavigation()">{{ icons.chevronBoxLeftIcon | safe }}</button>
+  {% endif %}
+  </div>
+
     <div  x-data="{ open: false }">
       <nav x-ref="dropdown" class="hidden w-full md:block">
         <div class="flex items-center">

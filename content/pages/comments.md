@@ -1,7 +1,7 @@
 ---
 title: Adding comments
-date: 2020-11-20
-permalink: /advanced/comments/index.html
+date: Last Modified
+permalink: /advanced/comments/
 toc: true
 eleventyNavigation:
   key: Enabling comments 

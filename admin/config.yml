@@ -49,8 +49,8 @@ collections:
 #          - {label: "Meta description", name: "description", widget: "string"}
 #          - {label: "Site footer", name: "footer", widget: "string", required: false}
 #          - {label: "Site Url", name: "url", widget: "string"}
-#          - {label: "Github Url", name: "githubUrl", widget: "string"}
-#          - {label: "Github branch", name: "githubBranch", widget: "string"}
+#          - {label: "Github Url", name: "gitUrl", widget: "string"}
+#          - {label: "Github branch", name: "gitBranch", widget: "string"}
 #          - {label: "Navigation style", name: "navigationStyle", widget: "string"}
 #          - {label: "Site emoji", name: "emoji", widget: "string", required: false}
 #          - {label: "Enable search", name: "enableSearch", widget: "boolean"}

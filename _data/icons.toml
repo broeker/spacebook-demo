@@ -1,7 +1,7 @@
 # ICON CONFIGURATION
 # https://iconify.design/icon-sets/ion/
 
-githubIcon = """
+gitIcon = """
 <svg aria-hidden="true" focusable="false" width="24" height="24" 
 class="inline fill-current text-icon hover:text-icon-hover dark:text-icon-dark dark:hover:text-icon-dark-hover" 
 style="-ms-transform: rotate(360deg); 

@@ -1,7 +1,7 @@
 ---
 title: Working with links
-date: 2020-11-20
-permalink: /tips-and-tricks/links/index.html
+date: Last Modified
+permalink: /tips-and-tricks/links/
 toc: true
 comments: 0
 eleventyNavigation:

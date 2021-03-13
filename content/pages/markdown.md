@@ -1,7 +1,7 @@
 ---
 title: Learning markdown️
-date: 2020-11-20
-permalink: /tips-and-tricks/markdown/index.html
+date: Last Modified
+permalink: /tips-and-tricks/markdown/
 toc: true
 eleventyNavigation:
   key: Learning markdown 

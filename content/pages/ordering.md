@@ -1,7 +1,7 @@
 ---
 title: Understanding ordering
-date: 2020-11-20
-permalink: /tips-and-tricks/ordering/index.html
+date: Last Modified
+permalink: /tips-and-tricks/ordering/
 toc: true
 eleventyNavigation:
   key: Understanding ordering

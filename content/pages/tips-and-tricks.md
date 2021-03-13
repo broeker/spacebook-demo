@@ -1,11 +1,10 @@
 ---
 title: Tips and tricks
 date: Last Modified
-permalink: /tips-and-tricks/index.html
+permalink: /tips-and-tricks/
 comments: 0
 eleventyNavigation:
   key: Tips & Tricks
-  title: Tips & Tricks
   order: 120 
 ---
 

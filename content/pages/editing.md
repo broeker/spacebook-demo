@@ -1,7 +1,7 @@
 ---
 title: Editing content
-date: 2020-11-20
-permalink: /tips-and-tricks/editing/index.html
+date: Last Modified
+permalink: /tips-and-tricks/editing/
 toc: true
 eleventyNavigation:
   key: Editing content

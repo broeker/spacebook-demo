@@ -1,7 +1,7 @@
 ---
 title: Adding analytics 
-date: 2020-11-20
-permalink: /advanced/analytics/index.html
+date: Last Modified
+permalink: /advanced/analytics/
 eleventyNavigation:
   key: Enabling analtyics 
   order: 73 

@@ -1,7 +1,7 @@
 ---
 title: 'Configure your site' 
 date: Last Modified 
-permalink: /getting-started/configure/index.html
+permalink: /getting-started/configure/
 toc: true
 eleventyNavigation:
   order: 5 

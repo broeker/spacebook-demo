@@ -1,7 +1,7 @@
 ---
 title: Password protect your spacebook 
-date: 2020-11-20
-permalink: /advanced/encryption/index.html
+date: Last Modified
+permalink: /advanced/encryption/
 toc: true
 eleventyNavigation:
   key: Password protection

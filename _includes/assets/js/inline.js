@@ -1,3 +1,4 @@
+// Boilerplate for Netlify Identity
 if (window.netlifyIdentity) {
   window.netlifyIdentity.on("init", user => {
     if (!user) {
@@ -7,8 +8,9 @@ if (window.netlifyIdentity) {
     }
   });
 }
-//localStorage.clear()
+// Event listener for darkmode, close search on body click
 document.addEventListener("DOMContentLoaded", function() {
+
   const el = document.getElementById("content");
   el.addEventListener("click", closeSearch, false)
 
@@ -20,20 +22,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+// Logout and remove passphrase from local storage
 function logout() {
   localStorage.removeItem("passphrase")
   window.location.href = "/";
 }
 
-function minimizeNav() {
-  const content = document.getElementById("content");
-  const nav = document.getElementById("navigation");
-  nav.classList.add("w-4");
-  nav.classList.remove("w-64", "lg:w-72", "mt-20")
-  content.classList.remove("md:ml-64", "lg:ml-72")
-  content.classList.add("ml-0")
-}
-
+// Show search
 function showSearch() {
   const logo = document.getElementById("logo");
   const site = document.getElementById("site");
@@ -49,6 +44,7 @@ function showSearch() {
   document.getElementById("searchField").focus();
 }
 
+// Close search
 function closeSearch() {
   const logo = document.getElementById('logo')
   const site = document.getElementById("site");
@@ -62,20 +58,7 @@ function closeSearch() {
   searchbox.classList.add("hidden")
 }
 
-// Submenu logic for horizontal nav
-function showMenu(id) {
-  var elem = document.getElementById(id);
-  elem.classList.add("block")
-  elem.classList.remove("hidden")
-  var isOut = isOutOfViewport(elem )
-
-  if (isOut.any) {
-    elem.classList.add("right-0")
-    elem.classList.remove("mr-8")
-    elem.classList.add("-mr-2")
-  }
-}
-
+// Show/hide responsive navigation
 function showNavigation() {
   const navigation = document.getElementById("navigation");
   const verticalNavigation = document.getElementById("v-nav");
@@ -94,9 +77,20 @@ function closeNavigation() {
   navigation.classList.remove("overflow-y-scroll","w-full", "right-0", "z-50", "pt-0", "bg-white","border-l", "border-gray-200", "md:absolute", "md:left-0");
 }
 
+// Submenu logic for horizontal drop down nav
+function showSubMenu(id) {
+  var elem = document.getElementById(id);
+  elem.classList.add("block")
+  elem.classList.remove("hidden")
+  var isOut = isOutOfViewport(elem )
+  if (isOut.any) {
+    elem.classList.add("right-0")
+    elem.classList.remove("mr-8")
+    elem.classList.add("-mr-2")
+  }
+}
 
-
-
+// Toggle dark mode
 function activateDarkMode() {
   if (localStorage.getItem('darkmode') === 'true') {
     localStorage.setItem('darkmode', 'false')
@@ -112,13 +106,13 @@ function activateDarkMode() {
  * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {Node}  elem The element to check
  * @return {Object}     A set of booleans for each side of the element
- */
+ * Used for horizontal nav drop downs
+ * */
 var isOutOfViewport = function (elem) {
 
   // Get element's bounding
   var bounding = elem.getBoundingClientRect();
 
-  console.log(bounding.right)
   // Check if it's out of the viewport on each side
   var out = {};
   out.top = bounding.top < 0;
@@ -129,5 +123,14 @@ var isOutOfViewport = function (elem) {
   out.all = out.top && out.left && out.bottom && out.right;
 
   return out;
-
 };
+
+// Hide responsive navigation
+// function minimizeNav() {
+//   const content = document.getElementById("content");
+//   const nav = document.getElementById("navigation");
+//   nav.classList.add("w-4");
+//   nav.classList.remove("w-64", "lg:w-72", "mt-20")
+//   content.classList.remove("md:ml-64", "lg:ml-72")
+//   content.classList.add("ml-0")
+// }

@@ -1,71 +1,100 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const navigationStyleDefault = "horizontal"
-  const horizontalNav = document.getElementById("h-nav");
-  const verticalNav = document.getElementById("v-nav");
-  const content = document.getElementById("content-main");
-  const dateline = document.getElementById("dateline");
-  const datelineVertical = document.getElementById("dateline-vertical");
 
+  const navigationStyle = navigation.style
+  const navigationStyleDefault = navigation.default
 
-  if (!localStorage.getItem('nav')) {
-    if (navigationStyleDefault === 'vertical') {
-      localStorage.setItem('nav', navigationStyleDefault)
-      horizontalNav.classList.add('hidden')
-      verticalNav.classList.remove('hidden')
-      content.classList.add('mt-16', 'md:mt-20','md:ml-64', 'lg:ml-72')
-      content.classList.remove('mt-12', 'md:mt-28')
-      dateline.classList.add('hidden')
-      datelineVertical.classList.remove('hidden')
-    } else {
-      localStorage.setItem('nav', navigationStyleDefault)
-      horizontalNav.classList.remove('hidden')
-      verticalNav.classList.add('hidden')
-      content.classList.remove('mt-0','mt-16', 'md:mt-20','md:ml-64', 'lg:ml-72')
-      content.classList.add('mt-12', 'md:mt-28')
-      dateline.classList.remove('hidden')
-      datelineVertical.classList.add('hidden')
+  // If style does not equal toggle, remove any previously
+  // set localStorage
+  if (navigationStyle !== 'toggle') {
+    localStorage.removeItem('nav')
+    localStorage.setItem('nav', navigationStyle )
+  }
+
+  console.log(navigationStyle)
+  console.log(navigationStyleDefault)
+  console.log(localStorage.getItem('nav'))
+
+  // If localstorage has not been set, set up the
+  // navigation style using the default style set
+  // in _data/assets/navigation.js
+  if (localStorage.getItem('nav')) {
+
+    switch (localStorage.getItem('nav')) {
+      case "horizontal":
+        horizontalSetup()
+        break
+      case "vertical":
+        verticalSetup()
+        break
     }
   } else {
-    if (localStorage.getItem('nav') === 'vertical') {
-      horizontalNav.classList.add('hidden')
-      verticalNav.classList.remove('hidden')
-      content.classList.add('mt-16', 'md:mt-20','md:ml-64', 'lg:ml-72')
-      content.classList.remove('mt-12', 'md:mt-28')
-      dateline.classList.add('hidden')
-      datelineVertical.classList.remove('hidden')
-    } else {
-      horizontalNav.classList.remove('hidden')
-      verticalNav.classList.add('hidden')
-      content.classList.remove('mt-0','mt-16', 'md:mt-20','md:ml-64', 'lg:ml-72')
-      content.classList.add('mt-12', 'md:mt-28')
-      dateline.classList.remove('hidden')
-      datelineVertical.classList.add('hidden')
+
+    switch (navigationStyle) {
+      case "horizontal":
+        verticalSetup()
+        break
+      case "vertical":
+        horizontalSetup()
+        break
+      case "toggle":
+        if (!localStorage.getItem('nav')) {
+          if (navigationStyleDefault === 'vertical') {
+            localStorage.setItem('nav', navigationStyleDefault)
+            verticalSetup()
+          } else {
+            localStorage.setItem('nav', navigationStyleDefault)
+            horizontalSetup()
+          }
+        } else {
+          if (localStorage.getItem('nav') === 'vertical') {
+            verticalSetup()
+          } else {
+            horizontalSetup()
+          }
+        }
+        ;
+        break
+      default:
+        horizontalSetup()
     }
-  };
+  }
 });
 
 function toggleNavigation() {
+  console.log(localStorage.getItem('nav'))
+  if (localStorage.getItem('nav') === 'vertical') {
+    localStorage.setItem('nav', 'horizontal')
+    horizontalSetup()
+  } else {
+    localStorage.setItem('nav', 'vertical')
+    verticalSetup()
+  }
+}
+
+function verticalSetup() {
   const horizontalNav = document.getElementById("h-nav");
   const verticalNav = document.getElementById("v-nav");
   const content = document.getElementById("content-main");
   const dateline = document.getElementById("dateline");
   const datelineVertical = document.getElementById("dateline-vertical");
-  if (localStorage.getItem('nav') === 'vertical') {
-    localStorage.setItem('nav', 'horizontal')
-    horizontalNav.classList.remove('hidden')
-    verticalNav.classList.add('hidden')
-    content.classList.remove('mt-16', 'md:mt-20','md:ml-64', 'lg:ml-72')
-    content.classList.add('mt-12', 'md:mt-28')
-    dateline.classList.remove('hidden')
-    datelineVertical.classList.add('hidden')
-  } else {
-    console.log('i am now vertical')
-    localStorage.setItem('nav', 'vertical')
-    horizontalNav.classList.add('hidden')
-    verticalNav.classList.remove('hidden')
-    content.classList.add('mt-16', 'md:mt-20','md:ml-64', 'lg:ml-72')
-    content.classList.remove('mt-12', 'md:mt-28')
-    dateline.classList.add('hidden')
-    datelineVertical.classList.remove('hidden')
-  }
+  horizontalNav.classList.add('hidden')
+  verticalNav.classList.remove('hidden')
+  content.classList.add('mt-16', 'md:mt-20', 'md:ml-64', 'lg:ml-72')
+  content.classList.remove('mt-12', 'md:mt-28')
+  dateline.classList.add('hidden')
+  datelineVertical.classList.remove('hidden')
+}
+
+function horizontalSetup() {
+  const horizontalNav = document.getElementById("h-nav");
+  const verticalNav = document.getElementById("v-nav");
+  const content = document.getElementById("content-main");
+  const dateline = document.getElementById("dateline");
+  const datelineVertical = document.getElementById("dateline-vertical");
+  horizontalNav.classList.remove('hidden')
+  verticalNav.classList.add('hidden')
+  content.classList.remove('mt-0','mt-16', 'md:mt-20','md:ml-64', 'lg:ml-72')
+  content.classList.add('mt-12', 'md:mt-28')
+  dateline.classList.remove('hidden')
+  datelineVertical.classList.add('hidden')
 }

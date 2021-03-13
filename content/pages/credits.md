@@ -1,7 +1,7 @@
 ---
 title: Credits 🙌 
-date: 2020-12-27
-permalink: /credits/index.html
+date: Last Modified
+permalink: /credits/
 eleventyNavigation:
   order: 95 
   key: Credits

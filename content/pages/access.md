@@ -1,7 +1,7 @@
 ---
 title: 'Review your privacy settings' 
 date: Last Modified 
-permalink: /getting-started/step-four/index.html
+permalink: /getting-started/step-four/
 toc: true
 eleventyNavigation:
   order: 18  

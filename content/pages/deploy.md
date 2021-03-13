@@ -1,7 +1,7 @@
 ---
 title: 'Deploy your changes' 
-date: 2020-11-20
-permalink: /getting-started/deploy/index.html
+date: Last Modified
+permalink: /getting-started/deploy/
 eleventyNavigation:
   order: 20 
   parent: Getting started 

@@ -1,7 +1,7 @@
 ---
 title: Navigation layout 
 date: Last Modified
-permalink: /advanced/navigation/index.html
+permalink: /advanced/navigation/
 eleventyNavigation:
   key: Navigation layout 
   order: 58

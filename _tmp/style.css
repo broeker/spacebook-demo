@@ -1632,6 +1632,11 @@ ul.search-results li {
   background-color: rgba(191, 219, 254, var(--tw-bg-opacity)) !important;
 }
 
+.bg-pink-100 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(252, 231, 243, var(--tw-bg-opacity)) !important;
+}
+
 .bg-header {
   background-color: var(--header) !important;
 }

@@ -1,7 +1,7 @@
 ---
 title: Working with images and all the great creatures large and small
-date: 2020-11-20
-permalink: /tips-and-tricks/images/index.html
+date: Last Modified
+permalink: /tips-and-tricks/images/
 eleventyNavigation:
   key: Working with images and all the great creatures large and small and things between
   order: 30 

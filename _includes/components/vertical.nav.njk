@@ -1,16 +1,17 @@
 
 <nav id="navigation"
-        class="h-full overflow-y-auto fixed hidden
-        bg-sidebar dark:bg-sidebar-dark
+        class="h-full overflow-y-auto
+        bg-pink-100 dark:bg-sidebar-dark
         px-6 w-64 lg:w-72 md:mt-20 md:block md:absolute md:left-0
-        top-0 
-        border-r 
+        border-r
         border-b border-sidebar-border 
         dark:border-sidebar-border-dark">
 
+        {%  if config.navigationStyle === "toggle" %}
         <div class="hidden md:block absolute left-2 mt-2">
             <button onclick="toggleNavigation()" name="navigation">{{ icons.chevronBoxUpIcon | safe }}</button>
         </div>
+        {% endif %}
 
         {# Mobile icons #}
         <div class="border-b border-sidebar-border pb-2 md:hidden flex space-x-2 justify-end items-center max-h-16 pt-3 -mr-5 mb-4">

@@ -1,8 +1,7 @@
 ---
 title: 'Set up your content' 
 date: Last Modified
-permalink: /getting-started/content/index.htm
-toc: true
+permalink: /getting-started/content/
 eleventyNavigation:
   order: 10
   parent: Getting started 
