@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const navigationStyle = navigation.style
   const navigationStyleDefault = navigation.default
 
-  // If style does not equal toggle, remove any previously
-  // set localStorage
+  // If style does not equal toggle, remove any previously set localStorage
   if (navigationStyle !== 'toggle') {
     localStorage.removeItem('nav')
     localStorage.setItem('nav', navigationStyle )
@@ -14,9 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
   console.log(navigationStyleDefault)
   console.log(localStorage.getItem('nav'))
 
-  // If localstorage has not been set, set up the
-  // navigation style using the default style set
-  // in _data/assets/navigation.js
+  // If localstorage exists, set up the
+  // navigation style using the existing key
+  // If no localStorage, set default style using
+  // key from _data/assets/navigation.js
   if (localStorage.getItem('nav')) {
 
     switch (localStorage.getItem('nav')) {
@@ -78,8 +78,8 @@ function verticalSetup() {
   const dateline = document.getElementById("dateline");
   const datelineVertical = document.getElementById("dateline-vertical");
   horizontalNav.classList.add('hidden')
-  verticalNav.classList.remove('hidden')
-  content.classList.add('mt-16', 'md:mt-20', 'md:ml-64', 'lg:ml-72')
+  verticalNav.classList.add('hidden', 'lg:block')
+  content.classList.add('mt-16', 'md:mt-20', 'lg:ml-72')
   content.classList.remove('mt-12', 'md:mt-28')
   dateline.classList.add('hidden')
   datelineVertical.classList.remove('hidden')
@@ -93,6 +93,7 @@ function horizontalSetup() {
   const datelineVertical = document.getElementById("dateline-vertical");
   horizontalNav.classList.remove('hidden')
   verticalNav.classList.add('hidden')
+  verticalNav.classList.remove('md:block', 'md:ml-64', 'lg:ml-72')
   content.classList.remove('mt-0','mt-16', 'md:mt-20','md:ml-64', 'lg:ml-72')
   content.classList.add('mt-12', 'md:mt-28')
   dateline.classList.remove('hidden')
