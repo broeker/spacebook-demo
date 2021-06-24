@@ -3,13 +3,16 @@ layout: layouts/base.njk
 section: page
 ---
 {% if config.enableEditButton == true or config.enableDatestamp == true %}
-<div id="dateline-vertical" class="hidden absolute right-0 flex justify-end">
+<div id="dateline-vertical" class="absolute right-0 flex justify-end">
     {% if config.enableDatestamp == true %}
-    <div class="inline-block w-auto text-xs text-dateline dark:text-dateline-dark
-     py-1 mr-3">Updated <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time></div>
+    <div class="inline-block w-auto text-xs text-dateline dark:text-dateline-dark py-1 mr-3">
+        Updated <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time>
+    </div>
     {% endif %}
     {% if config.enableEditButton == true %}
-    <div class="inline-block w-auto text-xs  py-1 mr-3"><a class="text-dateline dark:text-dateline-dark hover:text-dateline-hover dark:hover:text-dateline-dark-hover" target="_blank" rel="noopener" rel="noreferrer" href="{{ config.gitUrl }}/edit/{{ config.gitBranch }}/{{ page.inputPath }}">Edit</a></div>
+    <div class="inline-block w-auto text-xs  py-1 mr-3">
+        <a class="text-dateline dark:text-dateline-dark hover:text-dateline-hover dark:hover:text-dateline-dark-hover" target="_blank" rel="noopener" rel="noreferrer" href="{{ config.gitUrl }}/edit/{{ config.gitBranch }}/{{ page.inputPath }}">Edit</a>
+    </div>
     {% endif %}
 </div>
 {% endif %}
@@ -20,26 +23,26 @@ section: page
     <article>
         <h1>{{ title }}</h1>
         {% if config.enableEditButton == true or config.enableDatestamp == true %}
-        <div id="dateline" class="hidden">
-            <div class="dateline flex mt-4 justify-end mr-1">
-                {% if config.enableDatestamp == true %}
-                    <div class="inline-block w-auto text-xs text-dateline dark:text-dateline-dark pt-1 pb-1 pl-3 mr-2 rounded ">Updated <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time></div>
-                {% endif %}
-                {% if config.enableEditButton == true %}
-                    <div class="inline-block w-auto text-xs  pt-1 pr-4 pb-1 pl-3 rounded"><a class="text-dateline dark:text-dateline-dark hover:dark:text-dateline-hover dark:hover:text-dateline-dark-hover no-underline font-normal !important" target="_blank"  rel="noopener" rel="noreferrer" href="{{ config.gitUrl }}/edit/{{ config.gitBranch }}/{{ page.inputPath }}">Edit</a></div>
-                {% endif %}
+            <div id="dateline" class="hidden">
+                <div class="dateline flex mt-4 justify-end mr-1">
+                    {% if config.enableDatestamp == true %}
+                        <div class="inline-block w-auto text-xs text-dateline dark:text-dateline-dark pt-1 pb-1 pl-3 mr-2 rounded ">Updated <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time></div>
+                    {% endif %}
+                    {% if config.enableEditButton == true %}
+                        <div class="inline-block w-auto text-xs  pt-1 pr-4 pb-1 pl-3 rounded"><a class="text-dateline dark:text-dateline-dark hover:dark:text-dateline-hover dark:hover:text-dateline-dark-hover no-underline font-normal !important" target="_blank"  rel="noopener" rel="noreferrer" href="{{ config.gitUrl }}/edit/{{ config.gitBranch }}/{{ page.inputPath }}">Edit</a></div>
+                    {% endif %}
+                </div>
             </div>
-        </div>
         {% endif %}
 
         <div class="text-content-text dark:text-content-text-dark self-center adjust">
             {{ layoutContent | safe }}
             {% if (config.enableComments) and (comments !== 0) %}
-            <!-- Paste your comment code here! -->
+                <!-- Paste your comment code here! -->
             {% endif %}
-                        
+
             {% if config.enablePageNavigation == true %}
-              {% include "../components/page.nav.njk" %}
+                {% include "../components/page.nav.njk" %}
             {% endif %}
         </div>
     </article>

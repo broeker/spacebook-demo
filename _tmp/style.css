@@ -1632,11 +1632,6 @@ ul.search-results li {
   background-color: rgba(191, 219, 254, var(--tw-bg-opacity)) !important;
 }
 
-.bg-pink-100 {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgba(252, 231, 243, var(--tw-bg-opacity)) !important;
-}
-
 .bg-header {
   background-color: var(--header) !important;
 }
@@ -1965,6 +1960,10 @@ ul.search-results li {
   margin-bottom: 1rem !important;
 }
 
+.mt-6 {
+  margin-top: 1.5rem !important;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem !important;
 }
@@ -1985,12 +1984,20 @@ ul.search-results li {
   margin-top: 3rem !important;
 }
 
+.mb-12 {
+  margin-bottom: 3rem !important;
+}
+
 .mt-16 {
   margin-top: 4rem !important;
 }
 
 .mt-20 {
   margin-top: 5rem !important;
+}
+
+.mb-20 {
+  margin-bottom: 5rem !important;
 }
 
 .mr-1\.5 {
@@ -2044,6 +2051,10 @@ ul.search-results li {
 
 .p-4 {
   padding: 1rem !important;
+}
+
+.p-6 {
+  padding: 1.5rem !important;
 }
 
 .p-8 {
@@ -2159,6 +2170,10 @@ ul.search-results li {
 
 .pt-12 {
   padding-top: 3rem !important;
+}
+
+.pb-12 {
+  padding-bottom: 3rem !important;
 }
 
 .placeholder-placeholder::-moz-placeholder {
@@ -2335,6 +2350,10 @@ ul.search-results li {
   color: var(--dateline) !important;
 }
 
+.text-sidebar-text {
+  color: var(--sidebar-text) !important;
+}
+
 .text-footer-text {
   color: var(--footer-text) !important;
 }
@@ -2413,6 +2432,10 @@ ul.search-results li {
   color: var(--dateline-dark) !important;
 }
 
+.dark .dark\:text-sidebar-text-dark {
+  color: var(--sidebar-text-dark) !important;
+}
+
 .dark .dark\:text-footer-text-dark {
   color: var(--footer-text-dark) !important;
 }
@@ -2451,6 +2474,10 @@ ul.search-results li {
 
 .dark .dark\:hover\:text-subheader-text-dark-hover:hover {
   color: var(--subheader-text-dark-hover) !important;
+}
+
+.dark .dark\:hover\:text-sidebar-link-dark:hover {
+  color: var(--sidebar-link-dark) !important;
 }
 
 .dark .dark\:hover\:text-sidebar-link-dark-hover:hover {
@@ -3540,6 +3567,10 @@ ul.search-results li {
 
   .lg\:block {
     display: block !important;
+  }
+
+  .lg\:flex {
+    display: flex !important;
   }
 
   .lg\:hidden {

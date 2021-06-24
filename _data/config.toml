@@ -1,6 +1,7 @@
-#------------------------------------------------#
-# SPACEBOOK CONFIGURATION Official Launch Handbook
-#------------------------------------------------#
+#=========================================================#
+# CONFIGURE YOUR SPACEBOOK
+# Official Launch Handbook
+#=========================================================#
 #
 #        |
 #       / \
@@ -12,12 +13,24 @@
 #  /  |  |  |  \
 #  |,-'--|--'-.| 
 #
-#------------------------------------------------
+#=========================================================#
 # GENERAL SETTINGS
-# name
-#   * the main title or header for your spacebook
-# shortName
-#   * a short version of your name, for smaller screens
+#=========================================================#
+# name (main title or header for your spacebook)
+name = "Spacebook v1.0"
+
+# shortName (a shorter version of your name for small screens
+shortName = "Spacebook Inc"
+
+#=========================================================#
+# SIDEBAR (VERTICAL AND MOBILE NAV BAR)
+#=========================================================#
+# sidebarText (custom text for the bottom of sidebar)
+# sidebarText = "I am the fooman."
+sidebarText = """
+<div>And time goes on, and we fall by the wayside. Where all the news is fit to print and the children go to play. I watch as tears go by. I watch the children play I watch as they go by</div>
+"""
+
 #   * optional
 # subtitle
 #   * the short subtitle that appears below your site name
@@ -31,8 +44,8 @@
 # url
 #   * The main URL to your site (use full URL)
 #------------------------------------------------
-name = "Spacebook v1.0"
-shortName = "Spacebook Inc"
+
+
 subtitle = "Create a modern notebook to document or explain almost anything."
 shortSubtitle = "Create a modern notebook today."
 description = "Create a modern notebook to document or explain almost anything."
@@ -41,7 +54,7 @@ url =  "https://spacebook.app"
 #------------------------------------------------
 # GIT SETTINGS
 # gitUrl
-#   * The full URL to your git repository
+# The full URL to your git repository
 # gitBranch
 #   * Your primary git branch
 #------------------------------------------------
@@ -92,6 +105,10 @@ enableEncryption = true
 enableContact = true
 enableComments = true
 
+#=========================================================#
+
+
+
 #------------------------------------------------
 # PLACEHOLDER AND DEFAULT TEXT
 # searchPlaceholder
@@ -106,13 +123,12 @@ searchNoResultsMessage = "Sorry cadet, no results available!"
 #------------------------------------------------
 # NAVIGATION STYLE
 # Set your navigation style to vertical (left-hand
-# sidebar), horizontal (top), or both (dynamic toggle)
+# sidebar) or horizontal (top)
 # navigationStyle
-#   * toggle (let the user toggle between sidebar/top)
 #   * horizontal (sidebar-only)
 #   * vertical (top-only)
 #------------------------------------------------
-navigationStyle = "toggle"
+navigationStyle = "vertical"
 
 
 #------------------------------------------------

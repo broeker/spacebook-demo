@@ -63,9 +63,9 @@ function showNavigation() {
   const navigation = document.getElementById("navigation");
   const verticalNavigation = document.getElementById("v-nav");
   document.body.classList.add("overflow-hidden")
-  navigation.classList.remove("hidden");
+  navigation.classList.remove("hidden","mt-20");
   verticalNavigation.classList.remove("hidden");
-  navigation.classList.add("overflow-y-scroll", "w-full","right-0", "top-0", "z-50", "pt-0", "bg-white","border-l", "border-gray-200");
+  //navigation.classList.add("overflow-y-scroll", "w-full","right-0", "top-0", "z-50", "pt-0", "bg-white","border-l", "border-gray-200");
 }
 
 function closeNavigation() {

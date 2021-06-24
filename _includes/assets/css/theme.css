@@ -27,7 +27,7 @@
 
     --callout:  #F9FAFB; /* gray-50 */
     --callout-text: #6B7280; /* gray-500 */
-    --callout-dark: #E5E7EB; /* gray-200 */
+    --callout-dark: #1F2937; /* gray-700 */
     --callout-text-dark: #6B7280; /* gray-500 */
     --callout-text-hover: #9CA3AF; /* gray-400 */
     --callout-link: #1E40AF; /* blue-800 */
@@ -62,11 +62,11 @@
     --footer-text-dark-hover: #6B7280; /* gray-500 */
 
     /* SIDEBAR */
-    --sidebar: #fff;
-    --sidebar-dark: black; /* gray-900 */
+    --sidebar: pink;
+    --sidebar-dark: #1F2937; /* gray-700 */
     --sidebar-text: #6B7280; /* gray-500 */
     --sidebar-text-dark: yellow;
-    --sidebar-link:  #6B7280; /* gray-500 */
+    --sidebar-link: #6B7280; /* gray-500 */
     --sidebar-link-hover:#4B5563; /* gray-600 */
     --sidebar-link-dark: #6B7280; /* gray-500 */
     --sidebar-link-dark-hover:  #9CA3AF; /* gray-400 */
@@ -163,6 +163,12 @@
     color: var(--callout-text);
     background-color: var(--callout)
 }
+
+body.dark .callout {
+    color: var(--callout-text-dark);
+    background-color: var(--callout-dark)
+}
+
 #content .callout a {
     color: var(--callout-link);
 }

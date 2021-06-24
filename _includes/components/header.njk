@@ -30,7 +30,7 @@
       {% endif %}
     </div>
 
-    <button id="hamburger" aria-label="Show navigation" onclick="showNavigation()" class="block md:hidden pr-2 resize-none">
+    <button id="hamburger" aria-label="Show navigation" onclick="showNavigation()" class="block lg:hidden mr-2 resize-none">
     {{ icons.menuIcon | safe  }}
     </button>
 
@@ -38,13 +38,13 @@
     {% include "../templates/search.njk" %} 
     {% endif %}
 
-    <div id="header-icons" class="hidden block md:flex space-x-2 mr-2">
+    <div id="header-icons" class="hidden block lg:flex space-x-2 mr-2">
      {% include "../templates/icons.njk" %}
     </div>
   </div>
-  <div id="h-nav" class="hidden">
-    {% include "../components/horizontal.nav.njk" %}
-  </div>
+{#  <div id="h-nav" class="hidden">#}
+{#    {% include "../components/horizontal.nav.njk" %}#}
+{#  </div>#}
 </div>
 
  

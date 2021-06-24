@@ -1,26 +1,27 @@
 [[header]]
-name="Github"
-url="https://github.com"
-icon="gitIcon"
+    name="Github"
+    url="https://github.com"
+    icon="gitIcon"
 
 [[header]]
-name="Darkmode"
-icon="darkmodeIcon"
-onclick="activateDarkMode()"
+    name="Darkmode"
+    icon="darkmodeIcon"
+    onclick="activateDarkMode()"
+
 [[header]]
-name="Encryption"
-onclick="logout()"
-icon="logoutIcon"
+    name="Encryption"
+    onclick="logout()"
+    icon="logoutIcon"
 
 [[footerLeft]]
-name="Contact"
-url="https://github.com"
-icon="contactIcon"
+    name="Contact"
+    url="https://github.com"
+    icon="contactIcon"
 
 [[footerLeft]]
-name="Twitter"
-url="https://twitter.url"
-icon="twitterIcon"
+    name="Twitter"
+    url="https://twitter.url"
+    icon="twitterIcon"
 
 [[footerRight]]
 name="CMS"

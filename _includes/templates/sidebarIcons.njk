@@ -9,9 +9,9 @@
         </a>
         <span class="p-2">
         {% if item.internal %}
-        <a class="no-underline" href="{{ item.url }}" rel="noopener noreferrer">{{ item.label }}</a>
+        <a class="no-underline text-sidebar-link hover:text-sidebar-link-hover dark:text-sidebar-link-dark dark:hover:text-sidebar-link-dark font-normal" href="{{ item.url }}" rel="noopener noreferrer">{{ item.label }}</a>
         {% else %}
-        <a class="no-underline" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.label }}</a>
+        <a class="no-underline text-sidebar-link hover:text-sidebar-link-hover dark:text-sidebar-link-dark dark:hover:text-sidebar-link-dark font-normal" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.label }}</a>
         {% endif %}
         </span>
         </div>

@@ -1,21 +1,24 @@
 <!doctype html>
 <html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
-  {% include "components/head.njk" %}
-  <body>
-    <div id="app" class="h-screen bg-white dark:bg-gray-900">
+    {% include "components/head.njk" %}
+    <body>
+    <div id="app" class="h-screen">
         {% include "../components/header.njk" %}
-        <div id="v-nav" class="fixed top-0 left-0 h-screen z-50 hidden">
+
+        {%  if config.navigationStyle === "vertical" %}
+        <div id="v-nav" class="fixed top-0 left-0 mt-20 h-screen z-50 hidden w-full lg:block">
             {% include "../components/vertical.nav.njk" %}
         </div>
+        {% endif %}
 
         <main id="content" class="bg-content dark:bg-content-dark">
-          <div id="content-main" class="mt-16 md:mt-20 ">
-              <div class="px-16 py-4 max-w-5xl mx-auto  focus:outline-none focus:ring-header-border focus:ring-2">
-              {{ layoutContent | safe }}
-              </div>
-            {% include "components/footer.njk" %}
-          </div>
+            <div id="content-main" class="mt-16 md:mt-20 lg:ml-72">
+                <div class="px-16 py-4 max-w-5xl mx-auto  focus:outline-none focus:ring-header-border focus:ring-2">
+                {{ layoutContent | safe }}
+                </div>
+                {% include "components/footer.njk" %}
+            </div>
         </main>
     </div>
-  </body>
+    </body>
 </html>
