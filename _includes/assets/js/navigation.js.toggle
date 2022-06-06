@@ -36,24 +36,24 @@ document.addEventListener("DOMContentLoaded", function() {
       case "vertical":
         horizontalSetup()
         break
-      case "toggle":
-        if (!localStorage.getItem('nav')) {
-          if (navigationStyleDefault === 'vertical') {
-            localStorage.setItem('nav', navigationStyleDefault)
-            verticalSetup()
-          } else {
-            localStorage.setItem('nav', navigationStyleDefault)
-            horizontalSetup()
-          }
-        } else {
-          if (localStorage.getItem('nav') === 'vertical') {
-            verticalSetup()
-          } else {
-            horizontalSetup()
-          }
-        }
-        ;
-        break
+      // case "toggle":
+      //   if (!localStorage.getItem('nav')) {
+      //     if (navigationStyleDefault === 'vertical') {
+      //       localStorage.setItem('nav', navigationStyleDefault)
+      //       verticalSetup()
+      //     } else {
+      //       localStorage.setItem('nav', navigationStyleDefault)
+      //       horizontalSetup()
+      //     }
+      //   } else {
+      //     if (localStorage.getItem('nav') === 'vertical') {
+      //       verticalSetup()
+      //     } else {
+      //       horizontalSetup()
+      //     }
+      //   }
+      //   ;
+      //   break
       default:
         horizontalSetup()
     }

@@ -1,141 +1,82 @@
-#=========================================================#
-# CONFIGURE YOUR SPACEBOOK
-# Official Launch Handbook
-#=========================================================#
+#=============================================================================================#
 #
 #        |
 #       / \
-#      / _ \        See spacebook.app for
-#     |.o '.|       more documentation!
+#      / _ \        SPACEBOOK v42
+#     |.o '.|       Official Launch Settings and Configuration Guide
 #     |'._.'|
 #     |     |
-#   ,'|  |  |`.
-#  /  |  |  |  \
+#   ,'|  |  |`.     Commencing countdown, engines on (five, four, three)
+#  /  |  |  |  \    spacebook.app
 #  |,-'--|--'-.| 
 #
-#=========================================================#
-# GENERAL SETTINGS
-#=========================================================#
-# name (main title or header for your spacebook)
-name = "Spacebook v1.0"
+#=============================================================================================#
+# GIT SETTINGS Connect your git repository to your spacebook
+#=============================================================================================#
 
-# shortName (a shorter version of your name for small screens
-shortName = "Spacebook Inc"
-
-#=========================================================#
-# SIDEBAR (VERTICAL AND MOBILE NAV BAR)
-#=========================================================#
-# sidebarText (custom text for the bottom of sidebar)
-# sidebarText = "I am the fooman."
-sidebarText = """
-<div>And time goes on, and we fall by the wayside. Where all the news is fit to print and the children go to play. I watch as tears go by. I watch the children play I watch as they go by</div>
-"""
-
-#   * optional
-# subtitle
-#   * the short subtitle that appears below your site name
-#   * optional
-# shortSubtitle
-#   * a short version of your subtitle, for smaller screens
-#   * optional
-# description 
-#   * used to populate your site metadata
-#   * shows up in search results and in social sharing
-# url
-#   * The main URL to your site (use full URL)
-#------------------------------------------------
-
-
-subtitle = "Create a modern notebook to document or explain almost anything."
-shortSubtitle = "Create a modern notebook today."
-description = "Create a modern notebook to document or explain almost anything."
-url =  "https://spacebook.app"
-
-#------------------------------------------------
-# GIT SETTINGS
-# gitUrl
-# The full URL to your git repository
-# gitBranch
-#   * Your primary git branch
-#------------------------------------------------
+# Full URL to your git repository
 gitUrl = "https://github.com/broeker/spacebook-demo"
+
+# Your primary git branch
 gitBranch = "main"
 
-#------------------------------------------------
-# FAVICON
-# enableFaviconEmoji
-#   * Use any emoji for your favicon
-# faviconEmoji
-#   * If true, paste your favorite emoji here
-#
-# Note: You can leave this set to false to use the
-# default favicon, or add your own custom favicon
-# to the includes/assets/ folder!
-#------------------------------------------------
-enableFaviconEmoji = false 
+#=============================================================================================#
+# GENERAL SETTINGS Name your project, and setup other general settings
+#=============================================================================================#
+
+# The main title, short title, subtitle, short subtitle for your spacebook
+name = "Catching a Fish in America"
+shortName = "Spacebook v42" # an optional short version, for smaller screens
+subtitle = "Create a modern notebook to document or explain almost anything." #subtitle
+shortSubtitle = "Create your own modern notebook today." ## a short version, for smaller screens
+description = "Create a modern notebook to document or explain almost anything." # meta description
+url =  "https://spacebook.app" ## your primary url (not currently in use, but someday?)
+
+#=============================================================================================#
+# SIDEBAR CALLOUT Enter some OPTIONAL sidebar HTML; comment to disable
+#=============================================================================================#
+
+sidebarText = "fooman." # custom HTML for a sidebar message
+
+#=============================================================================================#
+# LOGO Choose custom SVG, PNG, emoji, or no logo. (See _includes/assets/logo/README)
+#=============================================================================================#
+
+enableLogo = true # false = I don't need no stinkin' logo; true = svg, png, or emoji logo
+logoStyle = 'svg' # Choose png, svg, or emoji
+emojiLogo = "🐟"
+
+#=============================================================================================#
+# FAVICON Copy paste your favorite emoji here, or use a custom favicon
+#=============================================================================================#
+
+enableFaviconEmoji = false # false = use _includes/assets/favicon/favicon.ico; true = use emoji
 faviconEmoji = "💥"
 
-#------------------------------------------------
-# SITE FEATURES
-# enableDarkmode
-#   * Set to true to enable darkmode toggle
-# enableSearch
-#   * Set to true to enable Elastic Lunr search
-# enableEditButton
-#   * Set to true to enable an "edit this page" link
-# enableDatestamp
-#   * Set to true to enable a datestamp
-# enablePageNavigation
-#   * Set to true to enable page-by-page navigation
-# enableEncryption
-#   * Set to true to enable logout button
+#=============================================================================================#
+# BASIC SITE FEATURES Configure the active features for your site
 #   * See https://spacebook.app/advanced/encryption/
-# enableContact
-#   * Set to true to enable a Netlify contact form icon
-# enableComments
-#   * Set to true to enable a commenting engine
 #   * See https://spacebook.app/advanced/comments/
-#------------------------------------------------
-enableDarkmode = true
-enableSearch = true
-enableEditButton = true
-enableDatestamp = true
-enablePageNavigation = true
-enableEncryption = true
-enableContact = true
-enableComments = true
+#=============================================================================================#
 
-#=========================================================#
+navigationStyle = "vertical" # set to vertical or horizontal
+enableDarkmode = true # Set to true to enable darkmode toggle
+enableSearch = true # Set to true to enable Elastic Lunr search
+enableEditButton = true # Set to true to enable an "edit this page" link
+enableDatestamp = true # Set to true to enable a datestamp
+enablePageNavigation = true # Set to true to enable page-by-page navigation
+enableEncryption = true # Set to true to enable staticrypt password protection
+enableContact = true # Set to true to enable a Netlify contact form icon
+enableComments = true # Set to true to enable a commenting engine
+searchPlaceholder = "Search " # Change text for search bar placeholder
+searchNoResultsMessage = "Sorry cadet, no results available!" # Change message for no search results
 
+#=============================================================================================#
+# FOOTER Enter some OPTIONAL footer HTML; comment to disable.
+#=============================================================================================#
 
-
-#------------------------------------------------
-# PLACEHOLDER AND DEFAULT TEXT
-# searchPlaceholder
-#   * Change text for search bar placeholder
-# searchNoResultsMessage
-#   * Change message for no search results
-
-#------------------------------------------------
-searchPlaceholder = "Search "
-searchNoResultsMessage = "Sorry cadet, no results available!"
-
-#------------------------------------------------
-# NAVIGATION STYLE
-# Set your navigation style to vertical (left-hand
-# sidebar) or horizontal (top)
-# navigationStyle
-#   * horizontal (sidebar-only)
-#   * vertical (top-only)
-#------------------------------------------------
-navigationStyle = "vertical"
-
-
-#------------------------------------------------
-# FOOTER
-#------------------------------------------------
 # footerText (appears at the center of your bottom footer)
-# To use raw HTML in your use a multiline tomls string, e.g.:
+# To use raw HTML in use a multi-line toml string, e.g.:
 # 
 # footerText = """
 # <div><strong>Acme Inc and the California Office of Design</strong></div>
@@ -145,14 +86,11 @@ navigationStyle = "vertical"
 #    <li>Address: Yorba, CA 55410-0000</li>
 #    <li>Website: <a href="http://spacebook.app" target="_blank">spacebook.app</li>
 #</ul>
-#------------------------------------------------#
 
+#=============================================================================================#
+# CMS INTEGRATION (If you have Netlify or Forestry enabled, show the CMS admin icon)
+#=============================================================================================#
 
-
-#------------------------------------------------#
-# CMS INTEGRATION (Netlify or Forestry)
-#------------------------------------------------#
-#  enableCMS (show the CMS admin icon in footer)
-#------------------------------------------------#
 enableCMS = true
-#------------------------------------------------#
+
+#=============================================================================================#

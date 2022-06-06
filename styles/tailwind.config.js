@@ -82,10 +82,6 @@ module.exports = {
           'link-dark': 'var(--callout-link-dark)',
           'link-dark-hover': 'var(--callout-link-dark-hover)',
         },
-        'sidebar-text': {
-          DEFAULT: 'var(--sidebar-text)',
-          'dark': 'var(--sidebar-text-dark)',
-        },
         'footer': {
           DEFAULT: 'var(--footer)',
           'dark': 'var(--footer-dark)',
@@ -116,10 +112,6 @@ module.exports = {
           'dark': 'var(--sidebar-link-dark)',
           'dark-hover': 'var(--sidebar-link-dark-hover)',
         },
-        'sidebar-text': {
-          DEFAULT: 'var(--sidebar-text)',
-          'dark': 'var(--sidebar-text-dark)',
-        },
         'nav': {
           DEFAULT: 'var(--nav)',
           'dark': 'var(--nav-dark)',
@@ -127,6 +119,21 @@ module.exports = {
           'dark-hover': 'var(--nav-dark-hover)',
           'button': 'var(--nav-button)',
           'button-dark': 'var(--nav-button-dark)',
+        },
+        'logo': {
+          DEFAULT: 'var(--logo)',
+          '1': 'var(--logo-1)',
+          '1-hover': 'var(--logo-1-hover)',
+          '1-dark': 'var(--logo-1-dark)',
+          '1-dark-hover': 'var(--logo-1-dark-hover)',
+          '2': 'var(--logo-2)',
+          '2-hover': 'var(--logo-2-hover)',
+          '2-dark': 'var(--logo-2-dark)',
+          '2-dark-hover': 'var(--logo-2-dark-hover)',
+          'accent': 'var(--logo-accent)',
+          'accent-hover': 'var(--logo-accent-hover)',
+          'accent-dark': 'var(--logo-accent-dark)',
+          'accent-dark-hover': 'var(--logo-accent-dark-hover)',
         },
         'icon': {
           DEFAULT: 'var(--icon)',

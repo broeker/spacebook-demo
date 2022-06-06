@@ -1,10 +1,10 @@
-{% for item in iconGroups.sidebar %}
+{% for item in icons.iconGroups.sidebar %}
         <div class="flex align-center items-center">
         <a href="{{ item.url }}" title="{{ item.name }}" class="no-underline" target="_blank" rel="noopener noreferrer">
         {% if item.emoji %}
         {{ item.emoji }}
         {% else %}
-        {{ icons[item.icon] | safe }}  
+        {{ icons.icons[item.icon] | safe }}
         {% endif %}
         </a>
         <span class="p-2">

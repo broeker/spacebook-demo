@@ -1,3 +1,4 @@
+# Custom header icons
 [[header]]
     name="Github"
     url="https://github.com"
@@ -13,6 +14,20 @@
     onclick="logout()"
     icon="logoutIcon"
 
+# Custom sidebar icons
+[[sidebar]]
+    name="Airplane"
+    url="https://twitter.com"
+    label = "Follow me on Twitter"
+    icon="twitterIcon"
+
+[[sidebar]]
+    name="Github"
+    url="https://github.com"
+    icon="gitIcon"
+    label = "View on Github"
+
+# Custom footer icons (left)
 [[footerLeft]]
     name="Contact"
     url="https://github.com"
@@ -23,27 +38,18 @@
     url="https://twitter.url"
     icon="twitterIcon"
 
+# Custom footer icons (right)
 [[footerRight]]
-name="CMS"
-url="https://github.com"
-icon="cmsIcon"
+    name="CMS"
+    url="https://github.com"
+    icon="cmsIcon"
 
 [[footerRight]]
-name="Twitter"
-url="https://twitter.com"
-icon="twitterIcon"
+    name="Twitter"
+    url="https://twitter.com"
+    icon="twitterIcon"
 
-[[sidebar]]
-name="Airplane"
-url="https://linkedIn.com"
-label = "Follow me on Twitter"
-icon="twitterIcon"
 
-[[sidebar]]
-name="Github"
-url="https://github.com"
-icon="gitIcon"
-label = "View on Github"
 
 
 

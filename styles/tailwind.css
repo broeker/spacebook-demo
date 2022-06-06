@@ -83,7 +83,7 @@
     @apply text-nav-hover dark:text-nav-hover bg-nav-button dark:bg-nav-button-dark rounded;
   }
   nav ul li a.active {
-    @apply font-semibold  bg-nav-button dark:bg-nav-button-dark rounded;
+    @apply bg-nav-button dark:bg-nav-button-dark rounded;
   }
 
   /* Search */
@@ -108,6 +108,12 @@
   }
 
   /* Utilities and misc */
+  #logo {
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+  }
+
   .adjust p img,
   .adjust img,
   .adjust p iframe,

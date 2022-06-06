@@ -62,10 +62,11 @@
     --footer-text-dark-hover: #6B7280; /* gray-500 */
 
     /* SIDEBAR */
-    --sidebar: pink;
+    --sidebar: #fff;
     --sidebar-dark: #1F2937; /* gray-700 */
     --sidebar-text: #6B7280; /* gray-500 */
-    --sidebar-text-dark: yellow;
+    --sidebar-text-dark: #6B7280; /* gray-500 */
+    --sidebar-link-hover:#4B5563; /* gray-6 */
     --sidebar-link: #6B7280; /* gray-500 */
     --sidebar-link-hover:#4B5563; /* gray-600 */
     --sidebar-link-dark: #6B7280; /* gray-500 */
@@ -76,7 +77,7 @@
     --nav-hover:  #4B5563; /* gray-600 */;
     --nav-dark: #9CA3AF; /* gray-400 */
     --nav-dark-hover: #6B7280; /* gray-500 */
-    --nav-button: #F9FAFB; /* gray-50 */
+    --nav-button: #E5E7EB; /* gray-200 */
     --nav-button-dark:  #1F2937; /* gray-700 */
 
     /* BORDERS */
@@ -104,7 +105,22 @@
     --focus-dark: #4B5563; /* gray-600 */
     --placeholder: #9CA3AF; /* gray-400 */
     --placeholder-dark: #4B5563; /* gray-600 */
+
+    /* LOGO */
+    --logo-1: #F3F4F6;
+    --logo-1-hover:  #1F2937; /* gray-700 */
+    --logo-1-dark: #374151; /* gray-700 */
+    --logo-1-dark-hover: #6B7280; /* gray-500 */
+    --logo-2: #374151; /* gray-700 */
+    --logo-2-hover: #374151; /* gray-700 */
+    --logo-2-dark:  #374151; /* gray-700 */
+    --logo-2-dark-hover: #ffc40c; /* gray-500 */
+    --logo-accent: #FFF; /* White */
+    --logo-accent-hover:  #FBBF24; /*Yellow 400 */
+    --logo-accent-dark:#9CA3AF; /* gray-400 */
+    --logo-accent-dark-hover: #FBBF24; /*Yellow 400 */;
 }
+
 
 /* ICONS */
 #header {

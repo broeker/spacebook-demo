@@ -37,6 +37,9 @@ section: page
 
         <div class="text-content-text dark:text-content-text-dark self-center adjust">
             {{ layoutContent | safe }}
+
+
+
             {% if (config.enableComments) and (comments !== 0) %}
                 <!-- Paste your comment code here! -->
             {% endif %}
@@ -47,4 +50,5 @@ section: page
         </div>
     </article>
 </div>
+
 
