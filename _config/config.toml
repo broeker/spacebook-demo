@@ -43,7 +43,7 @@ sidebarText = "fooman." # custom HTML for a sidebar message
 #=============================================================================================#
 
 enableLogo = true # false = I don't need no stinkin' logo; true = svg, png, or emoji logo
-logoStyle = 'svg' # Choose png, svg, or emoji
+logoStyle = 'emoji' # Choose png, svg, or emoji
 emojiLogo = "🐟"
 
 #=============================================================================================#

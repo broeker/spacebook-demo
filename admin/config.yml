@@ -42,7 +42,7 @@ collections:
 #      - label: "Site Data"
 #        name: "site_data"
 #        delete: false
-#        file: "_data/config.toml"
+#        file: "_config/config.toml"
 #        fields:
 #          - {label: "Site name", name: "name", widget: "string"}
 #          - {label: "Site subtitle", name: "subtitle", widget: "string", required: false}

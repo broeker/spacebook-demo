@@ -1,16 +1,15 @@
 module.exports = {
+  mode: 'jit',
   important: true,
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: {
-    enabled: true,
-    content: ["_site/**/*.html"],
-    options: {
-      safelist: [],
-    },
-  },
+  content: [
+    './pages/**/*.{html,js}',
+    './_includes/components/**/*.{html,js}',
+    './_site/index.html'
+  ],
   darkMode: 'class',
   theme: {
     container: {
@@ -206,9 +205,6 @@ module.exports = {
       }
     },
   }, 
-  variants: {
-    fill: ['hover', 'focus'], // this line does the trick
-  },
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),

@@ -6,7 +6,7 @@
         {% include "../components/header.njk" %}
 
         {%  if config.navigationStyle === "vertical" %}
-        <div id="v-nav" class="fixed top-0 left-0 mt-20 h-screen z-50 hidden lg:block">
+        <div id="v-nav" class="fixed top-0 left-0 mt-20 w-full h-screen h-full z-50 hidden lg:block">
             {% include "../components/vertical.nav.njk" %}
         </div>
         {% endif %}
