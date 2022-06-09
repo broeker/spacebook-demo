@@ -1,6 +1,6 @@
-<div id="searchbox" class="hidden lg:block mr-4 resize-none">
+<div id="searchbox" class="lg:block mr-2 resize-none">
       <input aria-label="Search" x-data="{ isOpen: true }" x-bind:class="{ 'hidden': !isOpen }" type="search" placeholder="{{ config.searchPlaceholder }}" 
-      class="resize-none float-right w-48
+      class="resize-none float-right w-48 
        text-sm bg-search dark:bg-search-dark
        text-search-text dark:text-search-text-dark
       border border-search-border dark:border-search-border-dark
@@ -12,7 +12,7 @@
       <div  class="hidden w-96 z-50 absolute top-16 right-0" id="searchWrapper">
         <ul  id="searchResults" tabindex="0" class="pb-8 z-50 resize-none"></ul>
       </div>
-      <div id="noResultsFound"
+      <div id="noResultsFound" 
       class="bg-header dark:bg-search-dark
        text-search-text dark:text-search-text-dark
       border border-search-border dark:border-search-border-dark

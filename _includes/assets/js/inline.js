@@ -28,47 +28,58 @@ function logout() {
   window.location.href = "/";
 }
 
-// Show search
-function showSearch() {
-  const logo = document.getElementById("logo");
-  const site = document.getElementById("site");
-  const icons = document.getElementById("header-icons");
-  const searchbox = document.getElementById("searchbox");
-  const hamburger = document.getElementById('hamburger')
-  logo.classList.add("hidden"); 
-  site.classList.add("hidden"); 
-  icons.classList.add("hidden"); 
-  hamburger.classList.add("hidden"); 
-  searchbox.classList.add("w-full"); 
-  searchbox.classList.remove("hidden")
-  document.getElementById("searchField").focus();
+function activateSearch() {
+
 }
 
-// Close search
-function closeSearch() {
-  const logo = document.getElementById('logo')
-  const site = document.getElementById("site");
-  const searchbox = document.getElementById("searchbox");
-  const hamburger = document.getElementById('hamburger')
-  site.classList.remove("hidden"); 
-  logo.classList.remove("hidden"); 
-  hamburger.classList.remove("hidden"); 
-  searchbox.classList.remove("w-full"); 
-  searchbox.classList.remove("sm:block")
-  searchbox.classList.add("hidden")
-}
+// Show search
+// function showSearch() {
+//   const logo = document.getElementById("logo");
+//   const site = document.getElementById("site");
+//   const icons = document.getElementById("header-icons");
+//   const searchbox = document.getElementById("searchbox");
+//   const hamburger = document.getElementById('hamburger')
+//   logo.classList.add("hidden");
+//   site.classList.add("hidden");
+//   icons.classList.add("hidden");
+//   hamburger.classList.add("hidden");
+//   searchbox.classList.add("w-full");
+//   searchbox.classList.remove("hidden")
+//   document.getElementById("searchField").focus();
+// }
+//
+// // Close search
+// function closeSearch() {
+//   const logo = document.getElementById('logo')
+//   const site = document.getElementById("site");
+//   const searchbox = document.getElementById("searchbox");
+//   const hamburger = document.getElementById('hamburger')
+//   site.classList.remove("hidden");
+//   logo.classList.remove("hidden");
+//   hamburger.classList.remove("hidden");
+//   searchbox.classList.remove("w-full");
+//   searchbox.classList.remove("sm:block")
+//   searchbox.classList.add("hidden")
+// }
 
 // Show/hide responsive navigation
 function showNavigation() {
   const navigation = document.getElementById("navigation");
   const verticalNavigation = document.getElementById("v-nav");
-
-  document.body.classList.add("overflow-hidden")
-
+  const navigationIcon = document.getElementById("hamburger");
+  const content = document.getElementById("content");
   navigation.classList.remove("hidden","mt-20");
 
   // verticalNavigation.classList.remove("hidden");
   verticalNavigation.classList.toggle("hidden");
+  navigationIcon.classList.toggle("bg-hamburger");
+  navigationIcon.classList.toggle("bg-hamburger-close");
+  content.classList.toggle("hidden");
+  // verticalNavigation.classList.toggle("w-full");
+  // verticalNavigation.classList.toggle("h-screen");
+  // verticalNavigation.classList.toggle("h-full");
+
+  navigationIcon.classList.toggle("open");
   //navigation.classList.add("overflow-y-scroll", "w-full","right-0", "top-0", "z-50", "pt-0", "bg-white","border-l", "border-gray-200");
 }
 

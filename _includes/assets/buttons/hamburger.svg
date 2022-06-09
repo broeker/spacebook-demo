@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="24" height="24"
+     class="inline fill-current
+text-icon hover:text-icon-hover dark:text-icon-dark dark:hover:text-icon-dark-hover"
+     style="-ms-transform: rotate(360deg);
+-webkit-transform: rotate(360deg); transform: rotate(360deg);"
+     preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+    <path d="M64 384h384v-42.67H64zm0-106.67h384v-42.66H64zM64 128v42.67h384V128z"  />
+    <rect x="0" y="0" width="512" height="512"
+          fill="rgba(0, 0, 0, 0)" /></svg>

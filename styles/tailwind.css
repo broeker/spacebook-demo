@@ -4,6 +4,9 @@
 
 @layer base {
 
+  #hamburger {
+    @apply bg-hamburger h-8 w-8
+  }
   /* Set up some default image behavior for nicer images */
   .prose img {
     @apply w-auto  shadow-md border-2 border-transparent !important;

@@ -3,7 +3,7 @@ layout: layouts/base.njk
 section: page
 ---
 {% if config.enableEditButton == true or config.enableDatestamp == true %}
-<div id="dateline-vertical" class="absolute right-0 flex justify-end">
+<div id="dateline-vertical" class="-mr-12 flex justify-end">
     {% if config.enableDatestamp == true %}
     <div class="inline-block w-auto text-xs text-dateline dark:text-dateline-dark py-1 mr-3">
         Updated <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time>

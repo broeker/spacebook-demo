@@ -19,6 +19,10 @@ module.exports = {
       margin: {
         '26': '6.5rem',
        },
+      backgroundImage: {
+        'hamburger': "url('/_includes/assets/buttons/menu.svg')",
+        'hamburger-close': "url('/_includes/assets/buttons/close.svg')",
+      },
       colors: {
         'header': {
           DEFAULT: 'var(--header)',

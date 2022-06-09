@@ -1,5 +1,10 @@
 # Custom header icons
 [[header]]
+    name="Search"
+    icon="searchIcon"
+    onclick="activateSearch()"
+
+[[header]]
     name="Github"
     url="https://github.com"
     icon="gitIcon"
