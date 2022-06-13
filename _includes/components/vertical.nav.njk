@@ -1,27 +1,20 @@
+  {# Mobile icons #}
+        <div id="navigation-icons" class="flex px-4 py-4 w-full border-b border-sidebar-border lg:hidden items-center bg-sidebar dark:bg-sidebar-dark">
+            <div class="flex-grow  flex space-x-2 justify-start">
+                {% include "../templates/icons.njk" %}
+            </div>
+         <button id="hamburger" aria-label="Show navigation" onclick="toggleNavigation()" class="bg-hamburger-close block lg:hidden mr-2 resize-none"></button>
+        </div>
+
 <nav id="navigation"
         class="h-full overflow-y-auto
          bg-sidebar dark:bg-sidebar-dark
         px-6 pb-12 xs:-mt-4 mb-12 w-full lg:w-72
         border-r
         border-b border-sidebar-border
-        dark:border-sidebar-border-dark z-50">
+        dark:border-sidebar-border-dark">
 
-        {%  if config.navigationStyle === "toggle" %}
-        <div class="hidden md:block absolute left-2 mt-2">
-            <button onclick="toggleNavigation()" name="navigation">{{ icons.chevronBoxUpIcon | safe }}</button>
-        </div>
-        {% endif %}
 
-        {# Mobile icons #}
-        <div class="border-b border-sidebar-border pb-2 lg:hidden flex space-x-2 justify-end items-center max-h-16 pt-3 -mr-5 mb-4">
-           {% include "../templates/icons.njk" %}
-          <div class="pr-2 pl-1">
-            <a id="close" name="Close navigation" title="Close menu" onclick="closeNavigation()" class="lg:hidden" aria-label="close">
-           {{ icons.closeIcon | safe }}
-            </a>
-          </div>
-        </div>
-        {# End mobile icon #}
 
         <div class="mt-6">
             {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({anchorClass: "item",activeAnchorClass: "active",activeListItemClass: "active",activeKey: eleventyNavigation.key, listClass: "nav", listItemClass: "item"}) | safe }}

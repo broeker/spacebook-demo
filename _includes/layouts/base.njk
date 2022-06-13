@@ -2,17 +2,18 @@
 <html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
     {% include "components/head.njk" %}
     <body>
-     {% include "../components/header.njk" %}
-    <div id="app" class="min-h-[150vh]" >
 
+     {% include "../components/header.njk" %}
+
+
+    <div id="app" class="z-40">
        {%  if config.navigationStyle === "vertical" %}
-                <div id="v-nav" class="fixed h-full hidden lg:block">
+                <div id="v-nav" class="fixed  h-full hidden lg:block">
                     {% include "../components/vertical.nav.njk" %}
                 </div>
-                {% endif %}
+       {% endif %}
         <main id="content" class="bg-content dark:bg-content-dark">
-
-            <div id="content-main" class="px-16 mt-16 md:mt-20 lg:ml-72">
+            <div id="content-main" class="px-16 lg:ml-72">
                 <div class="py-4 max-w-5xl mx-auto focus:outline-none focus:ring-header-border focus:ring-2">
                 {{ layoutContent | safe }}
                 </div>

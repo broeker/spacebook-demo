@@ -25,7 +25,7 @@ gitBranch = "main"
 #=============================================================================================#
 
 # The main title, short title, subtitle, short subtitle for your spacebook
-name = "Catching a Fish in America"
+name = "Spacebook"
 shortName = "Spacebook v42" # an optional short version, for smaller screens
 subtitle = "Create a modern notebook to document or explain almost anything." #subtitle
 shortSubtitle = "Create your own modern notebook today." ## a short version, for smaller screens
@@ -43,7 +43,7 @@ sidebarText = "fooman." # custom HTML for a sidebar message
 #=============================================================================================#
 
 enableLogo = true # false = I don't need no stinkin' logo; true = svg, png, or emoji logo
-logoStyle = 'emoji' # Choose png, svg, or emoji
+logoStyle = 'svg' # Choose png, svg, or emoji
 emojiLogo = "🐟"
 
 #=============================================================================================#

@@ -121,6 +121,10 @@
     --logo-accent-dark-hover: #FBBF24; /*Yellow 400 */;
 }
 
+/* Enable Chrome support for darkmode scroll bars */
+/*:root {*/
+/*    color-scheme: dark;*/
+/*}*/
 
 /* ICONS */
 #header {
@@ -130,7 +134,7 @@
     --icon-dark-hover: #6B7280; /* gray-500 */
 }
 
-#navigation {
+#navigation-icons {
     --icon: #9CA3AF; /* gray-400 */
     --icon-hover: #374151; /* gray-700 */
     --icon-dark: #4B5563; /* gray-600 */

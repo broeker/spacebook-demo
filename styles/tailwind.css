@@ -5,7 +5,7 @@
 @layer base {
 
   #hamburger {
-    @apply bg-hamburger h-8 w-8
+    @apply bg-hamburger dark:bg-hamburger-dark h-8 w-8
   }
   /* Set up some default image behavior for nicer images */
   .prose img {
@@ -91,15 +91,15 @@
 
   /* Search */
   .search-results {
-    @apply z-50 p-4 bg-sidebar dark:bg-sidebar-dark text-sidebar dark:text-sidebar-dark;
+    @apply  p-4 bg-search dark:bg-search-dark text-sidebar dark:text-sidebar-dark;
   }
 
   .search-results a {
-    @apply z-50 text-sidebar-link dark:text-sidebar-link-dark;
+    @apply  text-sidebar-link dark:text-sidebar-link-dark;
   }
 
   .search-results a:hover {
-    @apply z-50 text-sidebar-link-hover dark:text-sidebar-link-dark-hover;
+    @apply text-sidebar-link-hover dark:text-sidebar-link-dark-hover;
   }
 
   ul.search-results {

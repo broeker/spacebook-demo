@@ -12,7 +12,7 @@ if (window.netlifyIdentity) {
 document.addEventListener("DOMContentLoaded", function() {
 
   const el = document.getElementById("content");
-  el.addEventListener("click", closeSearch, false)
+  el.addEventListener("click", toggleSearch, false)
 
   if (localStorage.getItem('darkmode') === 'true') {
     document.body.classList.add("dark");
@@ -28,8 +28,16 @@ function logout() {
   window.location.href = "/";
 }
 
-function activateSearch() {
+function toggleSearch() {
+  const search = document.getElementById("search");
+  const verticalNavigation = document.getElementById("v-nav");
+  const content = document.getElementById("content");
+  const app = document.getElementById("app");
+  search.classList.toggle("hidden");
+  // app.classList.toggle("hidden");
 
+   verticalNavigation.classList.toggle("hidden");
+    // content.classList.toggle("hidden");
 }
 
 // Show search
@@ -63,7 +71,7 @@ function activateSearch() {
 // }
 
 // Show/hide responsive navigation
-function showNavigation() {
+function toggleNavigation() {
   const navigation = document.getElementById("navigation");
   const verticalNavigation = document.getElementById("v-nav");
   const navigationIcon = document.getElementById("hamburger");
@@ -72,8 +80,10 @@ function showNavigation() {
 
   // verticalNavigation.classList.remove("hidden");
   verticalNavigation.classList.toggle("hidden");
+  verticalNavigation.classList.toggle("w-full");
   navigationIcon.classList.toggle("bg-hamburger");
   navigationIcon.classList.toggle("bg-hamburger-close");
+  header.classList.toggle("hidden");
   content.classList.toggle("hidden");
   // verticalNavigation.classList.toggle("w-full");
   // verticalNavigation.classList.toggle("h-screen");
@@ -83,14 +93,14 @@ function showNavigation() {
   //navigation.classList.add("overflow-y-scroll", "w-full","right-0", "top-0", "z-50", "pt-0", "bg-white","border-l", "border-gray-200");
 }
 
-function closeNavigation() {
-  const navigation = document.getElementById("navigation");
-  const verticalNavigation = document.getElementById("v-nav");
-  navigation.classList.add("hidden");
-  verticalNavigation.classList.add("hidden");
-  document.body.classList.remove("overflow-hidden","foo")
-  navigation.classList.remove("overflow-y-scroll","w-full", "right-0", "z-50", "pt-0", "bg-white","border-l", "border-gray-200", "md:absolute", "md:left-0");
-}
+// function closeNavigation() {
+//   const navigation = document.getElementById("navigation");
+//   const verticalNavigation = document.getElementById("v-nav");
+//   navigation.classList.add("hidden");
+//   verticalNavigation.classList.add("hidden");
+//   document.body.classList.remove("overflow-hidden","foo")
+//   navigation.classList.remove("overflow-y-scroll","w-full", "right-0", "z-50", "pt-0", "bg-white","border-l", "border-gray-200", "md:absolute", "md:left-0");
+// }
 
 // Submenu logic for horizontal drop down nav
 function showSubMenu(id) {
@@ -139,13 +149,3 @@ var isOutOfViewport = function (elem) {
 
   return out;
 };
-
-// Hide responsive navigation
-// function minimizeNav() {
-//   const content = document.getElementById("content");
-//   const nav = document.getElementById("navigation");
-//   nav.classList.add("w-4");
-//   nav.classList.remove("w-64", "lg:w-72", "mt-20")
-//   content.classList.remove("md:ml-64", "lg:ml-72")
-//   content.classList.add("ml-0")
-// }
