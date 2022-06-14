@@ -1,9 +1,8 @@
 <div class="bg-search dark:bg-search-dark flex w-full h-40 items-center content-center px-8 py-8 z-30">
-
-
-   <div id="searchbox" class="flex-1 resize-none">
-         <input aria-label="Search" x-data="{ isOpen: true }" x-bind:class="{ 'hidden': !isOpen }" type="search" placeholder="{{ config.searchPlaceholder }}"
-         class="w-full resize-none
+    <div id="searchbox" class="flex-1 resize-none">
+        <input aria-label="Search" x-data="{ isOpen: true }" x-bind:class="{ 'hidden': !isOpen }" type="search"
+               placeholder="{{ config.searchPlaceholder }}"
+               class="w-full resize-none
           text-sm
           text-search-text dark:text-search-text-dark
          border border-search-border dark:border-search-border-dark
@@ -11,23 +10,21 @@
          placeholder-placeholder dark:placeholder-placeholder-dark leading-tight
          focus:ring focus:ring-focus dark:focus:ring-focus-dark
          ring-opacity-50" id="searchField">
+    </div>
 
-
-  </div>
-
-
-  <button id="hamburger" aria-label="Close search" onclick="toggleSearch()" class="flex-none content-center content-center bg-hamburger-close ml-2 resize-none"></button>
+    <button id="hamburger" aria-label="Close search" onclick="toggleSearch()"
+            class="flex-none content-center content-center bg-hamburger-close ml-2 resize-none"></button>
 
 </div>
 
-
- <div id="noResultsFound"
-      class="hidden w-full  bg-search dark:bg-search-dark
+<div id="noResultsFound"
+     class="hidden w-full  bg-search dark:bg-search-dark
        text-search-text dark:text-search-text-dark
     px-8  pb-16 resize-none
       ">
-       {{ config.searchNoResultsMessage }}
-      </div>
-    <div  class="w-full bg-search dark:bg-search-dark" id="searchWrapper">
-        <ul  id="searchResults" tabindex="0" class="bg-search dark:bg-search-dark px-8 -mt-12 mr-10 resize-none"></ul>
-      </div>
+    {{ config.searchNoResultsMessage }}
+</div>
+
+<div class="w-full bg-search dark:bg-search-dark" id="searchWrapper">
+    <ul id="searchResults" tabindex="0" class="bg-search dark:bg-search-dark px-8 -mt-12 mr-10 resize-none"></ul>
+</div>

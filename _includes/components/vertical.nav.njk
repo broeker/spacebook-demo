@@ -1,37 +1,36 @@
-  {# Mobile icons #}
-        <div id="navigation-icons" class="flex px-4 py-4 w-full border-b border-sidebar-border lg:hidden items-center bg-sidebar dark:bg-sidebar-dark">
-            <div class="flex-grow  flex space-x-2 justify-start">
-                {% include "../templates/icons.njk" %}
-            </div>
-         <button id="hamburger" aria-label="Show navigation" onclick="toggleNavigation()" class="bg-hamburger-close block lg:hidden mr-2 resize-none"></button>
-        </div>
+{# Mobile icons #}
+<div id="navigation-icons"
+     class="flex px-4 py-4 w-full border-b border-sidebar-border lg:hidden items-center bg-sidebar dark:bg-sidebar-dark">
+    <div class="flex-grow  flex space-x-2 justify-start">
+        {% include "../templates/icons.njk" %}
+    </div>
+    <button id="hamburger" aria-label="Show navigation" onclick="toggleNavigation()"
+            class="bg-hamburger-close block lg:hidden mr-2 resize-none"></button>
+</div>
 
+{# Vertical nav #}
 <nav id="navigation"
-        class="h-full overflow-y-auto
+     class="h-full overflow-y-auto
          bg-sidebar dark:bg-sidebar-dark
         px-6 pb-12 xs:-mt-4 mb-12 w-full lg:w-72
         border-r
         border-b border-sidebar-border
         dark:border-sidebar-border-dark">
+    <div class="mt-6">
+        {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({anchorClass: "item",activeAnchorClass: "active",activeListItemClass: "active",activeKey: eleventyNavigation.key, listClass: "nav", listItemClass: "item"}) | safe }}
+    </div>
 
+    <hr class="mt-8 mb-8"/>
 
-
-        <div class="mt-6">
-            {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({anchorClass: "item",activeAnchorClass: "active",activeListItemClass: "active",activeKey: eleventyNavigation.key, listClass: "nav", listItemClass: "item"}) | safe }}
-        </div>
-
-        <hr class="mt-8 mb-8" />
-
-       {% if config.sidebarText %}
+    {% if config.sidebarText %}
         <div class="prose text-sidebar-text dark:text-sidebar-text-dark !important">
             {{ config.sidebarText | safe }}
         </div>
-        <hr class="mt-8 mb-8" />
-        {% endif %}
+        <hr class="mt-8 mb-8"/>
+    {% endif %}
 
-        {% if icons.iconGroups.sidebar %}
-            {% include "../templates/sidebarIcons.njk" %}
-            <hr class="mt-8 mb-8" />
-        {% endif %}
-
-      </nav>
+    {% if icons.iconGroups.sidebar %}
+        {% include "../templates/sidebarIcons.njk" %}
+        <hr class="mt-8 mb-8"/>
+    {% endif %}
+</nav>

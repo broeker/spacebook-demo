@@ -3,18 +3,21 @@ layout: layouts/base.njk
 section: page
 ---
 {% if config.enableEditButton == true or config.enableDatestamp == true %}
-<div id="dateline-vertical" class="-mr-12 flex justify-end">
-    {% if config.enableDatestamp == true %}
-    <div class="inline-block w-auto text-xs text-dateline dark:text-dateline-dark py-1 mr-3">
-        Updated <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time>
+    <div id="dateline-vertical" class="-mr-12 flex justify-end">
+        {% if config.enableDatestamp == true %}
+            <div class="inline-block w-auto text-xs text-dateline dark:text-dateline-dark py-1 mr-3">
+                Updated
+                <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time>
+            </div>
+        {% endif %}
+        {% if config.enableEditButton == true %}
+            <div class="inline-block w-auto text-xs  py-1 mr-3">
+                <a class="text-dateline dark:text-dateline-dark hover:text-dateline-hover dark:hover:text-dateline-dark-hover"
+                   target="_blank" rel="noopener" rel="noreferrer"
+                   href="{{ config.gitUrl }}/edit/{{ config.gitBranch }}/{{ page.inputPath }}">Edit</a>
+            </div>
+        {% endif %}
     </div>
-    {% endif %}
-    {% if config.enableEditButton == true %}
-    <div class="inline-block w-auto text-xs  py-1 mr-3">
-        <a class="text-dateline dark:text-dateline-dark hover:text-dateline-hover dark:hover:text-dateline-dark-hover" target="_blank" rel="noopener" rel="noreferrer" href="{{ config.gitUrl }}/edit/{{ config.gitBranch }}/{{ page.inputPath }}">Edit</a>
-    </div>
-    {% endif %}
-</div>
 {% endif %}
 
 <div class="pt-12 flex-none w-auto prose  md:prose-lg flow-root  focus:outline-none
@@ -26,10 +29,17 @@ section: page
             <div id="dateline" class="hidden">
                 <div class="dateline flex mt-4 justify-end mr-1">
                     {% if config.enableDatestamp == true %}
-                        <div class="inline-block w-auto text-xs text-dateline dark:text-dateline-dark pt-1 pb-1 pl-3 mr-2 rounded ">Updated <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time></div>
+                        <div class="inline-block w-auto text-xs text-dateline dark:text-dateline-dark pt-1 pb-1 pl-3 mr-2 rounded ">
+                            Updated
+                            <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time>
+                        </div>
                     {% endif %}
                     {% if config.enableEditButton == true %}
-                        <div class="inline-block w-auto text-xs  pt-1 pr-4 pb-1 pl-3 rounded"><a class="text-dateline dark:text-dateline-dark hover:dark:text-dateline-hover dark:hover:text-dateline-dark-hover no-underline font-normal !important" target="_blank"  rel="noopener" rel="noreferrer" href="{{ config.gitUrl }}/edit/{{ config.gitBranch }}/{{ page.inputPath }}">Edit</a></div>
+                        <div class="inline-block w-auto text-xs  pt-1 pr-4 pb-1 pl-3 rounded"><a
+                                    class="text-dateline dark:text-dateline-dark hover:dark:text-dateline-hover dark:hover:text-dateline-dark-hover no-underline font-normal !important"
+                                    target="_blank" rel="noopener" rel="noreferrer"
+                                    href="{{ config.gitUrl }}/edit/{{ config.gitBranch }}/{{ page.inputPath }}">Edit</a>
+                        </div>
                     {% endif %}
                 </div>
             </div>

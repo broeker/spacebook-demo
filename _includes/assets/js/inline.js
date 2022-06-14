@@ -8,11 +8,9 @@ if (window.netlifyIdentity) {
     }
   });
 }
-// Event listener for darkmode, close search on body click
-document.addEventListener("DOMContentLoaded", function() {
 
-  const el = document.getElementById("content");
-  el.addEventListener("click", toggleSearch, false)
+// Event listener for darkmode
+document.addEventListener("DOMContentLoaded", function() {
 
   if (localStorage.getItem('darkmode') === 'true') {
     document.body.classList.add("dark");
@@ -28,49 +26,21 @@ function logout() {
   window.location.href = "/";
 }
 
+// Toggle search pane
 function toggleSearch() {
   const search = document.getElementById("search");
   const verticalNavigation = document.getElementById("v-nav");
-  const content = document.getElementById("content");
-  const app = document.getElementById("app");
+  const horizontalNavigation = document.getElementById("h-nav");
   search.classList.toggle("hidden");
-  // app.classList.toggle("hidden");
-
-   verticalNavigation.classList.toggle("hidden");
-    // content.classList.toggle("hidden");
+  // if (horizontalNavigation !== null) {
+  //   verticalNavigation.classList.toggle("hidden");
+  // }
+  // if (verticalNavigation !== null) {
+  //   verticalNavigation.classList.toggle("hidden");
+  // }
 }
 
-// Show search
-// function showSearch() {
-//   const logo = document.getElementById("logo");
-//   const site = document.getElementById("site");
-//   const icons = document.getElementById("header-icons");
-//   const searchbox = document.getElementById("searchbox");
-//   const hamburger = document.getElementById('hamburger')
-//   logo.classList.add("hidden");
-//   site.classList.add("hidden");
-//   icons.classList.add("hidden");
-//   hamburger.classList.add("hidden");
-//   searchbox.classList.add("w-full");
-//   searchbox.classList.remove("hidden")
-//   document.getElementById("searchField").focus();
-// }
-//
-// // Close search
-// function closeSearch() {
-//   const logo = document.getElementById('logo')
-//   const site = document.getElementById("site");
-//   const searchbox = document.getElementById("searchbox");
-//   const hamburger = document.getElementById('hamburger')
-//   site.classList.remove("hidden");
-//   logo.classList.remove("hidden");
-//   hamburger.classList.remove("hidden");
-//   searchbox.classList.remove("w-full");
-//   searchbox.classList.remove("sm:block")
-//   searchbox.classList.add("hidden")
-// }
-
-// Show/hide responsive navigation
+// Toggle responsive navigation
 function toggleNavigation() {
   const navigation = document.getElementById("navigation");
   const verticalNavigation = document.getElementById("v-nav");
@@ -83,24 +53,12 @@ function toggleNavigation() {
   verticalNavigation.classList.toggle("w-full");
   navigationIcon.classList.toggle("bg-hamburger");
   navigationIcon.classList.toggle("bg-hamburger-close");
+
+
   header.classList.toggle("hidden");
   content.classList.toggle("hidden");
-  // verticalNavigation.classList.toggle("w-full");
-  // verticalNavigation.classList.toggle("h-screen");
-  // verticalNavigation.classList.toggle("h-full");
-
   navigationIcon.classList.toggle("open");
-  //navigation.classList.add("overflow-y-scroll", "w-full","right-0", "top-0", "z-50", "pt-0", "bg-white","border-l", "border-gray-200");
 }
-
-// function closeNavigation() {
-//   const navigation = document.getElementById("navigation");
-//   const verticalNavigation = document.getElementById("v-nav");
-//   navigation.classList.add("hidden");
-//   verticalNavigation.classList.add("hidden");
-//   document.body.classList.remove("overflow-hidden","foo")
-//   navigation.classList.remove("overflow-y-scroll","w-full", "right-0", "z-50", "pt-0", "bg-white","border-l", "border-gray-200", "md:absolute", "md:left-0");
-// }
 
 // Submenu logic for horizontal drop down nav
 function showSubMenu(id) {
@@ -116,7 +74,7 @@ function showSubMenu(id) {
 }
 
 // Toggle dark mode
-function activateDarkMode() {
+function toggleDarkMode() {
   if (localStorage.getItem('darkmode') === 'true') {
     localStorage.setItem('darkmode', 'false')
     document.body.classList.remove("dark");

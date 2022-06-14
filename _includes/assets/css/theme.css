@@ -141,6 +141,14 @@
     --icon-dark-hover: #6B7280; /* gray-500 */
 }
 
+#sidebar-icons {
+    --icon: #9CA3AF; /* gray-400 */
+    --icon-hover: #374151; /* gray-700 */
+    --icon-dark: #4B5563; /* gray-600 */
+    --icon-dark-hover: #6B7280; /* gray-500 */
+}
+
+
 #footer {
     --icon: #9CA3AF; /* gray-400 */
     --icon-hover: #374151; /* gray-700 */

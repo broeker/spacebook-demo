@@ -66,7 +66,6 @@ enableEditButton = true # Set to true to enable an "edit this page" link
 enableDatestamp = true # Set to true to enable a datestamp
 enablePageNavigation = true # Set to true to enable page-by-page navigation
 enableEncryption = true # Set to true to enable staticrypt password protection
-enableContact = true # Set to true to enable a Netlify contact form icon
 enableComments = true # Set to true to enable a commenting engine
 searchPlaceholder = "Search " # Change text for search bar placeholder
 searchNoResultsMessage = "Sorry cadet, no results available!" # Change message for no search results
@@ -78,14 +77,14 @@ searchNoResultsMessage = "Sorry cadet, no results available!" # Change message f
 # footerText (appears at the center of your bottom footer)
 # To use raw HTML in use a multi-line toml string, e.g.:
 # 
-# footerText = """
-# <div><strong>Acme Inc and the California Office of Design</strong></div>
-# <div>Where all the news is fit to print</div>
-# <ul>
-#    <li>Foo: 612-555-5555</li>
-#    <li>Address: Yorba, CA 55410-0000</li>
-#    <li>Website: <a href="http://spacebook.app" target="_blank">spacebook.app</li>
-#</ul>
+footerText = """
+<div><strong>Acme Inc and the California Office of Design</strong></div>
+<div>Where all the news is fit to print</div>
+<ul>
+   <li>Foo: 612-555-5555</li>
+   <li>Address: Yorba, CA 55410-0000</li>
+   <li>Website: <a href="http://spacebook.app" target="_blank">spacebook.app</li>
+</ul> """
 
 #=============================================================================================#
 # CMS INTEGRATION (If you have Netlify or Forestry enabled, show the CMS admin icon)

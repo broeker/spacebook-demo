@@ -1,11 +1,9 @@
 {% for item in icons.iconGroups.footerLeft %}
-    {% if not (config.enableContact == 0 and item.name == "Contact") %}
-        <a 
+    <a
         {% if item.onclick %} onclick="{{ item.onclick }}" {% endif %}
         {% if item.url %} href="{{ item.url }}" target="_blank" {% endif %}
-        title="{{ item.name }}" class="mr-2 " aria-label="{{ item.name }}" rel="noopener noreferrer" 
-        >
+        title="{{ item.name }}" class="mr-2 " aria-label="{{ item.name }}" rel="noopener noreferrer"
+    >
         {{ icons.icons[item.icon] | safe }}
-        </a>
-    {% endif %}
+    </a>
 {% endfor %}

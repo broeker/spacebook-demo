@@ -7,13 +7,21 @@
 [[header]]
     name="Darkmode"
     icon="darkmodeIcon"
-    onclick="activateDarkMode()"
+    onclick="toggleDarkMode()"
 
 [[header]]
     name="Github"
     url="https://github.com"
     icon="gitIcon"
 
+[[header]]
+    name="Github"
+    url="https://github.com"
+    icon="gitIcon"
+[[header]]
+    name="Github"
+    url="https://github.com"
+    icon="gitIcon"
 [[header]]
     name="Encryption"
     onclick="logout()"
@@ -35,7 +43,7 @@
 # Custom footer icons (left)
 [[footerLeft]]
     name="Contact"
-    url="https://github.com"
+    url="/contact"
     icon="contactIcon"
 
 [[footerLeft]]
