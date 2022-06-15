@@ -1,0 +1,7 @@
+<svg width="30px" height="30px" viewBox="0 0 24 24"
+     role="img" xmlns="http://www.w3.org/2000/svg"
+     aria-labelledby="hamburgerIconTitle"
+     class="inline fill-current text-icon hover:text-icon-hover dark:text-icon-dark dark:hover:text-icon-dark-hover"
+     fill="none" >
+    <title id="hamburgerIconTitle">Menu</title>
+    <path d="M6 7L18 7M6 12L18 12M6 17L18 17"/> </svg>

@@ -40,7 +40,9 @@
         </div>
 
         <button id="hamburger" aria-label="Show navigation" onclick="toggleNavigation()"
-                class="bg-hamburger block lg:hidden mr-2 resize-none"></button>
+                class=" block lg:hidden mr-2 resize-none">
+            {{ icons.icons.menuIcon | safe }}
+        </button>
 
         <div id="header-icons" class="hidden block lg:flex space-x-2 mr-2">
             {% include "../templates/icons.njk" %}
@@ -48,12 +50,20 @@
     </div>
 
     {% if config.navigationStyle === "horizontal" %}
-        <div id="h-nav">
-            {% include "../components/horizontal.nav.njk" %}
-        </div>
+        <nav id="navigation">
+            <div id="h-nav" class="hidden lg:block">
+                {% include "../components/horizontal.nav.njk" %}
+            </div>
+        </nav>
     {% endif %}
 
 </div>
+
+{% if config.navigationStyle === "horizontal" %}
+    <div id="v-nav" class="fixed  h-full hidden">
+        {% include "../components/vertical.nav.njk" %}
+    </div>
+{% endif %}
 
 <div id="search" class="hidden fixed top-0 h-full w-full z-50">
     {% if config.enableSearch == 1 %}

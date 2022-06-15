@@ -84,7 +84,7 @@
     --header-border: #E5E7EB; /* gray-200 */
     --header-border-dark:  #1F2937; /* gray-700 */
     --sidebar-border: #E5E7EB; /* gray-200 */
-    --sidebar-border-dark:  #1F2937; /* gray-700 */
+    --sidebar-border-dark:  #FBBF24; /*Yellow 400 */;
     --footer-border: #E5E7EB; /* gray-200 */
     --footer-border-dark:  #1F2937; /* gray-700 */
 
@@ -95,12 +95,12 @@
     --content-hr-dark: #4B5563; /* gray-600 */
 
     /* SEARCH */
-    --search: #F9FAFB; /* gray-50 */
+    --search:  #E5E7EB; /* gray-200 */
     --search-dark: #1F2937; /* gray-700 */
     --search-text: #6B7280; /* gray-500 */
     --search-text-dark: #9CA3AF; /* gray-400 */
     --search-border: #E5E7EB; /* gray-200 */
-    --search-border-dark: black; /* gray-900 */
+    --search-border-dark: #6B7280; /* gray-500 */
     --focus: #E5E7EB; /* gray-200 */
     --focus-dark: #4B5563; /* gray-600 */
     --placeholder: #9CA3AF; /* gray-400 */

@@ -1,11 +1,13 @@
 {# Mobile icons #}
 <div id="navigation-icons"
-     class="flex px-4 py-4 w-full border-b border-sidebar-border lg:hidden items-center bg-sidebar dark:bg-sidebar-dark">
+     class="flex px-4 py-4 w-full border-b border-header-border dark:border-header-border-dark lg:hidden items-center bg-sidebar dark:bg-sidebar-dark">
     <div class="flex-grow  flex space-x-2 justify-start">
         {% include "../templates/icons.njk" %}
     </div>
     <button id="hamburger" aria-label="Show navigation" onclick="toggleNavigation()"
-            class="bg-hamburger-close block lg:hidden mr-2 resize-none"></button>
+            class=" block lg:hidden -mr-2 resize-none">
+        {{ icons.icons.closeIcon | safe }}
+    </button>
 </div>
 
 {# Vertical nav #}

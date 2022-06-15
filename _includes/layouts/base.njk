@@ -3,7 +3,7 @@
 {% include "components/head.njk" %}
 <body>
     {% include "../components/header.njk" %}
-    <div id="app" class="z-40">
+    <div id="app" class="h-screen bg-content dark:bg-content-dark z-40">
         {% if config.navigationStyle === "vertical" %}
             <div id="v-nav" class="fixed  h-full hidden lg:block">
                 {% include "../components/vertical.nav.njk" %}

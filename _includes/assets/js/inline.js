@@ -42,18 +42,16 @@ function toggleSearch() {
 
 // Toggle responsive navigation
 function toggleNavigation() {
-  const navigation = document.getElementById("navigation");
   const verticalNavigation = document.getElementById("v-nav");
   const navigationIcon = document.getElementById("hamburger");
   const content = document.getElementById("content");
-  navigation.classList.remove("hidden","mt-20");
+  const header = document.getElementById("header");
 
-  // verticalNavigation.classList.remove("hidden");
+
   verticalNavigation.classList.toggle("hidden");
   verticalNavigation.classList.toggle("w-full");
   navigationIcon.classList.toggle("bg-hamburger");
   navigationIcon.classList.toggle("bg-hamburger-close");
-
 
   header.classList.toggle("hidden");
   content.classList.toggle("hidden");

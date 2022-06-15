@@ -5,7 +5,7 @@
                class="w-full resize-none
           text-sm
           text-search-text dark:text-search-text-dark
-         border border-search-border dark:border-search-border-dark
+         border border-header-border dark:border-header-border-dark
          appearance-none rounded py-2 px-2
          placeholder-placeholder dark:placeholder-placeholder-dark leading-tight
          focus:ring focus:ring-focus dark:focus:ring-focus-dark
@@ -13,7 +13,9 @@
     </div>
 
     <button id="hamburger" aria-label="Close search" onclick="toggleSearch()"
-            class="flex-none content-center content-center bg-hamburger-close ml-2 resize-none"></button>
+            class="flex-none content-center content-center ml-2 resize-none">
+        {{ icons.icons.closeIcon | safe }}
+    </button>
 
 </div>
 

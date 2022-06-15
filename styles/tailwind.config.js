@@ -20,9 +20,10 @@ module.exports = {
                 '26': '6.5rem',
             },
             backgroundImage: {
-                'hamburger': "url('/_includes/assets/buttons/menu.svg')",
-                'hamburger-dark': "url('/_includes/assets/buttons/menu-dark.svg')",
-                'hamburger-close': "url('/_includes/assets/buttons/close.svg')",
+                'hamburger': "url('/_includes/assets/buttons.old/menu-dark.svg')",
+                'hamburger-dark': "url('/_includes/assets/buttons.old/menu-dark.svg')",
+                'hamburger-close': "url('/_includes/assets/buttons.old/close.svg')",
+                'hamburger-close-dark': "url('/_includes/assets/buttons.old/close.svg')",
             },
             colors: {
                 'header': {

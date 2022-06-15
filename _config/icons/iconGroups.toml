@@ -5,25 +5,17 @@
     onclick="toggleSearch()"
 
 [[header]]
-    name="Darkmode"
+    name="Toggle darkmode"
     icon="darkmodeIcon"
     onclick="toggleDarkMode()"
 
 [[header]]
-    name="Github"
+    name="See us on Github"
     url="https://github.com"
     icon="gitIcon"
 
 [[header]]
-    name="Github"
-    url="https://github.com"
-    icon="gitIcon"
-[[header]]
-    name="Github"
-    url="https://github.com"
-    icon="gitIcon"
-[[header]]
-    name="Encryption"
+    name="Logout"
     onclick="logout()"
     icon="logoutIcon"
 
