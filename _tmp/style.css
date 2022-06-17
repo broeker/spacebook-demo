@@ -1418,9 +1418,15 @@ select {
 }
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .-mr-12 {
   margin-right: -3rem !important;
 }
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -1700,6 +1706,8 @@ select {
 .font-bold {
   font-weight: 700 !important;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 }
 .font-normal {
   font-weight: 400 !important;
@@ -1761,6 +1769,116 @@ select {
   color: var(--placeholder) !important;
 }
 =======
+}
+.leading-tight {
+  line-height: 1.25 !important;
+}
+.text-logo-1 {
+  color: var(--logo-1) !important;
+}
+.text-logo-accent {
+  color: var(--logo-accent) !important;
+}
+.text-logo-2 {
+  color: var(--logo-2) !important;
+}
+.text-header-text {
+  color: var(--header-text) !important;
+}
+.text-subheader-text {
+  color: var(--subheader-text) !important;
+}
+.text-icon {
+  color: var(--icon) !important;
+}
+.text-search-text {
+  color: var(--search-text) !important;
+}
+.text-sidebar-link {
+  color: var(--sidebar-link) !important;
+}
+.text-dateline {
+  color: var(--dateline) !important;
+}
+.text-pagenav {
+  color: var(--pagenav) !important;
+}
+.text-footer-text {
+  color: var(--footer-text) !important;
+}
+.no-underline {
+  -webkit-text-decoration-line: none !important;
+          text-decoration-line: none !important;
+}
+.placeholder-placeholder::-moz-placeholder {
+  color: var(--placeholder) !important;
+}
+.placeholder-placeholder:-ms-input-placeholder {
+  color: var(--placeholder) !important;
+}
+.placeholder-placeholder::placeholder {
+  color: var(--placeholder) !important;
+}
+>>>>>>> Stashed changes
+=======
+}
+.font-normal {
+  font-weight: 400 !important;
+}
+.leading-tight {
+  line-height: 1.25 !important;
+}
+.text-logo-1 {
+  color: var(--logo-1) !important;
+}
+.text-logo-accent {
+  color: var(--logo-accent) !important;
+}
+.text-logo-2 {
+  color: var(--logo-2) !important;
+}
+.text-header-text {
+  color: var(--header-text) !important;
+}
+.text-subheader-text {
+  color: var(--subheader-text) !important;
+}
+.text-icon {
+  color: var(--icon) !important;
+}
+.text-search-text {
+  color: var(--search-text) !important;
+}
+.text-sidebar-link {
+  color: var(--sidebar-link) !important;
+}
+.text-dateline {
+  color: var(--dateline) !important;
+}
+.text-pagenav {
+  color: var(--pagenav) !important;
+}
+.text-footer-text {
+  color: var(--footer-text) !important;
+}
+.no-underline {
+  -webkit-text-decoration-line: none !important;
+          text-decoration-line: none !important;
+}
+.placeholder-placeholder::-moz-placeholder {
+  color: var(--placeholder) !important;
+}
+.placeholder-placeholder:-ms-input-placeholder {
+  color: var(--placeholder) !important;
+}
+.placeholder-placeholder::placeholder {
+  color: var(--placeholder) !important;
+}
+>>>>>>> Stashed changes
+=======
+}
+.font-normal {
+  font-weight: 400 !important;
 }
 .leading-tight {
   line-height: 1.25 !important;
