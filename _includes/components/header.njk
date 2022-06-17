@@ -59,16 +59,11 @@
 
 </div>
 
-{% if config.navigationStyle === "horizontal" %}
-    <div id="v-nav" class="fixed  h-full hidden">
-        {% include "../components/vertical.nav.njk" %}
-    </div>
-{% endif %}
 
-<div id="search" class="hidden fixed top-0 h-full w-full z-50">
-    {% if config.enableSearch == 1 %}
-        {% include "../templates/search.njk" %}
-    {% endif %}
-</div>
 
- 
+{#<div id="search" class="hidden fixed top-0 h-full w-full z-50">#}
+{#    {% if config.enableSearch == 1 %}#}
+{#        {% include "../templates/search.njk" %}#}
+{#    {% endif %}#}
+{#</div>#}
+
