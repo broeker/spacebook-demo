@@ -2,7 +2,7 @@
 title: Working with links
 date: Last Modified
 permalink: /tips-and-tricks/links/
-toc: true
+
 comments: 0
 eleventyNavigation:
   key: Working with links

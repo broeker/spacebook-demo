@@ -8,6 +8,27 @@
         @apply bg-hamburger dark:bg-hamburger-dark bg-no-repeat bg-center h-8 w-8
     }
 
+    /* TOC */
+    aside {
+        @apply mt-2;
+    }
+    .toc  ol {
+        @apply  list-none pl-0 ml-0;
+    }
+    .toc li {
+
+        @apply  pl-0 ml-0;
+    }
+    .toc li li {
+        @apply  pl-4 ml-0;
+    }
+    #content .toc li a {
+        @apply mb-1 py-1 pr-4  w-full block text-nav hover:text-nav-hover dark:text-nav-dark dark:hover:text-nav-dark-hover;
+
+    }
+
+
+
     /* Set up some default image behavior for nicer images */
     .prose img {
         @apply w-auto  shadow-md border-2 border-transparent !important;

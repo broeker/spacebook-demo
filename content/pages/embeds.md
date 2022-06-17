@@ -2,7 +2,7 @@
 title: Working with embeds 
 date: Last Modified
 permalink: /tips-and-tricks/embeds/
-toc: true
+
 eleventyNavigation:
   key: Working with embeds
   order: 40 

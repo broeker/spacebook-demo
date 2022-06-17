@@ -63,14 +63,13 @@
 
     /* SIDEBAR */
     --sidebar: #fff;
-    --sidebar-dark: #1F2937; /* gray-700 */
-    --sidebar-text: #6B7280; /* gray-500 */
-    --sidebar-text-dark: #6B7280; /* gray-500 */
-    --sidebar-link-hover:#4B5563; /* gray-6 */
-    --sidebar-link: #6B7280; /* gray-500 */
-    --sidebar-link-hover:#4B5563; /* gray-600 */
-    --sidebar-link-dark: #6B7280; /* gray-500 */
-    --sidebar-link-dark-hover:  #9CA3AF; /* gray-400 */
+    --sidebar-dark:#111827; /* gray-900 */
+    --sidebar-text: #111827; /* gray-900 */
+    --sidebar-text-dark:#9CA3AF; /* gray-400 */
+    --sidebar-link: #1E40AF; /* blue-800 */
+    --sidebar-link-hover: #111827; /* gray-900 */
+    --sidebar-link-dark: #9CA3AF; /* gray-400 */
+    --sidebar-link-dark-hover: #6B7280; /* gray-500 */
 
     /* NAVIGATION */
     --nav:  #6B7280; /* gray-500 */
@@ -84,7 +83,7 @@
     --header-border: #E5E7EB; /* gray-200 */
     --header-border-dark:  #1F2937; /* gray-700 */
     --sidebar-border: #E5E7EB; /* gray-200 */
-    --sidebar-border-dark:  #FBBF24; /*Yellow 400 */;
+    --sidebar-border-dark:   #1F2937; /* gray-700 */
     --footer-border: #E5E7EB; /* gray-200 */
     --footer-border-dark:  #1F2937; /* gray-700 */
 
@@ -148,6 +147,12 @@
     --icon-dark-hover: #6B7280; /* gray-500 */
 }
 
+#search {
+    --icon: #9CA3AF; /* gray-400 */
+    --icon-hover: #374151; /* gray-700 */
+    --icon-dark: #4B5563; /* gray-600 */
+    --icon-dark-hover: #6B7280; /* gray-500 */
+}
 
 #footer {
     --icon: #9CA3AF; /* gray-400 */

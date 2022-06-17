@@ -2,7 +2,7 @@
 title: 'Configure your site' 
 date: Last Modified 
 permalink: /getting-started/configure/
-toc: true
+
 eleventyNavigation:
   order: 5 
   parent: Getting started 

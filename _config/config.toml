@@ -62,6 +62,7 @@ faviconEmoji = "💥"
 navigationStyle = "vertical" # set to vertical or horizontal
 enableDarkmode = true # Set to true to enable darkmode toggle
 enableSearch = true # Set to true to enable Elastic Lunr search
+enableTOC = false # Enable inline table-of-contents on pages
 enableEditButton = true # Set to true to enable an "edit this page" link
 enableDatestamp = true # Set to true to enable a datestamp
 enablePageNavigation = true # Set to true to enable page-by-page navigation

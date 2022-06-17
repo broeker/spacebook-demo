@@ -5,7 +5,7 @@ const htmlmin = require("html-minifier");
 const svgContents = require("eleventy-plugin-svg-contents");
 const mdIterator = require('markdown-it-for-inline')
 const embedEverything = require("eleventy-plugin-embed-everything");
-//const pluginTOC = require('eleventy-plugin-nesting-toc');
+const pluginTOC = require('eleventy-plugin-nesting-toc');
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const Image = require("@11ty/eleventy-img");
 const toml = require("toml");
@@ -16,7 +16,7 @@ module.exports = function (eleventyConfig) {
     // Toml support
     eleventyConfig.addDataExtension("toml", contents => toml.parse(contents));
 
-    // eleventyConfig.addPlugin(pluginTOC);
+    eleventyConfig.addPlugin(pluginTOC);
     eleventyConfig.addPlugin(svgContents);
     eleventyConfig.addPlugin(embedEverything);
     eleventyConfig.addShortcode("version", function () {
@@ -240,6 +240,7 @@ module.exports = function (eleventyConfig) {
         .use(markdownItContainer, 'callout-green')
         .use(markdownItContainer, 'warning')
         .use(markdownItTasks)
+        .use(markdownToc)
         .use(markdownItCenterText)
         .use(markdownLinkifyImages, {
             imgClass: "p-4",

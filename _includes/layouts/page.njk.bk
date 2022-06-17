@@ -44,11 +44,20 @@ section: page
                 </div>
             </div>
         {% endif %}
+        <div class="{% if config.enableTOC and content|toc %}xl:pr-64{% endif %} text-content-text dark:text-content-text-dark self-center adjust">
 
+            {% if config.enableTOC and content|toc %}
+                <div class="fixed z-20 top-[5rem] bg-content bottom-0 right-[max(0px,calc(50%-45rem))] w-[19.5rem] py-10 px-8 overflow-y-auto hidden xl:block">
+                    <small>ON THIS PAGE</small><br/>
+                    <aside class="font-normal not-prose">
+                        {{ content | toc | safe }}
+                    </aside>
+                </div>
+            {% endif %}
 
             {{ layoutContent | safe }}
 
-
+        </div>
 
         {% if (config.enableComments) and (comments !== 0) %}
             <!-- Paste your comment code here! -->
@@ -57,7 +66,7 @@ section: page
         {% if config.enablePageNavigation == true %}
             {% include "../components/page.nav.njk" %}
         {% endif %}
-    </article>
+</article>
 </div>
 
 

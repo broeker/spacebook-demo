@@ -2,7 +2,7 @@
 title: Editing content
 date: Last Modified
 permalink: /tips-and-tricks/editing/
-toc: true
+
 eleventyNavigation:
   key: Editing content
   order: 25

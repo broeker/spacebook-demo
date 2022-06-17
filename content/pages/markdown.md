@@ -2,7 +2,7 @@
 title: Learning markdown️
 date: Last Modified
 permalink: /tips-and-tricks/markdown/
-toc: true
+
 eleventyNavigation:
   key: Learning markdown 
   order: 48 

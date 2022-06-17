@@ -21,18 +21,9 @@
     <div class="mt-6">
         {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({anchorClass: "item",activeAnchorClass: "active",activeListItemClass: "active",activeKey: eleventyNavigation.key, listClass: "nav", listItemClass: "item"}) | safe }}
     </div>
-
-    <hr class="mt-8 mb-8"/>
-
-    {% if config.sidebarText %}
-        <div class="prose text-sidebar-text dark:text-sidebar-text-dark !important">
-            {{ config.sidebarText | safe }}
-        </div>
-        <hr class="mt-8 mb-8"/>
-    {% endif %}
-
     {% if icons.iconGroups.sidebar %}
-        {% include "../templates/sidebarIcons.njk" %}
         <hr class="mt-8 mb-8"/>
+        {% include "../templates/sidebarIcons.njk" %}
+
     {% endif %}
 </nav>
