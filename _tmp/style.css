@@ -794,21 +794,6 @@ select {
         font-size: 40px;
     }
 
-    .adjust p img, .adjust img, .adjust p iframe, .adjust iframe, .twitter-tweet {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding: 0.5rem !important;
-  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color) !important;
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
-}
-
-    .adjust p img:hover, .adjust img:hover {
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
     .footer.prose-sm {
   line-height: 1.25rem;
 }
@@ -1431,9 +1416,15 @@ select {
 .mb-8 {
   margin-bottom: 2rem !important;
 }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .-mr-12 {
   margin-right: -3rem !important;
 }
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 .mr-3 {
   margin-right: 0.75rem !important;
 }
@@ -1708,9 +1699,11 @@ select {
 }
 .font-bold {
   font-weight: 700 !important;
+<<<<<<< Updated upstream
 }
 .font-normal {
   font-weight: 400 !important;
+<<<<<<< Updated upstream
 }
 .leading-tight {
   line-height: 1.25 !important;
@@ -1767,6 +1760,113 @@ select {
 .placeholder-placeholder::placeholder {
   color: var(--placeholder) !important;
 }
+=======
+}
+.leading-tight {
+  line-height: 1.25 !important;
+}
+.text-logo-1 {
+  color: var(--logo-1) !important;
+}
+.text-logo-accent {
+  color: var(--logo-accent) !important;
+}
+.text-logo-2 {
+  color: var(--logo-2) !important;
+}
+.text-header-text {
+  color: var(--header-text) !important;
+}
+.text-subheader-text {
+  color: var(--subheader-text) !important;
+}
+.text-icon {
+  color: var(--icon) !important;
+}
+.text-search-text {
+  color: var(--search-text) !important;
+}
+.text-sidebar-link {
+  color: var(--sidebar-link) !important;
+}
+.text-dateline {
+  color: var(--dateline) !important;
+}
+.text-pagenav {
+  color: var(--pagenav) !important;
+}
+.text-footer-text {
+  color: var(--footer-text) !important;
+}
+.no-underline {
+  -webkit-text-decoration-line: none !important;
+          text-decoration-line: none !important;
+}
+.placeholder-placeholder::-moz-placeholder {
+  color: var(--placeholder) !important;
+}
+.placeholder-placeholder:-ms-input-placeholder {
+  color: var(--placeholder) !important;
+}
+.placeholder-placeholder::placeholder {
+  color: var(--placeholder) !important;
+}
+>>>>>>> Stashed changes
+=======
+}
+.font-normal {
+  font-weight: 400 !important;
+}
+.leading-tight {
+  line-height: 1.25 !important;
+}
+.text-logo-1 {
+  color: var(--logo-1) !important;
+}
+.text-logo-accent {
+  color: var(--logo-accent) !important;
+}
+.text-logo-2 {
+  color: var(--logo-2) !important;
+}
+.text-header-text {
+  color: var(--header-text) !important;
+}
+.text-subheader-text {
+  color: var(--subheader-text) !important;
+}
+.text-icon {
+  color: var(--icon) !important;
+}
+.text-search-text {
+  color: var(--search-text) !important;
+}
+.text-sidebar-link {
+  color: var(--sidebar-link) !important;
+}
+.text-dateline {
+  color: var(--dateline) !important;
+}
+.text-pagenav {
+  color: var(--pagenav) !important;
+}
+.text-footer-text {
+  color: var(--footer-text) !important;
+}
+.no-underline {
+  -webkit-text-decoration-line: none !important;
+          text-decoration-line: none !important;
+}
+.placeholder-placeholder::-moz-placeholder {
+  color: var(--placeholder) !important;
+}
+.placeholder-placeholder:-ms-input-placeholder {
+  color: var(--placeholder) !important;
+}
+.placeholder-placeholder::placeholder {
+  color: var(--placeholder) !important;
+}
+>>>>>>> Stashed changes
 .ring-opacity-50 {
   --tw-ring-opacity: 0.5 !important;
 }
@@ -1900,20 +2000,12 @@ select {
   color: var(--search-text-dark) !important;
 }
 
-.dark .dark\:text-sidebar-text-dark {
-  color: var(--sidebar-text-dark) !important;
-}
-
 .dark .dark\:text-sidebar-link-dark {
   color: var(--sidebar-link-dark) !important;
 }
 
 .dark .dark\:text-dateline-dark {
   color: var(--dateline-dark) !important;
-}
-
-.dark .dark\:text-content-text-dark {
-  color: var(--content-text-dark) !important;
 }
 
 .dark .dark\:text-pagenav-dark {
