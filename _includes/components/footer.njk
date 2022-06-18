@@ -8,7 +8,7 @@ border-t border-footer-border dark:border-footer-border-dark">
     </div>
     <div class="grow flex items-center justify-center">
         <div class="flex-none">
-        foo
+            {{ config.footerText | safe }}
         </div>
     </div>
     <div class="flex-none w-14 h-14 ...">

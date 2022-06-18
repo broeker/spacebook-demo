@@ -1,4 +1,4 @@
-<div class="bg-search dark:bg-search-dark flex w-full h-40 items-center content-center px-8 py-8 z-30">
+<div class="bg-search dark:bg-search-dark flex w-full h-40 items-center content-center px-20 md:px-40 lg:px-40 py-8 z-30">
     <div id="searchbox" class="flex-1 resize-none">
         <input aria-label="Search" x-data="{ isOpen: true }" x-bind:class="{ 'hidden': !isOpen }" type="search"
                placeholder="{{ config.searchPlaceholder }}"
@@ -22,11 +22,11 @@
 <div id="noResultsFound"
      class="hidden w-full  bg-search dark:bg-search-dark
        text-search-text dark:text-search-text-dark
-    px-8  pb-16 resize-none
+    px-80  pb-16 resize-none
       ">
     {{ config.searchNoResultsMessage }}
 </div>
 
 <div class="w-full bg-search dark:bg-search-dark" id="searchWrapper">
-    <ul id="searchResults" tabindex="0" class="bg-search dark:bg-search-dark px-8 -mt-12 mr-10 resize-none"></ul>
+    <ul id="searchResults" tabindex="0" class="bg-search dark:bg-search-dark px-80 -mt-12 mr-10 resize-none"></ul>
 </div>

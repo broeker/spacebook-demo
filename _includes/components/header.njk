@@ -59,11 +59,9 @@
 
 </div>
 
-
-
-{#<div id="search" class="hidden fixed top-0 h-full w-full z-50">#}
-{#    {% if config.enableSearch == 1 %}#}
-{#        {% include "../templates/search.njk" %}#}
-{#    {% endif %}#}
-{#</div>#}
+<div id="search" class="hidden fixed top-0 h-full w-full z-50">
+    {% if config.enableSearch == 1 %}
+        {% include "../templates/search.njk" %}
+    {% endif %}
+</div>
 
