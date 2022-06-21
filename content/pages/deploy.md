@@ -2,6 +2,7 @@
 title: 'Deploy your changes' 
 date: Last Modified
 permalink: /getting-started/deploy/
+tags: foo
 eleventyNavigation:
   order: 20 
   parent: Getting started 

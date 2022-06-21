@@ -2,7 +2,7 @@
 title: Adding comments
 date: Last Modified
 permalink: /advanced/comments/
-
+tags: foo
 eleventyNavigation:
   key: Enabling comments 
   order: 70 

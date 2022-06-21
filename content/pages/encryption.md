@@ -2,7 +2,7 @@
 title: Password protect your spacebook 
 date: Last Modified
 permalink: /advanced/encryption/
-
+tags: foo
 eleventyNavigation:
   key: Password protection
   order: 75 

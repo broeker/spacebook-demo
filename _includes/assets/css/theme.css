@@ -71,6 +71,13 @@
     --sidebar-link-dark: #9CA3AF; /* gray-400 */
     --sidebar-link-dark-hover: #6B7280; /* gray-500 */
 
+    /* TAGS */
+    --tag: #E5E7EB; /* gray-200 */
+    --tag-hover:  #4B5563; /* gray-600 */;
+    --tag-dark: #9CA3AF; /* gray-400 */
+    --tag-dark-hover: #6B7280; /* gray-500 */
+
+
     /* NAVIGATION */
     --nav:  #6B7280; /* gray-500 */
     --nav-hover:  #4B5563; /* gray-600 */;

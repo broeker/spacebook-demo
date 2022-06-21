@@ -1,0 +1,16 @@
+---
+permalink: /tags/
+layout: layouts/page.njk
+---
+<h1>All tags</h1>
+{% if config.enableTags %}
+    <span id="tags">
+{% for tag in collections.tagList %}
+    {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+    <span class="uppercase last:mr-0 mr-1 text-xs rounded border border-bg-tag hover:bg-tag-dark px-2 py-1"><a
+                href="{{ tagUrl | url }}">{{ tag }}</a></span>
+{% endfor %}
+</span>
+{% else %}
+    <p>Tagging not enabled.</p>
+{% endif %}

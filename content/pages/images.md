@@ -2,6 +2,7 @@
 title: Working with images and all the great creatures large and small
 date: Last Modified
 permalink: /tips-and-tricks/images/
+tags: foo
 eleventyNavigation:
   key: Working with images and all the great creatures large and small and things between
   order: 30 

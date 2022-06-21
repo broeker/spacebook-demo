@@ -18,8 +18,7 @@
         <div id="site" class="resize-none space-y-4 w-full ml-2">
             <div class="text-header-text hover:text-header-text-hover dark:text-header-text-dark dark:hover:text-header-text-dark-hover">
                 <a class="no-underline resize-none font-bold" href="/" rel="noopener noreferrer">
-                    <span class="block md:hidden text-sm sm:text-xl md:text-xl resize-none">{{ config.shortName }}</span>
-                    <span class="hidden md:block text-sm sm:text-xl md:text-xl resize-none">{{ config.name }}</span>
+                    <span class="text-sm sm:text-xl md:text-xl resize-none">{{ config.name }}</span>
                 </a>
             </div>
 
@@ -32,8 +31,7 @@
                 lg:text-base
                 resize-none
                 w-full">
-                <span class="hidden md:block">{{ config.subtitle }}</span>
-                <span class="block md:hidden">{{ config.shortSubtitle }}</span>
+                <span>{{ config.subtitle }}</span>
             </span>
             {% endif %}
 

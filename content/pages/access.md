@@ -2,6 +2,7 @@
 title: 'Review your privacy settings' 
 date: Last Modified 
 permalink: /getting-started/step-four/
+tags: foo
 eleventyNavigation:
   order: 18  
   parent: Getting started 

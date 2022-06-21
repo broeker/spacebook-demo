@@ -2,6 +2,7 @@
 title: Adding analytics 
 date: Last Modified
 permalink: /advanced/analytics/
+tags: foo
 eleventyNavigation:
   key: Enabling analtyics 
   order: 73 
@@ -36,6 +37,6 @@ Netlify offers a similar and just as awesome analytics system starting at $9/mo 
 
 
 ::: callout 
-**Did you know?** Both of these scripts are extremely lightweight and unlike Google Analytics will have essentially zero impact on your peformance!
+r
 :::
 

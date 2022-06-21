@@ -2,6 +2,9 @@
 title: Navigation layout 
 date: Last Modified
 permalink: /advanced/navigation/
+tags: 
+  - foo
+  - foobar
 eleventyNavigation:
   key: Navigation layout 
   order: 58

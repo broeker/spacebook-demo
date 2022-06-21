@@ -1,5 +1,5 @@
 ---
-title: Getting started
+title: Getting started 
 date: Last Modified 
 permalink: /
 eleventyNavigation:
@@ -7,22 +7,48 @@ eleventyNavigation:
   title: Getting started
   order: 0
 ---
-Create your own spacebook exactly like this one and customize it to your needs. Spacebooks are speedy to set up, free, and 100% open source.
+Spacebooks are speedy to set up, free, and 100% open source. Create your own DIY spacebook and customize it to your needs. 
 
-- **Easy to use** 😀 -- add a new page and it appears magically in your navigation, make edits right from your phone
-- **Writing focused** ❤️ -- beautiful typography and a minimalist design managed with easy-to-use Markdown
+- **Writing focused** ❤️ -- beautiful typography, a minimalist design, all managed with easy-to-use Markdown
 - **Speedy and accessible** 🚀 -- static files, responsive system fonts, minimal JavaScript, purge and minify All the Things, accessible to all people and devices
-- **Privacy first** 🔒 -- User-agent: \* Disallow: / is set by default with noreferrer set on all links; encrypt your full site with a password if desired
+- **Easy to use** 😀 -- add a new pages with nested  navigation, make edits right from your phone
+- **Privacy first** 🔒 -- User-agent: \* Disallow: / is set by default with noreferrer set on all links; or, encrypt your full site with a password if desired
 - **Flexible** 💪 -- horizontal or vertical navigation, disable features you don't need, add advanced features with serverless functions or Alpine.js
 
-Spacebooks are modern notebooks you can use to create documentation, sketch out new ideas, plan a new project, or whatever suits your fancy. 
+Create documentation, sketch out new ideas, plan a new project, or whatever suits your fancy. 
 
 ---
+
+## What is a spacebook?
+
+A spacebook is a simple website generator that will help you create your own project just like this one using a bunch of cool, modern, and fast technology:
+
+- [Eleventy](https://www.11ty.io) a fast minimalist Node-based static site generator that stays out of your way and lets you ship only what you want to ship 🚀
+- [Tailwind](https://tailwindcss.com/) a brilliant and tiny utility-first CSS framework 🎨
+- [Elasticlunr](http://elasticlunr.com/) a lightweight full-text search engine 🔍
+- [Advanced Markdown-it support](https://github.com/markdown-it/markdown-it) with footnotes, custom containers, emoji support, tables, task lists, and auto-linked images ✏️
+- [Alpine.js](https://github.com/alpinejs/alpine) a minimal utility-first framework for simple or advanced JavaScript 🕹️
+- [Netlify CMS](https://www.netlify.com/) *(optional)* to provide an easy Markdown editor for creating and changing content. 💻
+
+Never fear. You don't need to understand any of this to launch a spacebook, but it all results in a speedy, easy-to-use, and accessible website that looks great out-of-the-box with a fine attention to detail.
+
+::: callout
+**Did you know?** You can customize the design of your spacebook, or even use it as the basis for your creating your own starter. It was built on the [shoulders of giants](/credits). 👍
+:::
+
+---
+
 ## Quick launch 👩🏽‍🚀
 
 If you're the adventurous type, you can launch your own spacebook right now with the click of a button. You'll need an existing [Github account](https://github.com/), and a [Netlify account](https://www.netlify.com/) (which you can create during this process if you wish): 
 
 <div class="flex width-full justify-center">
+<p><strong>Create an empty Spacebook</strong></p>
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/broeker/spacebook"><img class="button" width="146px" height="32px" height="auto" src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+</div>
+
+<div class="flex width-full justify-center">
+<p><strong>Create a clone of Spacebook.app</strong></p>
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/broeker/spacebook"><img class="button" width="146px" height="32px" height="auto" src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 </div>
 
@@ -36,22 +62,6 @@ If you click that button and follow the steps, the Netlify robots will copy the 
 
 ---
 
-## What is a spacebook? 
-
-A spacebook is a simple website generator that will help you create your own project just like this one using a bunch of cool, modern, and fast technology:
-
-- [Eleventy](https://www.11ty.io) a super fast Node-based static site generator that stays out of your way and lets you ship only what you want to ship 🚀
-- [Tailwind 2.0](https://tailwindcss.com/) a brilliant and tiny utility-first CSS framework 🎨
-- [Alpine.js](https://github.com/alpinejs/alpine) a minimal utility-first framework for simple or advanced JavaScript 🕹️
-- [Elasticlunr](http://elasticlunr.com/) a lightweight full-text search engine 🔍
-- [Advanced Markdown-it support](https://github.com/markdown-it/markdown-it) with footnotes, custom containers, emoji support, tables, task lists, and auto-linked images ✏️
-- [Netlify CMS](https://www.netlify.com/) *(optional)* to provide an easy Markdown editor for creating and changing content. 💻
-
-Never fear! You don't need to know or understand any of this to launch a spacebook, but it results in a speedy, easy-to-use, and accessible website that typically scores 100s across the board on Google Lighthouse metrics for mobile and desktop.
-
-::: callout
-**Did you know?** If you wish, you may customize the design of your spacebook, or even use it as the basis for your creating your own starter. It was built on the [shoulders of giants](/credits). 👍
-:::
 
 ## Features
 

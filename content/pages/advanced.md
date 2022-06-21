@@ -2,6 +2,7 @@
 title: Advanced settings
 date: Last Modified
 permalink: /advanced/
+tags: foo
 comments: 0
 eleventyNavigation:
   key: Advanced settings

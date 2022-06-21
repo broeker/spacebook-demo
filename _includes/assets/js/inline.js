@@ -75,10 +75,10 @@ function showSubMenu(id) {
 function toggleDarkMode() {
   if (localStorage.getItem('darkmode') === 'true') {
     localStorage.setItem('darkmode', 'false')
-    document.body.classList.remove("dark");
+    document.documentElement.classList.remove("dark");
   } else {
     localStorage.setItem('darkmode', 'true')
-    document.body.classList.add("dark");
+    document.documentElement.classList.add("dark");
   }
 }
 

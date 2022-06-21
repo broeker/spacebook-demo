@@ -3,7 +3,7 @@ layout: layouts/base.njk
 section: page
 ---
 {% if config.enableEditButton == true or config.enableDatestamp == true %}
-    <div id="dateline-vertical" class="w-full flex justify-end">
+    <div id="dateline-vertical" class="w-full flex justify-end ">
         {% if config.enableDatestamp == true %}
             <div class="inline-block w-auto text-xs text-dateline dark:text-dateline-dark py-1 mr-3">
                 Updated
@@ -20,11 +20,22 @@ section: page
     </div>
 {% endif %}
 
+       {% if config.enableTags %}
+           <div id="tags">
+               {%- for tag in tags | filterTagList -%}
+                   {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
+                   <span class="uppercase last:mr-0 mr-1 text-sm rounded border border-bg-tag hover:bg-tag-dark px-2 py-1"><a href="{{ tagUrl | url }}">{{ tag }}</a></span>
+               {%- endfor %}
+           </div>
+       {% endif %}
+
 <div class="v-screen v-full pt-12 flex-none w-auto prose  md:prose-lg flow-root  focus:outline-none
         focus:ring-header-border
-        focus:ring-2">
+        focus:ring-2
+        {% if config.enableTOC and content|toc %}xl:mr-[17rem]{% endif %}">
     <article>
         <h1>{{ title }}</h1>
+
         {% if config.enableEditButton == true or config.enableDatestamp == true %}
             <div id="dateline" class="hidden">
                 <div class="dateline flex mt-4 justify-end mr-1">
@@ -45,10 +56,18 @@ section: page
             </div>
         {% endif %}
 
+        {% if config.enableTOC and content|toc %}
+            <div class="fixed z-20 top-[8rem] bottom-0 right-[max(0px,calc(50%-45rem))] w-[19.5rem] py-10 px-8 overflow-y-auto hidden xl:block">
+                <div class="font-bold"><small>ON THIS PAGE</small></div>
+                <aside class="font-normal not-prose">
+                    {{ content | toc | safe }}
+                </aside>
+            </div>
+        {% endif %}
 
-            {{ layoutContent | safe }}
 
 
+        {{ layoutContent | safe }}
 
         {% if (config.enableComments) and (comments !== 0) %}
             <!-- Paste your comment code here! -->

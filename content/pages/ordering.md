@@ -2,7 +2,7 @@
 title: Understanding ordering
 date: Last Modified
 permalink: /tips-and-tricks/ordering/
-
+tags: foo
 eleventyNavigation:
   key: Understanding ordering
   order: 45 

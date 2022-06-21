@@ -2,6 +2,7 @@
 title: 'Set up your content' 
 date: Last Modified
 permalink: /getting-started/content/
+tags: foo
 eleventyNavigation:
   order: 10
   parent: Getting started 

@@ -13,9 +13,7 @@ const toml = require("toml");
 
 module.exports = function (eleventyConfig) {
 
-    // Toml support
     eleventyConfig.addDataExtension("toml", contents => toml.parse(contents));
-
     eleventyConfig.addPlugin(pluginTOC);
     eleventyConfig.addPlugin(svgContents);
     eleventyConfig.addPlugin(embedEverything);
@@ -152,6 +150,22 @@ module.exports = function (eleventyConfig) {
                 return (a.data.eleventyNavigation.order || 0) - (b.data.eleventyNavigation.order || 0);
             })
     );
+
+    function filterTagList(tags) {
+        return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
+    }
+
+    eleventyConfig.addFilter("filterTagList", filterTagList)
+
+    // Create an array of all tags
+    eleventyConfig.addCollection("tagList", function(collection) {
+        let tagSet = new Set();
+        collection.getAll().forEach(item => {
+            (item.data.tags || []).forEach(tag => tagSet.add(tag));
+        });
+
+        return filterTagList([...tagSet]);
+    });
 
     // Date formatting (human readable)
     eleventyConfig.addFilter("readableDate", dateObj => {

@@ -2,6 +2,7 @@
 title: Tips and tricks
 date: Last Modified
 permalink: /tips-and-tricks/
+tags: foo
 comments: 0
 eleventyNavigation:
   key: Tips & Tricks

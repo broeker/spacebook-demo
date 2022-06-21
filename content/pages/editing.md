@@ -2,7 +2,7 @@
 title: Editing content
 date: Last Modified
 permalink: /tips-and-tricks/editing/
-
+tags: foo
 eleventyNavigation:
   key: Editing content
   order: 25

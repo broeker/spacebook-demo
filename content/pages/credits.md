@@ -2,6 +2,7 @@
 title: Credits 🙌 
 date: Last Modified
 permalink: /credits/
+tags: foobar
 eleventyNavigation:
   order: 95 
   key: Credits

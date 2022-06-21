@@ -2,7 +2,7 @@
 title: Enabling Netlify CMS
 date: Last Modified
 permalink: /advanced/netlifycms/
-
+tags: foo
 eleventyNavigation:
   key: Enabling Netlify CMS 
   order: 60

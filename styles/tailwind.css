@@ -69,8 +69,13 @@
         scroll-margin-top: 3.5em;
     }
 
-    .prose .footer-nav a {
+    .prose .footer-nav a,
+    .prose #tags a {
         @apply no-underline !important;
+    }
+
+    #tags a {
+        @apply uppercase text-nav hover:text-nav-hover dark:text-nav-dark  dark:hover:text-nav-dark !important;
     }
 
     .prose ul.contains-task-list {
