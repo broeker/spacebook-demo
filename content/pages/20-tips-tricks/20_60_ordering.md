@@ -5,7 +5,7 @@ permalink: /tips-and-tricks/ordering/
 tags: foo
 eleventyNavigation:
   key: Understanding ordering
-  order: 45 
+  order: 160 
   parent: Tips & Tricks
 ---
 Both the primary menu and the in-page navigation rely on the **order** setting in the frontmatter for each of your pages. 

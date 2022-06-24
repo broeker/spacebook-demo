@@ -11,48 +11,48 @@
 
 [[header]]
     name="See us on Github"
-    url="https://github.com"
+    url="https://github.com/broeker/spacebook"
     icon="gitIcon"
 
-[[header]]
-    name="Logout"
-    onclick="logout()"
-    icon="logoutIcon"
+# [[header]]
+#     name="Logout"
+#     onclick="logout()"
+#     icon="logoutIcon"
 
 # Custom sidebar icons
 [[sidebar]]
-    name="Airplane"
+    name="Twitter"
     url="https://twitter.com"
     label = "Follow me on Twitter"
     icon="twitterIcon"
 
-[[sidebar]]
-    name="Github"
-    url="https://github.com"
-    icon="gitIcon"
-    label = "View on Github"
+# [[sidebar]]
+#     name="Github"
+#     url="https://github.com"
+#     icon="gitIcon"
+#     label = "View on Github"
 
 # Custom footer icons (left)
 [[footerLeft]]
     name="Contact"
-    url="/contact"
+    url="mailto:no-reply@my-email.com"
     icon="contactIcon"
 
-[[footerLeft]]
-    name="Twitter"
-    url="https://twitter.url"
-    icon="twitterIcon"
+# [[footerLeft]]
+#     name="Twitter"
+#     url="https://twitter.url"
+#     icon="twitterIcon"
 
 # Custom footer icons (right)
 [[footerRight]]
-    name="CMS"
-    url="https://github.com"
+    name="Login"
+    url="#"
     icon="cmsIcon"
 
-[[footerRight]]
-    name="Twitter"
-    url="https://twitter.com"
-    icon="twitterIcon"
+# [[footerRight]]
+#     name="Twitter"
+#     url="https://twitter.com"
+#     icon="twitterIcon"
 
 
 

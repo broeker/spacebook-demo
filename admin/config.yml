@@ -15,11 +15,11 @@ media_folder: "content/images" # Media files will be stored in the repo under im
 #     api_key: 159818251742281
 
 collections:
-  # Our pages e.g. About
-  - name: "pages"
+  # Our 20-tips-tricks e.g. About
+  - name: "20-tips-tricks"
     label: "Page"
-    folder: "content/pages"
-    create: true # Change to true to allow editors to create new pages
+    folder: "content/20-tips-tricks"
+    create: true # Change to true to allow editors to create new 20-tips-tricks
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }

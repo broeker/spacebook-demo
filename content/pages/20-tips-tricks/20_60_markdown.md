@@ -5,7 +5,7 @@ permalink: /tips-and-tricks/markdown/
 tags: foo
 eleventyNavigation:
   key: Learning markdown 
-  order: 48 
+  order: 150 
   parent: Tips & Tricks
 ---
 Spacebook uses Markdown, which is a simple markup language designed for long form writing and prose. This is a simple example page to demonstrate some common markdown scenarios and to demonstrate the built-in typography.

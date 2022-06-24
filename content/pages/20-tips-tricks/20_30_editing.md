@@ -5,10 +5,10 @@ permalink: /tips-and-tricks/editing/
 tags: foo
 eleventyNavigation:
   key: Editing content
-  order: 25
+  order: 120 
   parent: Tips & Tricks
 ---
-All of the content in your spacebook is managed with [simple markdown files](/markdown) that are easy to create and customize. There are three basic ways you can edit and update your spacebook content. They can be used interchangeably. 
+All of the content in your spacebook is managed with [simple markdown files](/content/pages/markdown.mdown.md) that are easy to create and customize. There are three basic ways you can edit and update your spacebook content. They can be used interchangeably. 
 
 ## Edit directly on Github 
 
@@ -24,4 +24,4 @@ You can also clone your repository and edit your local markdown files directly i
 
 ## Edit using Netlify CMS
 
-You can also configure the optional [Netlify CMS integration](/netlifycms) to enable a fast and easy CMS that will let you manage your content with a WYSIWYG editor and automatic formatting previews. When you publish a page in Netlify CMS, it is automatically committed back to your Github repository and then published to Netlify.
+You can also configure the optional [Netlify CMS integration](/content/pages/netlifycms.mdcms.md) to enable a fast and easy CMS that will let you manage your content with a WYSIWYG editor and automatic formatting previews. When you publish a page in Netlify CMS, it is automatically committed back to your Github repository and then published to Netlify.

@@ -6,7 +6,7 @@ module.exports = {
         purgeLayersByDefault: true,
     },
     content: [
-        './pages/**/*.{html,js}',
+        './20-tips-tricks/**/*.{html,js}',
         './_includes/components/**/*.{html,js}',
         './_site/index.html'
     ],

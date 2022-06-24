@@ -5,7 +5,7 @@ permalink: /tips-and-tricks/embeds/
 tags: foo
 eleventyNavigation:
   key: Working with embeds
-  order: 40 
+  order: 130 
   parent: Tips & Tricks
 ---
 Spacebook comes preconfigured with the [Eleventy Embed Everything](https://github.com/gfscott/eleventy-plugin-embed-everything) plugin which makes it very easy to embed responsive content simply by pasting the URL to your embedded content:

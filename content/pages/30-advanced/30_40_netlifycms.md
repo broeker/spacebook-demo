@@ -5,7 +5,7 @@ permalink: /advanced/netlifycms/
 tags: foo
 eleventyNavigation:
   key: Enabling Netlify CMS 
-  order: 60
+  order: 210 
   parent: Advanced settings 
 ---
 [Netlify CMS](https://www.netlifycms.org/) is a simple user interface that lets you add, edit, and preview your markdown files via a browser-based editor. It is very useful for beginners or anybody who wants an easy interface for managing content.

@@ -5,7 +5,7 @@ permalink: /tips-and-tricks/images/
 tags: foo
 eleventyNavigation:
   key: Working with images and all the great creatures large and small and things between
-  order: 30 
+  order: 100 
   parent: Tips & Tricks
 ---
 You can drop images, diagrams, or illustrations anywhere in your content. Images are automatically set to 100% width and centered with a subtle shadow and some small padding. There are two primary methods for adding images to your pages, each with its own set of pros and cons:  

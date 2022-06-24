@@ -111,9 +111,9 @@ module.exports = function (eleventyConfig) {
     //   }, {});
     // });
 
-    // Creates custom collection "pages"
+    // Creates custom collection "20-tips-tricks"
     eleventyConfig.addCollection("pages", function (collection) {
-        return collection.getFilteredByGlob("pages/*.md");
+        return collection.getFilteredByGlob("20-tips-tricks/*.md");
     });
 
     // Creates custom collection "posts"

@@ -7,7 +7,7 @@ tags:
   - foobar
 eleventyNavigation:
   key: Navigation layout 
-  order: 58
+  order: 200 
   parent: Advanced settings 
 ---
 

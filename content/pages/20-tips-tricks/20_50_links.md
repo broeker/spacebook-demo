@@ -6,7 +6,7 @@ tags: foo
 comments: 0
 eleventyNavigation:
   key: Working with links
-  order: 35
+  order: 140 
   parent: Tips & Tricks
 ---
 Working with links in markdown is simple once you get the hang of it. 
@@ -27,7 +27,7 @@ To create a nicely formatted interal link with a title use this simple markdown 
 ```
 [Tips & tricks](/tips-and-tricks)
 ```
-[Tips & tricks](/tips-and-tricks)
+[Tips & tricks](/content/pages/tips-and-tricks.mdcks.md)
 
 ::: callout 
 Internal links should start with a slash and include a path that matches the permalink set on the page you are linking to.

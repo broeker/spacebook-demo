@@ -2,11 +2,13 @@
 title: Advanced settings
 date: Last Modified
 permalink: /advanced/
-tags: foo
-comments: 0
+
+tags:
+  - advanced
+
 eleventyNavigation:
   key: Advanced settings
-  order: 50 
+  order: 170 
 ---
 
 The following sections outline some of the things you can do with your spacebook that take a bit more work to set up, but never fear:

@@ -2,12 +2,16 @@
 title: 'Set up your content' 
 date: Last Modified
 permalink: /getting-started/content/
-tags: foo
+tags:
+  - config
+  - markdown
 eleventyNavigation:
-  order: 10
+  order: 40 
   parent: Getting started 
   key: Set up your content 
 ---
+Now that you've got the basics configured, the fun begins.  
+
 All of your pages and images are stored in a top-level directory called **content**, with a sub-folder for your pages (**content/pages**) and one for your images (**content/images**). When you first install your spacebook, it will contain a default welcome page that you can change or delete. 
 
 ::: callout
@@ -25,7 +29,8 @@ date: 2020-11-20
 permalink: /hello/index.html
 eleventyNavigation:
   order: 10
-  key: Hello 
+  key: Hello
+  parent: Home 
 ---
 ```
 
@@ -33,8 +38,10 @@ eleventyNavigation:
 * **date** -- this is the (optional) last updated date that appears at the top of each page. You can use a standard date format such as **2021-01-31**, or the handy **Last Modified** value (which will automatically update each time you save a commit.)
 * **permalink** -- the permalink is used to define the URL for the page. It must follow this format, and end with *index.html*
 * **eleventyNavigation** -- this is used to define the menu item for your page, and to tell it where it will appear in the menu hierarchy.
+  * **parent** -- this should match the title of the parent page
   * **order** -- this determines where your menu appears relative to other menu items (0=first) 
   * **key** -- this is the menu "label" for your and also serves a simple slug or key used to track parent and child pages
+  * **title** -- a custom menu title
 
 ## Frontmatter options
 

@@ -2,11 +2,12 @@
 title: Tips and tricks
 date: Last Modified
 permalink: /tips-and-tricks/
-tags: foo
+tags: 
+  - tips
 comments: 0
 eleventyNavigation:
   key: Tips & Tricks
-  order: 120 
+  order: 90 
 ---
 
 The following sections outline some basic tips and tricks along with best practices for doing various things within your spacebook.

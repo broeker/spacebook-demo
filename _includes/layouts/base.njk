@@ -3,13 +3,13 @@
 {% include "components/head.njk" %}
 <body>
 {% include "../components/header.njk" %}
-<div id="app" class="flex flex-col h-screen v-screen bg-content dark:bg-content-dark z-40">
+<div id="app" class="">
     {% if config.navigationStyle === "vertical" %}
-        <div id="v-nav" class="fixed  h-full hidden lg:block">
+        <div id="v-nav" class="fixed h-full hidden lg:block">
             {% include "../components/vertical.nav.njk" %}
         </div>
     {% endif %}
-    <main id="content" class="v-screen bg-content dark:bg-content-dark">
+    <main id="content" class="bg-content dark:bg-content-dark">
         {% if config.navigationStyle === "vertical" %}
         <div id="content-main" class="px-16 lg:ml-72">
             {% else %}

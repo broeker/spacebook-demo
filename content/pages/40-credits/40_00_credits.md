@@ -4,7 +4,7 @@ date: Last Modified
 permalink: /credits/
 tags: foobar
 eleventyNavigation:
-  order: 95 
+  order: 230 
   key: Credits
 ---
 Spacebook was inspired by my search for the simplest possible way to spin up a modern website in the least amount of time, with the freedom to extend as needed, zero cost, no maintenance burden, and virtually zero effort. 

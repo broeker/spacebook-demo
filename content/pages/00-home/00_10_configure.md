@@ -1,3 +1,18 @@
+---
+title: 'Basic configuration' 
+date: Last Modified 
+permalink: /getting-started/configure/
+tags:
+  - config
+eleventyNavigation:
+  order: 10 
+  parent: Getting started 
+  key: Basic configuration
+  title: Basic configuration
+---
+Once your site is running, your first step is to review and set some basic configuration; all site configuration is stored in a single file located at **_config/config.toml**: 
+
+```
 #==============================================================================#
 # GIT SETTINGS
 #==============================================================================#
@@ -19,11 +34,11 @@ description = "Create a modern notebook to document or explain almost anything."
 url =  "https://spacebook.app" ## your primary url (this var is not currently in use, but someday?)
 
 #==============================================================================#
-# LOGO Choose custom SVG, PNG, emoji, or no logo.
+# LOGO Choose custom SVG, PNG, emoji, or no logo. 
 # (See _includes/assets/logo/README)
 #==============================================================================#
 
-enableLogo = true
+enableLogo = true 
 logoStyle = 'svg' # Choose png, svg, or emoji
 emojiLogo = "🐟"
 
@@ -32,7 +47,7 @@ emojiLogo = "🐟"
 # see _includes/assets/favicon/favicon.ico; true = use emoji
 #==============================================================================#
 
-enableFaviconEmoji = false
+enableFaviconEmoji = false  
 faviconEmoji = "💥"
 
 #==============================================================================#
@@ -58,24 +73,7 @@ searchNoResultsMessage = "Sorry, no results available!" # no search results
 # FOOTER Enter some OPTIONAL footer HTML; comment to disable.
 #==============================================================================#
 
-footerText = "Made with ❤ in️ Minneapolis"
+footerText = "Made with ❤ in️Minneapolis"
 
-# footerText (appears at the center of your bottom footer)
-# To use raw HTML in use a multi-line toml string, e.g.:
-# 
-# footerText = """
-# <div><strong>Acme Inc and the California Office of Design</strong></div>
-# <div>Where all the news is fit to print</div>
-# <ul>
-#    <li>Foo: 612-555-5555</li>
-#    <li>Address: Yorba, CA 55410-0000</li>
-#    <li>Website: <a href="http://spacebook.app" target="_blank">spacebook.app</li>
-# </ul> """
-
-#=============================================================================================#
-# CMS INTEGRATION (If you have Netlify or Forestry enabled, show the CMS admin icon)
-#=============================================================================================#
-
-# enableCMS = false
-
-#=============================================================================================#
+```
+Most of these settings should be self-explanatory and/or documented in the TOML file; experiment to see how various options affect your spacebook.
