@@ -29,7 +29,7 @@ From you'll be asked to import an existing project from a Git repository. Connec
 
 Now select the repository you created when you first created your Spacebook, e.g.
 
-*<your-github-username>/<your-repository>*
+*`<your-github-username>/<your-repository>`*
 
 ## Site settings 
 
