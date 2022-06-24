@@ -14,7 +14,15 @@ eleventyNavigation:
 
 Github Pages is a good option with a generous free-tier, easy setup, and also some cool automation options for automtically deploying your site.
 
-## Run your build command
+## Push your finished site to GitHub
+
+Once you have some work ready to go, push it all up to your GitHub repository's `main` branch.
+
+## Configure GitHub Pages
+
+* From your main repository page, head to `Settings > Pages`
+* Select your "source" branch (typically `main`)
+* Save
 
 To get started, first run your Eleventy build command on your local machine. This will build out your static site and place into the **_sites** folder where it will be ready for hosting on Github pages.
 
