@@ -1,0 +1,139 @@
+# Custom header icons
+[[header]]
+    name="Search"
+    icon="searchIcon"
+    onclick="toggleSearch()"
+
+[[header]]
+    name="Toggle darkmode"
+    icon="darkmodeIcon"
+    onclick="toggleDarkMode()"
+
+[[header]]
+    name="See us on Github"
+    url="https://github.com/broeker/spacebook"
+    icon="gitIcon"
+
+# [[header]]
+#     name="Logout"
+#     onclick="logout()"
+#     icon="logoutIcon"
+
+# Custom sidebar icons
+[[sidebar]]
+    name="Twitter"
+    url="https://twitter.com"
+    label = "Follow me on Twitter"
+    icon="twitterIcon"
+
+# [[sidebar]]
+#     name="Github"
+#     url="https://github.com"
+#     icon="gitIcon"
+#     label = "View on Github"
+
+# Custom footer icons (left)
+[[footerLeft]]
+    name="Contact"
+    url="mailto:no-reply@my-email.com"
+    icon="contactIcon"
+
+# [[footerLeft]]
+#     name="Twitter"
+#     url="https://twitter.url"
+#     icon="twitterIcon"
+
+# Custom footer icons (right)
+[[footerRight]]
+    name="Login"
+    url="#"
+    icon="cmsIcon"
+
+# [[footerRight]]
+#     name="Twitter"
+#     url="https://twitter.com"
+#     icon="twitterIcon"
+
+
+
+
+
+
+# [[footerRight]]
+# name="Question"
+# url="https://twitter.com"
+# icon="questionIcon"
+
+# [[footerRight]]
+# name="Flower"
+# url="https://twitter.com"
+# icon="flowerIcon"
+
+# [[footerRight]]
+# name="Bolt"
+# url="https://twitter.com"
+# icon="boltIcon"
+
+# [[footerRight]]
+# name="More"
+# url="https://twitter.com"
+# icon="moreIcon"
+
+# [[footerRight]]
+# name="Forward"
+# url="https://twitter.com"
+# icon="forwardIcon"
+
+# [[footerRight]]
+# name="Back"
+# url="https://twitter.com"
+# icon="backIcon"
+
+# [[footerLeft]]
+# name="LinkedIn"
+# url="https://linkedIn.com"
+# icon="linkedInIcon"
+
+# [[footerLeft]]
+# name="Website"
+# url="https://linkedIn.com"
+# icon="websiteIcon"
+
+# [[footerLeft]]
+# name="App"
+# url="https://linkedIn.com"
+# icon="appIcon"
+
+# [[footerLeft]]
+# name="Heart"
+# url="https://linkedIn.com"
+# icon="heartIcon"
+
+# [[footerLeft]]
+# name="Location"
+# url="https://linkedIn.com"
+# icon="locationIcon"
+
+# [[footerLeft]]
+# name="Rocket"
+# url="https://linkedIn.com"
+# icon="rocketIcon"
+
+# [[footerLeft]]
+# name="Planet"
+# url="https://linkedIn.com"
+# icon="planetIcon"
+
+# [[footerLeft]]
+# name="Audio"
+# url="https://linkedIn.com"
+# icon="audioIcon"
+
+# [[footerLeft]]
+# name="Info"
+# url="https://linkedIn.com"
+# icon="infoIcon"
+
+
+
+

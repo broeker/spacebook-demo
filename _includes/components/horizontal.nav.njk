@@ -1,0 +1,111 @@
+{% set navPages = collections.all | eleventyNavigation %}
+
+{% macro renderNavListItem(entry,rel) -%}
+    {% if entry.url == page.url or entry.title == eleventyNavigation.parent or entry.title == eleventyComputed.key %}
+        {# Active links #}
+        {% set highlight =
+            'bg-nav-button dark:bg-nav-button-dark
+       text-sidebar-link-hover dark:text-sidebar-link-dark-hover' %}
+        {% set buttonHighlight =
+            'bg-nav-button dark:nav-button-dark
+       dark:text-sidebar-link-dark-hover' %}
+        {% set current = 'aria-current="page"' %}
+    {% else %}
+        {# Normal links #}
+        {% set highlight =
+            'hover:bg-nav-button dark:hover:bg-nav-button-dark text-sidebar-link hover:text-sidebar-link-hover
+       dark:text-sidebar-link-dark dark:hover:text-sidebar-link-dark-hover' %}
+        {% set current = '' %}
+    {% endif %}
+
+    {%- if not entry.children.length -%}
+        {% if rel == "child" %}
+            {# Top-level links (with no children) #}
+            <a class="
+        px-4  py-2 mr-1.5
+        block
+        rounded
+        text-sm
+        focus:outline-none
+        focus:ring-header-border
+        dark:focus:ring-header-border-dark
+        focus:ring-2
+        hover:bg-nav-button
+        dark:hover:bg-nav-button-dark
+        {{ highlight }}"
+               href="{{ entry.url | url }}">{{ entry.title }}</a>
+        {% else %}
+            {# Child links #}
+            <a class="
+        px-4 py-2 mr-1.5
+        ml-1
+        rounded
+        block
+        text-sm
+        focus:outline-none
+        focus:ring-header-border
+        dark:focus:ring-header-border-dark
+        focus:ring-2
+        {{ highlight }}"
+               href="{{ entry.url | url }}">{{ entry.title }}</a>
+        {% endif %}
+
+    {%- else -%}
+
+        {%- if entry.children.length -%}
+            <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                <button onclick="showSubMenu({{ entry.url | url }})" @click="open = !open"
+                        x-ref="submenu"
+                        class="whitespace-nowrap flex flex-row items-center
+            mr-1.5 w-full px-4 py-2 text-sm text-left
+            md:w-auto md:inline
+            mt-0
+            focus:outline-none
+            focus:ring-2
+            focus:ring-header-border
+            dark:focus:ring-header-border-dark
+            rounded
+            hover:bg-nav-button
+            dark:hover:bg-nav-button-dark
+            {{ buttonHighlight }} {{ highlight }}">
+                    <span>{{ entry.title }}</span>
+                    <svg fill="currentColor" height="24" width="24" viewBox="0 0 20 20"
+                         :class="{'rotate-180': open, 'rotate-0': !open}"
+                         class="space-x-4 inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                        <path fill-rule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <div id="{{ entry.url }}" x-show="open"
+                     x-transition:enter="transition ease-out duration-100"
+                     x-transition:enter-start="transform opacity-0 scale-95"
+                     x-transition:enter-end="transform opacity-100 scale-100"
+                     x-transition:leave="transition ease-in duration-75"
+                     x-transition:leave-start="transform opacity-100 scale-100"
+                     x-transition:leave-end="transform opacity-0 scale-95"
+                     class="bg-content dark:bg-content-dark shadow-md absolute top-8 w-64 max-w-64 mt-2">
+                    <div x-show="open" class="pr-2 pb-2">
+                        {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
+                    </div>
+                </div>
+            </div>
+        {%- endif -%}
+    {%- endif -%}
+{%- endmacro %}
+
+<div class="py-1.5 flex justify-end content-center items-center bg-content dark:bg-content-dark">
+
+    <div class="flex-none content-center ml-2">
+
+        <div x-data="{ open: false }">
+            <nav x-ref="dropdown" class="hidden w-full md:block">
+                <div class="flex items-center">
+                    {%- for entry in navPages %}
+                        {{ renderNavListItem(entry,'child') }}
+                    {%- endfor -%}
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
